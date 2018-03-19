@@ -1,0 +1,33 @@
+<span class="close-btn-black fl-right pointer" ng-click="closeModal()"></span>
+<img class="img-responsive center-block" ng-src="/wp-content/plugins/lotto-yard/frontend/images/{{::product.LotteryName | lowercase | removeSpaces }}-logo.png"
+/>
+<p class="lottery-name text-center">{{::product.LotteryName}}</p>
+<p class="lottery-type text-center">{{::$parent.translation.Group}}</p>
+<hr>
+<p class="text-center" ng-bind="$parent.translation.Special_Lottery_About_{{product.LotteryName.split(' ').join('')}}"></p>
+<hr>
+<div class="col-xs-12 col-sm-6 no-padd">
+    <p>{{::$parent.translation.number_of_draws}}</p>
+
+    <div class="btn-group" uib-dropdown>
+        <button id="btn-append-to-single-button" type="button" class="btn-subs" uib-dropdown-toggle>
+        {{selected.NumberOfDraws}}
+        </button>
+        <ul class="dropdown-menu no-scroll" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+            <li class="subscriptionOption" ng-repeat="item in product.drawOptions" ng-click="changeDraw(item.NumberOfDraws)">
+                <span>{{item.NumberOfDraws}}</span>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div class="discount col-xs-12 col-sm-6">
+    <p>{{::$parent.translation.Discount}}:</p>
+    <p class="bordered-elem">{{::currency}} {{discount | number:2}}</p>
+</div>
+<div class="total fl-left max-width">
+    <span class="fl-left">{{::$parent.translation.Total}}</span>
+    <span class="fl-right bold">{{::currency}} {{totalPrice | number:2}}</span>
+</div>
+<!--<input type="text" value="{{::product.LotteryCurrency2}} {{totalPrice | number:2}}">-->
+<button class="fl-left max-width buy-btn text-center f-16" ng-click="saveToCart({draws: selected.NumberOfDraws})">{{::$parent.translation.buy_tickets}}</button>

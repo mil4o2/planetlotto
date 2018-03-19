@@ -1,0 +1,150 @@
+@import "functions.less";
+
+// #for-players {
+    .links {
+        .for-players{
+            width: 100%;
+            display: block;
+            padding: 16px;
+            color: white;
+            background-color: @color-base-one;
+            margin-top: 12px;
+        }
+        .link {
+            width: 100%;
+            display: block;
+            padding: 16px;
+            text-decoration: none;
+            border: 1px solid @light-gray;
+            color: @text-grey;
+            &:hover {
+                background-color:  @light-gray;
+            }
+        }
+        .current {
+            color: @color-base-one;
+            border-left: 3px solid @color-base-one;
+        }
+    }
+// }
+#terms-page {
+    .intro {
+        margin-bottom: 30px;
+    }
+}
+#faq-page {
+    padding-bottom: 20px;
+
+    .holder {
+        padding: 0;
+    }
+    .breadcrumbs{
+        padding-top: 15px;
+        padding-bottom: 50px;
+    }
+
+    .intro {
+        margin-top: -35px;
+        h1 {
+            font-size: 24px;
+            font-weight: 100;
+            margin-top: 30px;
+        }
+    }
+    .faq-part {
+        overflow: hidden;
+        // margin-top: 50px;
+        h4 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .accordion {
+            margin-top: 50px;
+        }
+    }
+}
+#safe-responsible {
+    padding-bottom: 20px;
+    .breadcrumb {
+        padding-top: 15px;
+        padding-bottom: 50px;
+        margin-bottom: 0;
+        padding-left: 0;
+        background: none;
+    }
+    h1 {
+        margin: 1.2em 0;
+    }
+    .img-responsive {
+        width: 230px;
+        height: 260px;
+        background: url('../images/ice-safe.jpg') center center no-repeat;
+    }
+    h2{
+        font-size: 24px;
+        font-weight: 100;
+    }
+    .intro {
+        margin-top: -25px;
+        h4 {
+            font-weight: 100;
+            margin: 20px 0;
+        }
+    }
+}
+@media(max-width: @screen-md-min) {
+
+
+    #safe-responsible {
+        .breadcrumb {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+    }
+
+    #for-players{
+        // margin-top: -35px;
+        margin-bottom: 45px;
+        float: left;
+        width: 100%;
+
+        .links {
+            width: 100%;
+            float: left;
+            display: table;
+
+            .for-players{
+                display: none;
+            }
+            .link {
+                height: 50px;
+                width: 20%;
+                // display: inline-flex;
+                // float: left;
+                display: table-cell;
+                // display: inline-block;
+                font-size: 11px;
+                padding: 16px 0;
+                text-align: center;
+                // align-items: center;
+            }
+            .current {
+                color: @color-base-one;
+                border-left: 1px solid @light-gray;
+                border-bottom: 3px solid @color-base-one;
+            }
+        }
+    }
+    #faq-page {
+        .faq-part h4 {
+            font-size: 24px;
+        }
+
+        .breadcrumbs{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}

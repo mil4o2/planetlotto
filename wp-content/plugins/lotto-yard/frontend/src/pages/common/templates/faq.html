@@ -1,0 +1,59 @@
+<div class="accordion" ng-if="contentFaq.faq">
+    <h4 ng-if="!contentFaq.faq_title"><div class="big"></div> {{::translation.faq}}</h4>
+    <h4 ng-if="contentFaq.faq_title"><span>{{$index + 1}}.</span> {{::contentFaq.faq_title}}</h4>
+    <div class="card" ng-repeat="question in contentFaq.faq track by $index" ng-if="contentFaq">
+        <button class="faq-btn" data-toggle="collapse" data-target="#collapseChild{{questionId[$index]}}" aria-controls="collapseChild{{questionId[$index]}}">
+            {{::question.question}}
+            <div class="arrow-down fl-right"></div>
+        </button>
+
+        <div id="collapseChild{{questionId[$index]}}" class="collapse">
+            <div class="card-block" bind-html-compile="question.answer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="accordion" ng-if="parentFaq">
+    <h4 ng-if="!contentFaq.faq_title"><div class="big"></div> {{::translation.faq}}</h4>
+    <div class="card" ng-repeat="question in parentFaq track by $index" >
+        <button class="faq-btn" data-toggle="collapse" data-target="#collapse{{$index}}" aria-controls="collapse{{$index}}">
+            {{::question.question}}
+            <div class="arrow-down fl-right"></div>
+        </button>
+
+        <div id="collapse{{$index}}" class="collapse">
+            <div class="card-block" bind-html-compile="question.answer"></div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="accordion" ng-if="contentFaq.faq">-->
+    <!--<h4 ng-if="!contentFaq.faq_title"><div class="big"></div> {{::translation.faq}}</h4>-->
+    <!--<h4 ng-if="contentFaq.faq_title"><span>{{$index + 1}}.</span> {{::contentFaq.faq_title}}</h4>-->
+    <!--<div class="card" ng-repeat="question in contentFaq.faq track by $index" ng-if="contentFaq">-->
+        <!--<button class="faq-btn" data-toggle="collapse" data-target="#collapseChild{{questionId[$index]}}" aria-controls="collapseChild{{questionId[$index]}}">-->
+            <!--{{::question.question}}-->
+            <!--<div class="arrow-down fl-right"></div>-->
+        <!--</button>-->
+
+        <!--<div id="collapseChild{{questionId[$index]}}" class="collapse">-->
+            <!--<div class="card-block" bind-html-compile="question.answer">-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<div class="accordion" ng-if="parentFaq">-->
+    <!--<h4 ng-if="!contentFaq.faq_title"><div class="big"></div> {{::translation.faq}}</h4>-->
+    <!--<div class="card" ng-repeat="question in parentFaq track by $index" >-->
+        <!--<button class="faq-btn" data-toggle="collapse" data-target="#collapse{{$index}}" aria-controls="collapse{{$index}}">-->
+            <!--{{::question.question}}-->
+            <!--<div class="arrow-down fl-right"></div>-->
+        <!--</button>-->
+
+        <!--<div id="collapse{{$index}}" class="collapse">-->
+            <!--<div class="card-block" bind-html-compile="question.answer"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->

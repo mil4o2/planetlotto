@@ -1,0 +1,64 @@
+<!-- <div ng-include="productTemplate"></div> -->
+<div class="opened-product">
+    <div ng-if="product.MainLottery != 'FreeProduct'" class="product-info col-xs-12">
+        <div class="white-bgr">
+            <img ng-if="product.MainLottery != 'freeSingle'" class="icon {{product.Product.toLowerCase()}}" ng-src="/wp-content/plugins/lotto-yard/frontend/images/{{product.MainLottery.toLowerCase()}}-logo.png" alt="{{lotery.lotteryName}}"/>
+            <img ng-if="product.MainLottery == 'freeSingle'" class="icon {{product.Lotteries[0].lotteryName.toLowerCase()}}" ng-src="/wp-content/plugins/lotto-yard/frontend/images/{{product.Lotteries[0].lotteryName.toLowerCase()}}-logo.png" alt="{{lotery.lotteryName}}"/>
+            <div class="text"><span><strong>{{::translation[product.Product + "-" + product.MainLottery]}} :</strong> {{::translation[product.Product + "-" + product.MainLottery + '_info']}}</span></div>
+        </div>
+    </div>
+    <!-- FOR free ticket-->
+    <div ng-if="product.MainLottery == 'FreeProduct'" class="product-info col-xs-12">
+        <img class="icon {{product.Product.toLowerCase()}}" ng-src="/wp-content/plugins/lotto-yard/frontend/images/{{product.Product.toLowerCase()}}-logo.png" alt="{{lotery.lotteryName}}"/>
+        <div class="text"><span><strong>{{::translation[translation.Personal + "-" + product.Product]}} :</strong> {{::translation[translation.Personal + "-" + product.Product + '_info']}}</span></div>
+    </div>
+
+    <div class="headers-row row">
+        <div class="col-xs-3 lotteries">{{::translation.Lotteries}}</div>
+        <div class="col-xs-4 personal-lines" ng-if="product.MainLottery == 'freeSingle' && product.Lotteries[0].selectedNumbers.length > 0">{{::translation.Personal_Lines}}</div>
+        <div class="col-xs-3 personal-lines" ng-if="product.MainLottery == 'freeSingle' && product.Lotteries[0].selectedNumbers.length == 0 && product.Product == 'RedCrossDraw'">{{::translation.Group_Lines}}</div>
+    </div>
+
+    <div class="data-row-holder">
+
+        <div class="data-row row col-xs-12" ng-repeat="lotery in product.Lotteries track by $index" ng-class="{'data-row-one-product':  product.Lotteries.length == 1}">
+            <div class="col-xs-3 lotteries">
+
+                <img ng-if="lotery.lotteryName != product.Lotteries[$index - 1].lotteryName" ng-src="/wp-content/plugins/lotto-yard/frontend/images/{{lotery.lotteryName.toLowerCase()}}-logo.png" alt="{{lotery.lotteryName}}"/>
+                <span ng-if="lotery.lotteryName != product.Lotteries[$index - 1].lotteryName">{{lotery.lotteryName}}</span>
+            </div>
+
+            <div class="col-xs-7">
+                <div class="col-xs-6 personal-lines fl-left" ng-if="lotery.selectedNumbers.length > 0">
+                    <div class="normal" ng-repeat="number in lotery.selectedNumbers">
+                        <span ng-hide="{{isRaffle(product.ProductId)}}" class="number selected">{{number}}</span>
+                        <span ng-show="{{isRaffle(product.ProductId)}}" class="raffleID">{{number}}</span>
+                    </div>
+                    <div class="extra" ng-repeat="extraNumber in lotery.extraNumbers">
+                        <span class="extraNumber selected" ng-if="extraNumber">{{extraNumber}}</span>
+                    </div>
+                </div>
+
+                <!-- <div class="col-xs-6 see-numbs fl-right" ng-click="showNumbers(lotery.lotteryName)" ng-if="product.MainLottery != 'freeSingle' && product.Product.toLowerCase() == 'bundle' && lotery.lotteryName !== 'RedCrossDraw' && product.MainLottery != 'AgainstCancer'">{{::translation.See_Your_Numbers}}</div> -->
+                <div class="col-xs-6 see-numbs fl-right" ng-if="showSeeNumbs(product, lotery, $index)" ng-click="showNumbers(lotery.lotteryName)">{{::translation.See_Your_Numbers}}</div>
+            </div>
+
+
+            <div class="col-xs-2 group-part" ng-if="lotery.selectedNumbers.length == 0 || product.Product.toLowerCase() == 'bundle' && product.MainLottery != 'freeSingle'">
+                <div class="" ng-if="$index == 0">
+                    <img src="/wp-content/plugins/lotto-yard/frontend/images/Group-pic-products.png" alt="">
+                    <div class="">
+                        <span>1 {{translation.Shares}},</span>
+                        <span>50 {{translation.Line}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!--data-row-holder-->
+    <div class="lines-left col-xs-12">
+        <span class="not-red">{{::translation.Lines_Left}}: </span>
+        <span class="red">{{activeLines}}</span>
+        <span class="not-red">/{{product.TotalLines}}</span>
+    </div>
+</div>

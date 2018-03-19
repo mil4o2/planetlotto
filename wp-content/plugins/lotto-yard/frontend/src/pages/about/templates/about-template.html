@@ -1,0 +1,27 @@
+<div id="top" class="about-page">
+    <!-- <div class="container-content">
+        <div class="container"> -->
+            <!-- <div class="" bind-html-compile="pageContent"></div> -->
+        <!-- </div>
+    </div> -->
+
+    <!-- <div class="container">
+        <div ly-scrolling-menus></div>
+    </div> -->
+    <div class="container">
+        <div class="max-width">
+            <div class="col-xs-12 col-md-3 fl-left no-padd">
+                <div ly-for-players titleMenu="{{::translation.about_icelotto}}"></div>
+            </div>
+
+            <div class="col-xs-12 col-md-9 fl-right">
+                <div class="" bind-html-compile="pageContent"></div>
+
+                <div class="faq-part" ng-repeat="contentFaq in acf.content track by $index">
+                    <div ly-faq class="col-xs-12 no-padd"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

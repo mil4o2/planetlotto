@@ -1,0 +1,1076 @@
+@import "functions.less";
+
+#my-account {
+    background: white;
+    .intro {
+        padding: 0;
+        .part {
+            padding: 16px 0;
+            text-align: center;
+            border-right: 1px solid @color-base-one;
+            border-bottom: 1px solid @color-base-one;
+            min-height: 252px;
+        }
+        .part.first {
+            background: @color-base-one;
+            padding: 67.5px 0;
+            .name {
+                font-size: 24px;
+                color: white;
+                text-transform: capitalize;
+                margin-bottom: 13px;
+            }
+            .vip-lvl {
+                color: white;
+                text-transform: uppercase;
+                font-size: 14px;
+                margin-bottom: 18px;
+            }
+            .deposit-btn {
+                font-size: 14px;
+                width: 95px;
+                height: 30px;
+                .centerLR();
+                display: inline-block;
+                padding-top: 6px;
+            }
+        }
+        .part.last {
+            padding: 0;
+            .vip-icon {
+                // background: url('../images/silver-vip.png') no-repeat;
+                background: url('../images/all-vip-levels.png') no-repeat;
+                // background-position: 0 0;
+                display: inline-block;
+                float: left;
+                height: 100%;
+                width: 35px;
+                margin-right: 8px;
+            }
+            .vip-icon.Gold{
+                background-position: -108px 0;
+            }
+            .vip-icon.None{
+                background-position: 0 0;
+            }
+            .vip-icon.Bronze{
+                background-position: -36px 0;
+            }
+            .vip-icon.Silver{
+                background-position: -71px 0;
+            }
+            .vip-icon.Platinim{
+                background-position: -71px 0;
+            }
+
+            .upperPart {
+                height: 165px;
+                padding: 35px 0 35px 8px;
+
+                .progress-holder {
+                    .progress-ends {
+                        border-left: 1px solid #BBB;
+                        border-right: 1px solid #BBB;
+                        width: 60%;
+                        float: right;
+                        padding: 4px 0;
+                        margin-bottom: 40px;
+                        margin-right: 13px;
+                        height: 26px;
+
+                        .progress {
+                            width: 100%;
+                            padding: 3px;
+                            background-image: initial;
+                            background-color: #F7F7F7;
+                            border-radius: 0;
+                            -webkit-box-shadow: none;
+                            box-shadow: none;
+                            position: relative;
+                            overflow: visible;
+                            font-size: 10px;
+
+                            .progress-bar {
+                                border-radius: 3px 0 0 3px;
+                                height: 14px;
+                                background-color: @color-base-one;
+                                background-image: none;
+                                position: relative;
+
+                                .indicator-line {
+                                    width: 1px;
+                                    height: 18px;
+                                    background: @color-base-one;
+                                    position: absolute;
+                                    right: -1px;
+                                }
+                            }
+                            .start-pts {
+                                position: absolute;
+                                top: -18px;
+                                left: -11px;
+                            }
+                            .end-pts {
+                                position: absolute;
+                                top: -18px;
+                                right: -11px;
+                            }
+                            .cur-pts {
+                                position: absolute;
+                                bottom: -14px;
+                                color: @color-base-one;
+                            }
+                        }
+                    }
+                }
+                .vip-icon {
+                    margin-top: 24px;
+                }
+                .left {
+                    max-width: 130px;
+                }
+                .text-blue {
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    text-align: left;
+                    float: left;
+                    margin: 5px 0;
+                    font-weight: 600;
+                    &:not(.text-center) {
+                        min-width: 100px;
+                    }
+                }
+                .current-level {
+                    display: inline-block;
+                    text-align: left;
+                    float: left;
+                    text-transform: capitalize;
+
+                }
+                .current-bonus {
+                    width: 61%;
+                    float: right;
+                    text-transform: capitalize;
+                    .half {
+                        width: 50%;
+                        float: left;
+                        .text-center {
+                            float: none;
+                        }
+                    }
+                }
+            }
+            .upperPart.Platinum {
+                padding: 80px 10px !important;
+                .current-bonus {
+                    margin-top: 8px;
+                }
+                .vip-icon {
+                    height: 100px;
+                    margin-top: 17px;
+                    background-position: -144px 0;
+                }
+            }
+            .lowerPart {
+                height: 86px;
+
+                .next-vip-part {
+                    border-top: 3px solid @color-base-one;
+                    border-right: 1px solid @color-base-one;
+                    height: 100%;
+                    text-align: left;
+                    padding: 4px 0;
+
+                    &:last-of-type{
+                        border-right: none;
+                    }
+
+                    .vip-icon {
+                        margin: 18px 8px 0 8px;
+                    }
+                    span {
+                        display: inline-block;
+                        float: left;
+                        text-transform: capitalize;
+
+                    }
+                    .text-blue {
+                        font-size: 24px;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+                }
+                .next-vip-part-smaller {
+                    padding: 17px 0;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .my-acc-icon {
+            display: inline-block;
+            height: 38px;
+            width: 38px;
+            margin-right: 5px;
+            position: relative;
+            top: 10px;
+            background-image: url(../images/MyAccMoneyIcons.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .real-money-icon {
+            background-position: 0 0;
+        }
+        .bonus-money-icon {
+            background-position: 0 -77px;
+        }
+        .balance-icon {
+            background-position: 0 -156px;
+            height: 45px;
+        }
+        .my-points-icon {
+            background-position: -71px 0;
+            width: 35px;
+        }
+        .lvlup-points-icon {
+            background-position: -106px 0;
+            width: 39px;
+        }
+        .money-panel {
+            font-weight: 600;
+            font-size: 14px;
+            text-align: left;
+            padding: 0 15px;
+        }
+        .money-string {
+            font-weight: 700;
+            font-size: 20px;
+            text-align: right;
+            display: inline-block;
+            position: relative;
+            top: 17px;
+        }
+        .money-string.balance {
+            font-size: 24px;
+            font-weight: 700;
+
+        }
+        .dots {
+            display: inline-block;
+            color: #E4E4E4;
+            position: relative;
+            left: 15px;
+            top: -4px;
+        }
+        .bigPlus, .bigEqual {
+            width: 100%;
+            font-size: 35px;
+            text-align: right;
+            padding: 13px 15px;
+            color: @color-base-one;
+            line-height: 23px;
+            margin-bottom: -18px;
+        }
+    }
+    .content {
+        padding: 0;
+        .left-part {
+            .link {
+                width: 100%;
+                display: block;
+                padding: 16px;
+                text-decoration: none;
+                border: 1px solid @light-gray;
+                color: @text-grey;
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+            .link.parent {
+                background-image: url(../images/dropdownArrow.png);
+                background-repeat: no-repeat;
+                background-position: 95% center;
+            }
+            .link.current {
+                border-left: 2px solid @color-base-one;
+                color: @color-base-one;
+                &:hover {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    .navigation {
+        .tab a {
+            border: 1px solid @light-gray;
+            border-radius: 0;
+            padding: 16px;
+
+        }
+        .tab.active a {
+            border-bottom: 2px solid @color-base-one;
+            color: @color-base-one;
+
+        }
+    }
+    .my-acc-table {
+        padding: 50px 0 0 30px;
+        position: relative;
+        .row {
+            border-bottom: 1px solid white;
+            padding: 15px 0;
+            margin: 0;
+            text-align: left;
+        }
+        .emptyRow {
+            height: 62px;
+        }
+        .filters-row {
+            padding: 0;
+            .form-group {
+                padding: 0;
+                border-right: 1px solid white;
+                .border-radius();
+                position: relative;
+                label {
+                    margin: 0;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #555;
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                }
+                input {
+                    width: 100%;
+                    border: none;
+                    background-color: @light-gray;
+                    color: #555;
+                    height: 30px;
+                    padding: 0 10px;
+                    border-radius: 0;
+                }
+
+                input.from {
+                    padding-left: 47px;
+                }
+                input.to {
+                    padding-left: 27px;
+                }
+                .select-box-arrow {
+                    margin: 0;
+                    width: 100%;
+                    select {
+                        width: 100%;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        text-indent: 1px;
+                        text-overflow: '';
+                        padding: 0 10px;
+                        font-style: normal;
+                        padding-right: 27px;
+                    }
+                    .fillter-by {
+                        padding-left: 64px;
+                    }
+                    .items {
+                        padding-left: 46px;
+                    }
+                }
+                .input-group-btn {
+                    visibility: hidden;
+                    top: -3px;
+                }
+            }
+        }
+        .headers-row {
+            color: @color-base-one;
+            background-color: #f2f7fb;
+            text-align: left;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .data-row {
+            background-color: white;
+            text-align: left;
+            border-bottom: 2px solid #f2f7fb;
+            position:static !important;
+
+            .glyphicon.glyphicon-chevron-down{
+                color: @color-base-one;
+                font-size: 15px;
+            }
+
+            .status {
+                background: @light-gray;
+                color: #D3D3D3;
+                padding: 5px;
+                text-align: center;
+                border-radius: 5px;
+            }
+            .status.active {
+                background: @color-base-one;
+                color: white;
+                padding: 5px;
+                text-align: center;
+                border-radius: 5px;
+            }
+            .text-left {
+                margin-left: 5px;
+            }
+            .lottery-name {
+                font-weight: 800;
+            }
+            .red {
+                color: #F23535;
+                font-weight: 600;
+            }
+            .draws-left {
+
+                span {
+                    display: inline;
+                    float: left;
+                }
+            }
+
+            .opened-product {
+                text-align: left;
+                background: @light-blue;
+
+                .lines-left {
+                    text-align: center;
+                }
+                .headers-row {
+                    background: none;
+                    color: @color-base-one;
+                }
+                .data-row {
+                    text-align: left;
+                    border-bottom: none;
+                    background: @light-blue;
+                    .personal-lines {
+                        text-align: left;
+                    }
+                    .lotteries {
+                        img {
+                            width: 35px;
+                            height: 30px;
+                        }
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                    .see-numbs {
+                        background: white;
+                        color: @color-base-one;
+                        border: 1px solid @color-base-one;
+                        padding: 5px;
+                        text-align: center;
+                        border-radius: 5px;
+                        margin-left: 10px;
+                        background: @light-blue;
+                        font-size: 13px;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                    .group-part {
+                        float: right;
+                        height:75px;
+                        position:absolute;
+                        top:0;
+                        right:0;
+                        bottom:0;
+                        z-index:100;
+                        margin:auto;
+                        div {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .product-info {
+                    padding: 15px;
+                    .text {
+                        background: white;
+                        padding: 10px;
+                        padding-left: 100px;
+                    }
+                    .icon {
+                        float: left;
+                        // width: 85px;
+                        width: 100px;
+                        height: 85px;
+                        background: white;
+                        // background: url('../images/ice-platimun-icon.png') center center no-repeat;
+                    }
+                }
+            }
+        }
+        .pagination-holder {
+            -webkit-box-align:center;
+            -webkit-box-pack:center;
+            display:-webkit-box;
+           .pagination {
+                * {
+                    border: 0;
+                }
+           }
+           .current {
+               text-align: center;
+           }
+        }
+
+    }
+    #my-tickets {
+        .my-acc-table {
+            .headers-row {
+                background: #f2f7fb;
+                color: @color-base-one;
+            }
+            .data-row {
+                text-align: center;
+                .glyphicon.glyphicon-chevron-down {
+                    margin-right: 15px;
+                }
+                .opened-ticket {
+                    background: #f2f7fb;
+                    padding-top: 0;
+                }
+                .scanned-small {
+                    color: @color-base-one;
+                    font-weight: 600;
+                    text-align: left;
+                    img {
+                        width: 50px;
+                        height: 70px;
+                    }
+                    .zoom-icon {
+                        width: 23px;
+                        height: 23px;
+                    }
+                }
+                .headers-row {
+                    background: #f2f7fb;
+                    color:@color-base-one;
+                }
+            }
+        }
+    }
+    #my-profile {
+        .my-acc-details {
+            padding: 30px;
+            .title {
+                font-size: 14px;
+                font-weight: bold;
+                margin-left: 15px;
+            }
+            .details-form.change-pass{
+              .success-msg{
+                  position: absolute;
+                  top: -14px;
+              }
+            }
+            .details-form {
+                max-width: 525px;
+
+                .spin-loader-inline-block{
+                    top: 3px;
+                    left: initial;
+                    margin-left: 10px;
+                    position: absolute !important;
+                }
+                .form-group {
+
+                    input.btn.disabled {
+                        text-align: left;
+                    }
+                    .has-error{
+                        position: absolute;
+                    }
+                    margin-bottom: 75px;
+                    min-height: 1px;
+                    label, .label-custom {
+                        margin: 0;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #B1B1B2;
+                    }
+                    input {
+                        width: 100%;
+                        border: none;
+                        background-color: @light-gray;
+                        color: #555;
+                        height: 35px;
+                        padding: 0 10px;
+                    }
+                    .select-box-arrow {
+                        margin: 0;
+                        width: 100%;
+                        select {
+                            width: 100%;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            text-indent: 1px;
+                            text-overflow: '';
+                            font-style: normal;
+                        }
+                    }
+                }
+                .form-group.second {
+                    margin-left: 15px;
+                    margin-bottom: 20px;
+                    .select-box-arrow {
+                        width: 32%;
+                    }
+                }
+                .form-btn-group {
+                    margin-left: 15px;
+                    button {
+                        margin-top: 5px;
+                        width: 125px;
+                        height: 30px;
+                        border-color: @color-base-one;
+                        color: @color-base-one;
+                        padding: 0
+                    }
+                }
+            }
+        }
+        .change-pass {
+            .details-form {
+                width: 250px;
+                .form-group {
+                    margin-bottom: 15px !important;
+                }
+                .form-btn-group {
+                    margin-left: 0;
+                    button {
+                        width: 100px;
+                    }
+                }
+                .show-pass {
+                    transition: 0s;
+                    height: 30px;
+                    padding-left: 20px;
+                    position: absolute;
+                    left: 105%;
+                    top: 25px;
+                    background: url('../images/eye.png') no-repeat;
+                    background-position: left center;
+                    line-height: 10px;
+                }
+            }
+        }
+    }
+    #my-transactions {
+        .headers-row{
+            margin-top: -20px;
+        }
+        .filters-row {
+            padding: 10px;
+            background: #f2f7fb;
+
+            .filter-holder {
+                display: inline-block;
+                float: left;
+                margin-right: 11px;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                label {
+                    float: left;
+                    margin: 5px 3px 0 0;
+                }
+                .btn-subs{
+                    padding: 0 7px;
+                }
+                .btn-group.dropdown {
+                    min-width: 133px;
+                    ul  {
+                        min-width: 133px;
+                    }
+                }
+            }
+            .filter-holder.special {
+                .form-group {
+                    width: 90px;
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle;
+                    input {
+                        padding: 0 7px;
+                    }
+                }
+            }
+        }
+        .withdraw-request {
+
+            .spin-loader-inline-block{
+                top: 10px;
+                margin-left: 8px;
+            }
+            padding: 40px 30px 75px 30px;
+            .text {
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 65px;
+            }
+            .choose-amount {
+                margin-bottom: 20px;
+            }
+            .amount-option {
+                background-color: @light-gray;
+                text-align: center;
+                padding: 20px;
+                font-size: 19px;
+                border: 1px solid white;
+                cursor: pointer;
+                margin-bottom: 20px;
+                &:hover {
+                    background-color: @color-base-one;
+                    color: white;
+                    input {
+                        color: black;
+                    }
+                }
+            }
+            .amount-option.jackpot {
+                color: @color-base-two;
+                &:hover {
+                    color: white;
+                    background-color: @color-base-two;
+                }
+            }
+            .amount-option.input{
+                padding: 19px 0;
+                input {
+                    width: 80px;
+                    background: white;
+                    border: none
+                }
+            }
+            .more-amounts {
+                a {
+                    text-decoration: underline;
+                    margin-right: 15px;
+                    cursor: pointer;
+                }
+            }
+
+            .balance-holder {
+                margin-top: 70px;
+                font-size: 14px;
+                font-weight: 600;
+                div {
+                    padding: 0;
+                }
+                .balance span{
+                    color: @color-base-one;
+                }
+                input {
+                    border-radius: 5px;
+                    border: 1px solid #DCDCDC;
+                    background: none;
+                    width: 70px;
+                    height: 30px;
+                    margin-bottom: 20px;
+                    padding: 0 5px;
+                    color: @color-base-one;
+                }
+                textarea {
+                    border-radius: 5px;
+                    border: 1px solid #DCDCDC;
+                    background: none;
+                    resize: none;
+                    height: 115px;
+                }
+                .withdraw-btn {
+                    width: 155px;
+                    height: 30px;
+                    display: inline-block;
+                    line-height: 5px;
+                    font-size: 14px;
+                    text-align: center;
+                    text-transform: none;
+                }
+            }
+        }
+    }
+    #my-payment-methods {
+        .data-row {
+            padding: 20px 0 !important;
+            min-height: 62px;
+        }
+        #my-active-payment-methods, #my-inactive-payment-methods {
+            padding: 30px;
+        }
+        h4 {
+            font-weight: bold;
+        }
+        .my-acc-table {
+            padding: 0;
+        }
+        .btn-update {
+            background-repeat: no-repeat;
+            background-position: 5px center;
+        }
+        .amount-option {
+            background-color: @light-gray;
+            text-align: center;
+            padding: 20px;
+            font-size: 19px;
+            border: 1px solid white;
+            cursor: pointer;
+            margin-bottom: 20px;
+            &:hover {
+                background-color: @color-base-one;
+                color: white;
+                input {
+                    color: black;
+                }
+            }
+        }
+        .amount-option.jackpot {
+            color: @color-base-two;
+            &:hover {
+                color: white;
+                background-color: @color-base-two;
+            }
+        }
+        .amount-option.input{
+            padding: 19px 0;
+            input {
+                width: 80px;
+                background: white;
+                border: none
+            }
+        }
+        .data-row.btn {
+            padding: 11px 0 48px 0 !important;
+            height: 51px;
+            border-radius: 0;
+            .btn-blue-brds {
+                padding: 4px 21px;
+                height: auto;
+                width: auto;
+                background-color: rgba(0,0,0,0);
+                border-color: @color-base-one;
+            }
+        }
+        .add-payment {
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+        .how-much {
+            margin: 10px 0;
+        }
+    }
+    .mainpaymenttabs.mainpaymenttabsexist.mainpaymenttabsdeposit{
+        padding: 20px;
+
+        #wallet-loader{
+            position: absolute !important;
+            left: 245px;
+        }
+
+        .spin-loader-inline-block{
+            margin-top: 25px;
+            margin-left: 15px;
+        }
+        .select-box-arrow {
+            width: 230px;
+            margin: 15px 0;
+            background-position: 95% center;
+            display: inline-block;
+            float: left;
+
+            select {
+                width: 100%;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                border: none;
+                text-indent: 1px;
+                text-overflow: '';
+                padding: 0 10px;
+                font-style: normal;
+            }
+        }
+        .agreement-text {
+            a {
+                text-decoration: underline;
+            }
+        }
+        #deposit {
+            width: 230px;
+            border: none;
+            background-color: #f0f0f0;
+            color: #555;
+            height: 35px;
+            padding: 0 10px;
+        }
+        input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type='number'] {
+            -moz-appearance:textfield;
+        }
+        .formpartlink {
+            margin: 15px 0 0 15px;
+            display: inline-block;
+            .add-payment {
+                width: auto;
+                height: 30px;
+                border-color: @color-base-one;
+                color: @color-base-one;
+                padding: 5px 10px;
+            }
+        }
+    }
+    @media(max-width: @screen-lg-min){
+        .money-string, .text-blue {
+            font-size: 14px !important;
+        }
+        .upperPart {
+            padding: 29px 0 35px 8px !important;
+            .current-level {
+                width: 100px;
+                float: initial;
+            }
+            .dots {
+                display: none !important;
+            }
+            .half {
+                margin-top: -20px;
+            }
+            .progress-holder {
+                margin-top: -5px;
+            }
+        }
+    }
+    @media(max-width: @screen-md-min){
+        .intro .part {
+            width: 100%;
+        }
+        .money-string, .text-blue {
+            font-size: 20px !important;
+        }
+        .dots, .vip-icon {
+            display: none !important;
+        }
+        .lowerPart {
+            margin-top: 35px;
+        }
+        .current-level {
+            font-size: 12px;
+        }
+        .next-vip-part {
+            padding: 10px 7px;
+            span {
+                font-size: 12px
+            }
+        }
+        .link {
+            font-size: 12px;
+            padding: 14px 2px;
+        }
+    }
+    @media(max-width: @screen-sm-min){
+        .dots, .vip-icon {
+            display: none !important;
+        }
+    }
+}
+.number {
+    color: @color-base-one;
+    border: 1px solid @color-base-one;
+    background: #fff;
+}
+.extraNumber {
+    color: #fff;
+    border: 1px solid @color-base-one;
+    background: @color-base-one;
+}
+.number, .extraNumber {
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    display: inline-block;
+    float: left;
+    width: 23px;
+    height: 23px;
+    line-height: 21px;
+    text-align: center;
+    font-size: 12px;
+}
+.raffleID {
+    background: @color-base-one;
+    color: white;
+    border: 1px solid @color-base-one;
+    padding: 5px;
+    text-align: center;
+    border-radius: 15px;
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.add-new-card-holder {
+    width: 100%;
+    padding: 30px;
+}
+.add-card-form-holder {
+    padding: 50px;
+    .details-form {
+        label {
+            width: 100%;
+        }
+        input {
+            background-color: @light-gray;
+            border: none;
+            color: #555;
+            padding: 0 10px;
+            height: 35px;
+        }
+        .btn-green {
+            width: 180px;
+            font-size: 14px;
+        }
+    }
+}
+.browser-gecko {
+    .lowerPart {
+        width: 100.1% !important;
+    }
+}
+.scanned-ticket {
+    .modal-dialog  {
+        width: 355px;
+    }
+    .modal-content {
+        background-color: rgba(255,255,255,0);
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        border: none;
+        button {
+            cursor: default;
+            -webkit-appearance: none;
+            border: none;
+            background-color: rgba(1,1,1,0);
+            color: white;
+            font-size: 26px;
+        }
+        .close {
+            text-align: right;
+            color: white;
+            font-size: 18px;
+            opacity: 100;
+        }
+        .img-number {
+            color: white;
+            font-size: 18px;
+            margin-left: 32px;
+        }
+    }
+}

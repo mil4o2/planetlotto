@@ -1,0 +1,6 @@
+<button class="roundBorder-btn sidebar-btn loader-circle" ng-click="onQuickPick()"><div class="quick-pick-icon sidebar-icon"></div>{{::translation.QuickPick}}</button>
+<div class="circle-animation" ng-if="showCircleAnim" ng-click="onQuickPick()">
+    <div class="loader-line"></div>
+</div>
+<button class="roundBorder-btn sidebar-btn" ng-click="saveAndGoToCart()"><div class="quick-checkout-icon sidebar-icon"></div>{{::translation.Quick_Checkout}}</button>
+<button class="roundBorder-btn sidebar-btn add-remove" ng-click="onClickMoreLessBtn()"><div class="{{moreLines?'removelines-icon': 'addlines-icon'}} sidebar-icon"></div>{{moreLines ? translation.Remove_Lines : translation.Add_Lines}} </button>

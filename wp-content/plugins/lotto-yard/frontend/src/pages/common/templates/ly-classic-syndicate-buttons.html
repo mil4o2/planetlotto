@@ -1,0 +1,6 @@
+<div id="group-classic-buttons" class="col-xs-12 no-padd text-center">
+	<button ng-click="changeCarousel(true)" class="lotterie-types classic-type" ng-class="{'selectedTab':isClassicTab, 'deselectedCTab':!isClassicTab}">{{translation.Classic_Lotteries}}</button>
+	<button ng-click="changeCarousel(false)" class="lotterie-types group-type" ng-class="{'selectedTab':!isClassicTab, 'deselectedCTab':isClassicTab}">{{translation.Group_Tickets}}</button>
+	<!--<button ng-click="showCharityLotteries()" class="lotterie-types charity-type" ng-class="{'selectedTab':showCharityLotteriesOnly, 'deselectedCTab':!showCharityLotteriesOnly}">Charity Lotteries</button>-->
+	<a class="lotterie-types charity-type deselectedCTab" href="http://planetlotto.com.au/lottery-ticket/megamillions/#classic">Charity Lotteries</a>
+</div>

@@ -1,0 +1,26 @@
+<div class="ticketcontent single stabilizeminwidth" style="display: block;">
+
+
+    <div id="quick-pick-sidebar" class="fl-left" ly-select-page-classic-sidebar on-quick-pick="roundQuickPickBtnClick(numberOfQuickPick, true)" more-lines="moreLines" show-circle-anim="showCircleAnim" on-add-remove-clicked="AddRemoveLinesCLicked()"></div>
+
+    <div class="fl-left tickets-content" ng-mouseover="deselectArea()" ng-mouseout="selectArea()">
+        <div id="select-numbers">
+            {{::translation.SelectYourNumbers}}
+            <i></i>
+        </div>
+
+        <div class="pull-left max-width">
+            <div class="column col-5-tickets tickettablecolumn" ng-repeat="n in numbOfLines track by $index">
+                <div class="fl-left tickets-content-inner" ly-select-page-line line-number="n"></div>
+            </div>
+        </div>
+        <div id="moreLines" class="content more" ng-if="moreLines">
+            <div class="column col-5-tickets tickettablecolumn" ng-repeat="n in nextLines track by $index">
+                <div ly-select-page-line line-number="n"></div>
+            </div>
+        </div>
+        <div class="empty-space" ng-if="!moreLines"></div>
+    </div>
+</div>
+
+<div ly-select-page-main-footer></div>

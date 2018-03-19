@@ -1,0 +1,283 @@
+@import 'functions.less';
+
+#play-lottery-page{
+	background: #fff;
+    margin-top: -20px;
+	// padding-top: 10px;
+	padding-bottom: 20px;
+
+  	#sort-by{
+	  @media (min-width: @screen-width-min-lg){
+		margin-top: 7px;
+	  }
+	}
+
+
+	.lotterie-types{
+		font-size: 16px;
+	  	max-width: 220px;
+	  	padding: 6px 12px 6px 55px;
+
+	  & + .lotterie-types {
+		margin-left: 15px;
+	  }
+
+	  .charity-type{
+		background-size: 35px auto;
+		background-position: 15px center;
+	  }
+	  .classic-type,
+	  .group-type{
+		background-position: 20px center;
+		background-size: 25px auto;
+	  }
+	}
+	.page-content{
+		color: @text-grey;
+		@media(min-width: @screen-sm-min){
+			padding-right: 8px;
+		}
+		padding-bottom: 30px;
+
+		span{
+			font-size: 14px;
+		}
+
+	}
+	h1, .h2, .h3{
+		font-size: 33px;
+		float:left;
+		width: 100%;
+		font-weight: 100;
+
+	}
+
+	#group-classic-buttons{
+		padding: 0;
+		position: relative;
+	  	margin-bottom: 0;
+    	//bottom: -50px;
+		@media (min-width: @screen-sm-min) and (max-width: @screen-width-min-lg){
+		  margin-top: 27px;
+		}
+		@media(min-width: @screen-sm-min){
+			padding-right: 8px;
+		}
+	}
+
+	.select-box-arrow{
+		width: 155px;
+		select{
+			float: left;
+			width: 186px;
+		}
+	}
+	label.f-12{
+		color: @text-grey;
+		font-weight: normal;
+		line-height: 30px;
+		padding-right: 5px;
+
+	}
+	.lottery-box.american-group{
+		background: url('../images/american-group-flag.jpg') no-repeat top right #fff;
+	}
+	.lottery-box.euro-group{
+		background: url('../images/euro-group-flag.jpg') no-repeat top right #fff;
+	}
+	.lottery-box.jackpot-hunter{
+		background: url('../images/jackpot-hunter-flag.jpg') no-repeat top right #fff;
+	}
+	.lottery-box{
+		border: 1px solid #ededed;
+		margin: 0 8px 8px 0;
+		background: #fff;
+		padding: 15px;
+		overflow: hidden;
+		color: #555658;
+
+
+	    .transition(all .2s ease-in-out);
+
+
+
+	    &:hover{
+	    	z-index: 3;
+	    	position: relative;
+	      .transform(scale(1.05));
+	      .box-shadow(0px 0px 15px 0px rgba(0,0,0,0.25));
+	    }
+
+
+
+
+
+		p:first-child{
+			font-size: 16px;
+			padding-top: 15px;
+		}
+
+		.timer{
+			color: @color-base-one;
+		}
+		.jackpot{
+			font-size: 36px;
+			font-weight: bold;
+			line-height: 55px;
+		}
+
+		.btn-blue{
+			display: inline-block;
+			margin-left: 8px;
+		}
+
+		.btn-blue-brds, .btn-blue{
+			.border-radius();
+			font-size: 12px;
+			height: 27px;
+			line-height: 26px;
+			padding: 0 15px;
+			@media (min-width: @screen-width-min-lg) {
+				font-size: 14px;
+			}
+		}
+	}
+
+	@media (max-width:@screen-sm-min) {
+		.lottery-box{
+			text-align: center;
+			img{
+				float: none;
+				margin: 0 auto;
+			}
+			div.fl-left{
+				width: 100%;
+			}
+
+		}
+		.h2, .h3{
+			padding: 0 15px;
+		}
+	}
+
+	@media (min-width:@screen-sm-min) and (max-width: 1200px) {
+		.lottery-box{
+			font-size: 10px;
+		}
+		img{
+		    width: 30%;
+		    max-width: 100px;
+		}
+		// div.fl-left{
+		// 	width: 70%;
+		// }
+		p:first-child{
+			font-size: 10px;
+		}
+		.jackpot{
+			font-size: 24px;
+			line-height: 45px;
+		}
+
+		.btn-blue-brds, .btn-blue{
+			padding: 0 8px !important;
+		}
+	}
+
+	@media(max-width: @screen-sm-min){
+		#sort-by{
+			max-width: 272px;
+			display: block;
+			width: 100%;
+			float: none;
+			margin: 0 auto;
+		}
+		.lotterie-types, .btn-blue-brds, .btn-blue, .view-info-btn{
+
+		    float: none;
+		    margin: 0 auto !important;
+		    margin-top: 15px !important;
+		    max-width: 215px;
+		    width: 100%;
+		    display: block;
+		}
+
+	}
+}
+
+
+.modal-info-special-lotteries{
+	.modal-dialog {
+		max-width: 314px;
+
+		.modal-content{
+			padding: 20px 30px;
+			float: left;
+
+			.discount{
+				padding-right: 0;
+			}
+			.close-btn-black{
+				margin: -10px -20px;
+			}
+			.lottery-name{
+				font-size: 34px;
+				color: #000;
+				font-weight: 600;
+				line-height: 30px;
+			}
+			.lottery-type{
+				line-height: 42px;
+				font-size: 30px;
+				font-weight: 600;
+				color: @color-base-one;
+			}
+			hr{
+				margin: 10px 0;
+			}
+			.dropdown-menu{
+				max-height: none;
+			}
+			.btn-group.dropdown, .bordered-elem{
+				min-width: initial;
+				width: 100%;
+				background-color: #fff;
+				border: 1px solid #e1e1e1;
+				.border-radius(3px);
+				height: 27px;
+				line-height: 27px;
+			}
+			.btn-group.dropdown{
+				.btn-subs{
+					padding: 0 0 0 5px;
+					line-height: 27px;
+				}
+			}
+			.bordered-elem{
+				padding-left: 5px;
+			}
+			.total{
+				background: #f9f9f9;
+				padding: 0 10px;
+				height: 38px;
+				line-height: 38px;
+				margin: 30px 0 35px 0;
+				.fl-left{
+					font-size: 13px;
+				}
+				.fl-right{
+					font-size: 24px;
+					font-weight: 600;
+				}
+			}
+			.buy-btn{
+				background: @color-base-one;
+				border: none;
+				color: #fff;
+				height: 39px;
+				line-height: 39px;
+				.border-radius(4px);
+			}
+		}
+	}
+}

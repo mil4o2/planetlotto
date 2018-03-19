@@ -1,0 +1,16 @@
+<div class="lottery-box" ng-class='product.LotteryName.replace(" ", "-") | lowercase : !product.isClassicLottery'>
+    
+    <img ng-src='/wp-content/plugins/lotto-yard/frontend/images/{{::product.LotteryName.replace(" ", "-") | lowercase}}-logo.png' class="img-responsive fl-left" alt="">
+
+    <div class="special-lottery-box-text fl-left">
+        <p ng-if="product.isClassicLottery">{{::translation.Get_Tickets | uppercase}}</p>
+        <p class="lottery-name" ng-if="!product.isClassicLottery">{{product.LotteryName | uppercase}}</p>
+        <p class="jackpot"><span ng-if="product.Jackpot != '-1'">{{::product.LotteryCurrency2}}</span><span count-to="{{::product.Jackpot | jackpot}}" value="0" duration="1" class="ng-scope"></span> <span ng-show="product.Jackpot != '-1'"> {{::translation.Million}}</span>            </p>
+        <div>
+            <button class="view-info-btn fl-left" ng-click="viewMoreShowHide()"><span ng-if="!product.isClassicLottery">{{::translation.view_more}}</span>
+            <span ng-if="product.isClassicLottery">{{::translation.Info}}</span></button>
+            <button class="btn-blue" ng-click="saveToCart(defaultDraws)">{{::translation.buy_tickets}}
+                <span ng-show="product.isClassicLottery"> {{::translation.only}} {{::currency}}{{::defaultPrice | number:2}}</span></button>
+        </div>
+    </div>
+</div>

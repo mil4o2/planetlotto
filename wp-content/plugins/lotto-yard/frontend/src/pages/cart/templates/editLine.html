@@ -1,0 +1,47 @@
+﻿<div class="edit-ticket">
+    <div class="column col-5-tickets tickettablecolumn">
+        <div class="fl-left tickets-content-inner">
+
+            <div class="arrows pointer next glyphicon glyphicon-menu-left" ng-click="changeLine(-1)"></div>
+            <div class="arrows prev pointer glyphicon glyphicon-menu-right" ng-click="changeLine(1)"></div>
+
+            <div class="quickpick-per-ticket clearfix">
+                <div ng-click="quickpick()" class="button-quickpickall button bg-color-active"></div>
+                <div ng-click="clearLine(line)" class="button-quickclearall button bg-color-active"></div>
+            </div>
+
+            <div class="text-holder">
+
+                <p class="complete-pickmore">{{picksLeft!=0 ? translation.Pick +' '+ picksLeft +' '+ (picksLeft ==1?translation.Number :translation.Numbers) : translation.Complete}}</p>
+            </div>
+
+            <div class="numbers">
+                <div class="number" ng-repeat="number in selectedNumbers" ng-class="{selected: number.isSelected ==  1}" ng-click="clickNumber(number, true)">
+                    {{number.id}}
+                </div>
+            </div>
+
+            <div class="text-holder">
+                <div class="complete-pickmore" ng-show="selectedNumbersExtra.length">
+                    <span>{{extraNumbersPicksLeft==0? translation.Complete :  translation.Pick + ' ' +extraNumbersPicksLeft + ' ' + item.getLotteryName() + '*'}}</span>
+                </div>
+            </div>
+            <div class="extraNumbers">
+                <div class="number" ng-repeat="number in selectedNumbersExtra" ng-class="{selected: number.isSelected ==  1}" ng-click="clickNumber(number, false)">
+                    {{number.id}}
+                </div>
+                <div class="qp-brn-bot btn-blue" ng-click="quickpick()">{{::translation.Quick_Pick}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 no-padd">
+        <button class="ticketbutton pointer" ng-click="closeThisDialog('Some value')">
+            {{::translation.Cancel}}
+        </button>
+        <button class="ticketbutton pointer save" ng-disabled="!isChanged" ng-click="isValidExtraLine && isValidSelectLine && checkInput(line) && closeThisDialog('Some value')">
+            {{::translation.Save}}
+        </button>
+        <div class="clear"></div>
+    </div>
+</div>

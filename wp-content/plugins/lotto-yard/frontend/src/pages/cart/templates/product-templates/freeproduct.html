@@ -1,0 +1,38 @@
+﻿<!-- Mobile -->
+<p class="mobile ticket-title-name visible-xs">{{::translation.free_ticket_title}}</p>
+<!-- End mobile -->
+<div class="free-ticket">
+    <div class="delete-container"></div>
+    <div class="lottery-image">
+        <span class="helper"></span>
+        <img ng-src="/wp-content/plugins/lotto-yard/frontend/images/megamillions-logo.png" alt="">
+    </div>
+    <div class="right-part">
+        <p class="ticket-title-name hidden-xs">{{::translation.free_ticket_title}}
+            <span class="price-ticket">{{::translation.Free}}</span>
+        </p>
+        <!--This is here empty for alignment-->
+        <div class="subscription-container-free"></div>
+
+        <div class="fl-left col-xs-12 lines-draws-container">
+            <div class="fl-left col-xs-12 no-padd">
+                <p class="mobile-lines-draws-text text-center text-uppercase f-12">{{::translation.Share}}</p>
+                <div class="lines-draws">
+                    <p class="fl-left text-center" ng-value="value" ng-disabled="true"> 1 </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fl-left col-xs-12 lines-draws-container">
+            <div class="fl-left col-xs-12 no-padd">
+                <p class="mobile-lines-draws-text text-center text-uppercase f-12">{{::translation.Draw}}</p>
+                <div class="lines-draws">
+                    <p class="fl-left text-center" ng-value="value" ng-disabled="true"> 1 </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="fl-left" ly-details-item></div>
+</div>

@@ -1,0 +1,91 @@
+<div id="my-tickets">
+    <div class="my-acc-table">
+        <div class="headers-row row">
+            <div class="col-xs-2">
+                <span>{{translation.Ticket_Status}}</span>
+            </div>
+            <div class="col-xs-2">
+                <span>{{translation.Lottery}}</span>
+            </div>
+            <div class="col-xs-2">
+                <span>{{translation.Country}}</span>
+            </div>
+            <div class="col-xs-2">
+                <span>{{translation.Ticket_Type}}</span>
+            </div>
+            <div class="col-xs-2">
+                <span>{{translation.Draw_Date}}</span>
+            </div>
+
+            <div class="col-xs-2">
+                <span>{{translation.Winning_Amount}}</span>
+            </div>
+
+        </div>
+        <div class="data-row row" ng-repeat="ticket in tickets">
+            <div class="row" ng-click="isVisible = !isVisible">
+                <div class="col-xs-2"><span ng-if="todayDate < ticket.DrawDate">{{ticket.Status}}</span></div>
+                <div class="col-xs-2">{{ticket.LotteryName}}</div>
+                <div class="col-xs-2">{{ ticket.CountryName}}
+                    <!-- <span>{{ ticket.CountryCode.toLowerCase() }}</span> -->
+                    <!-- <span class="iti-flag {{ticket.CountryCode.toLowerCase()}}"></span> {{ticket.CountryName}} -->
+                </div>
+                <div class="col-xs-2">
+                    <span ng-if="ticket.IsFree">{{::translation.Free}}</span>
+                    <span ng-if="!ticket.IsFree">{{::ticket.IsSyndicate ? translation.Group : translation.Classic}}</span>
+                </div>
+                <div class="col-xs-2">{{ticket.DrawDate | date:'dd/MM/yyyy'}}</div>
+                <div class="col-xs-2">{{ticket.Winning !=0? ticket.Winning: ''}}
+                    <!-- <div class="fl-right glyphicon glyphicon-chevron-down"></div>       -->
+                    <div class="arrow-down fl-right"></div>
+                </div>
+            </div>
+
+            <div ng-if="isVisible" class="row opened-ticket">
+                <div class="headers-row row">
+                   <!-- <div class="col-xs-4">{{translation.Line_One}}</div> -->
+                   <div class="col-xs-4">{{translation.Draw_Results}}</div>
+                    <div class="col-xs-4">{{ticket.IsSyndicate ? translation.Shares : translation.Numbers}}</div>
+                    <div class="col-xs-4">{{translation.Ticket_Scan}}</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col-xs-4">{{!ticket.IsFree? translation.Free_Ticket : ticket.IsSyndicate ? translation.Group : translation.Classic}}</div> -->
+                    <div class="col-xs-4">{{ticket.WinningResult}}</div>
+
+                    <div class="col-xs-4 ticket-number" ng-if="!ticket.IsSyndicate">
+                        <span class="number selected" ng-repeat="selected in getNumbers(ticket, 0)">{{selected}}</span>
+                        <span class="extraNumber selected" ng-repeat="extra in getNumbers(ticket,1)">{{extra}}</span>
+                    </div>
+
+                    <div class="col-xs-4" ng-if="ticket.IsSyndicate">
+                        <span class="number selected">{{translation.Shares}} {{ticket.SharesCount}}</span>
+                    </div>
+
+                    <div class="col-xs-4 scanned-small">
+                        <span ng-if="ticket.ScanImageUrls.length" ng-click="openTickets(ticket.ScanImageUrls)">
+                            <img ng-src="{{ticket.ScanImageUrls[0]}}" >
+                            <img ng-src="/wp-content/plugins/lotto-yard/frontend/images/zoom-icon.png" alt="zoom" class="zoom-icon">
+                            {{::translation.Zoom}}
+                        </span>
+                        <span ng-if="!ticket.ScanImageUrls.length">
+                            {{translation.Scanning}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="pagination-holder row">
+            <div class="col-xs-1">
+                <button class="btn btn-default" ng-click="changePage(-1)" ng-disabled="currentPage==1"><</button>
+            </div>
+            <div class="col-xs-1 current">{{currentPage}}</div>
+            <div class="col-xs-1">
+                <button class="btn btn-default" ng-click="changePage(1)" ng-disabled="tickets.length==0">></button>
+            </div>
+        </div> -->
+        <div class="pagination-holder col-xs-12">
+            <ul uib-pagination total-items="40 * ticketsPageCount" ng-model="currentPage" max-size="3" ng-change="changePage(currentPage)"
+                    boundary-links="false" direction-links="true" previous-text="<" next-text=">"></ul>
+        </div>
+    </div>
+</div>

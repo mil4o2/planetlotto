@@ -1,0 +1,19 @@
+<div class="drawoption">
+    <div class="multidraw col-xs-6 col-sm-5 col-md-5 col-lg-6" ng-class="{'grey-disabled': isSubscription }">
+        <p class="drawoption-title">
+            {{::translation.ChooseDraws}}:
+        </p>
+        <div class="number-draws-select">
+            <div class="number-draws-btns minus" ng-click="changeMultiDraw(-1)"></div>
+            <span class="number-draws">{{selectedmultiOptions.NumberOfDraws}}</span>
+            <div class="number-draws-btns plus" ng-click="changeMultiDraw(1)"></div>
+            <!--<div class="discount-text">{{selectedmultiOptions.Discount*100}}% Discount {{::ngCart.getCurrency()}}{{pricePerLine | number:2}} / {{::translation.Line}}-->
+            <!--</div>-->
+        </div>
+        <!--<div class="ly-winning-chances"></div>-->
+        <!--<div class='winning-chanses'>{{::translation.winningChances}}</div>-->
+    </div>
+
+    <div ly-select-page-total></div>
+</div>
+</div>

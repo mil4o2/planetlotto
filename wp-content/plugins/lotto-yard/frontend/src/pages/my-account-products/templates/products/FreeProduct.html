@@ -1,0 +1,10 @@
+<div>{{product.SyndicateShares}} {{translation.Shares}}</div>
+<div ng-repeat="line in product.Lotteries track by $index">
+    <span ng-repeat="number in line.selectedNumbers track by $index">
+        {{number}}
+    </span>
+    <span ng-repeat="extraNumber in line.extraNumbers track by $index">
+        {{extraNumber}}
+    </span>
+</div>
+<div>{{product.TotalDraws}} {{translation.Draws}}</div>

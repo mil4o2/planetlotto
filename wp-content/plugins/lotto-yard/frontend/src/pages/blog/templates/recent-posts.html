@@ -1,0 +1,12 @@
+<div class="recent-posts">
+    <h3>Recent Posts</h3>
+    <div class="news-block text-left clearfix" ng-repeat="news in allBlogs | startFrom:0 | limitTo:3">
+	    <div class="news-img" ng-if="news._embedded['wp:featuredmedia'][0].source_url">
+	        <img ng-src="{{::news._embedded['wp:featuredmedia'][0].source_url}}" alt="Post Image">
+	    </div>
+        <a href="{{::news.link.toLowerCase()}}">
+            <p class="news-title">{{::news.title.rendered}}</p>
+            <!--<p class="news-date">{{::news.date | date : 'dd MMMM yyyy' }}</p>-->
+        </a>
+    </div>
+</div>

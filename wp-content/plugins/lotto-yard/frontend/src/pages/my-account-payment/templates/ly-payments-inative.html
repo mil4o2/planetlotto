@@ -1,0 +1,30 @@
+<div id="my-inactive-payment-methods">
+    <h4>{{::translation.My_Inactive_Cards}}:</h4>
+    <div class="my-acc-table no-padd" ng-if="inactivePayments.length > 0">
+        <div class="max-width" ng-repeat="payment in inactivePayments track by $index" ng-class="{'col-md-12 no-padd': !payment.IsExpired}">
+            <!-- {{$index}} -->
+            <span class="data-row row col-md-3">{{payment.CardType +" (**********" + payment.CreditCardNumber + ')'}}</span>
+            <span class="data-row row col-md-3 text-right">{{!payment.IsExpired? translation.Active: translation.Inactive}}</span>
+            <span class="col-md-6 emptyRow"></span>
+
+            <!-- <div class="data-row row col-md-2 btn">
+                <button class="btn btn-blue-brds" ng-click="setDefaultCreditCard(payment)" ng-if="payment.IsDefault || !payment.IsExpired">{{payment.IsDefault? translation.Default: translation.Set_As_Default}}</button>
+            </div>
+            <div class="data-row row col-md-2 btn">
+                <button class="btn btn-blue-brds" ng-if="!payment.IsExpired || payment.IsDefault" ng-click="update(payment)" ng-disabled="payment.IsExpired">{{::translation.Update}}</button>
+            </div>
+            <div class="data-row row col-md-2 btn">
+                <button class="btn btn-blue-brds" ng-click="deletePaymentMethod(payment)" ng-if="!payment.IsExpired && !payment.IsDefault">{{translation.Delete}}</button>
+            </div> -->
+        </div>
+
+        <div ng-bind="resultMessage"></div>
+        <div ng-bind="errorMessage"></div>
+    </div>
+    <div ng-if="allPaymentMethods.length == 0">
+        <!--<ng-include src="'/wp-content/plugins/lotto-yard/frontend/src/pages/common/templates/ly-credit-card-user-data.html'"></ng-include>-->
+        <div ly-edit-add-payment error="error" show-login-loader="showLoginLoader" edit-add-credit-card="editAddCreditCard(creditcard)" creditcard="creditcard" is-update="isUpdate"></div>
+    </div>
+    <button class="add-payment btn btn-blue-brds" ng-click="popUpAddPayment()">{{::translation.Add_Payment_Method}}</button>
+    
+</div>

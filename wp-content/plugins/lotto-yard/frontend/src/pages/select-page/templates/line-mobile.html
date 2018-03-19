@@ -1,0 +1,45 @@
+<div class="line-mobile">
+    <div class="play" ng-click="showAllNumbersBool = true">
+        <div class="play-a">{{::translation.Play}} {{lineNumber}}</div>
+        <div class="edit" ng-click="showAllNumbers(lineNumber)">{{::translation.edit}}</div>
+    </div>
+
+    <div ng-if="pickedNumbers.length > 0" class="numbers-holder" ng-click="showAllNumbers(lineNumber)">
+        <div class="numbers">
+            <div class="number selected" ng-repeat="number in pickedNumbers track by $index">{{number}}</div>
+        </div>
+        <div class="special-numbers">
+            <div class="special-number selected" ng-repeat="number in pickedSpecialNumbers track by $index">{{number}}</div>
+        </div>
+    </div>
+    <!-- Emprty numbers for empty lines -->
+    <div ng-if="pickedNumbers.length <= 0" class="numbers-holder emptyLines" ng-click="showAllNumbers(lineNumber)">
+        <div class="numbers">
+            <div class="number selected" ng-repeat="number in [].constructor(lotteryRules.MaxSelectNumbers) track by $index"></div>
+        </div>
+        <div class="special-numbers">
+            <div class="special-number selected" ng-repeat="number in [].constructor(lotteryRules.MaxExtraNumbers) track by $index"></div>
+        </div>
+    </div>
+    <div class="delete" ng-click="clearLine(lineNumber)"></div>
+</div>
+<!--Line Expanded -->
+<div class="numbersHidden" ng-show="showAllNumbersBool">
+    <div class="line-header">
+        <div id="quickpickIndex{{lineNumber}}" ng-click="onQuickPickClicked(lineNumber)" class="button-quickpickall button bg-color-active col-xs-3 no-padd-m">Quick Pick</div>
+        <div ng-if="!isCorrect" class="pick-numbers col-xs-6 no-padd-m">{{::translation.Pick}} {{::lotteryRules.MaxSelectNumbers}} {{::translation.Numbers}}</div>
+        <div ng-if="isCorrect" class="pick-numbers col-xs-6 no-padd-m">{{::translation.Complete}}</div>
+        <div class="closeAllNumbs glyphicon glyphicon-remove" ng-click="showAllNumbersBool = false"></div>
+    </div>
+    <div class="numbers" is-regular-number="true">
+        <div ng-repeat="n in selectNumbers track by $index" class="number" ng-click="onNumberClicked(n, true, $event)">{{::n}}</div>
+    </div>
+
+    <div>
+        <div ng-if="!isCorrect" class="pick-special-numbers">{{::translation.Pick}} {{::lotteryRules.MaxExtraNumbers}} {{::lotteryRules.LotteryType}}</div>
+        <div ng-if="isCorrect" class="pick-special-numbers">{{::translation.Complete}}</div>
+    </div>
+    <div class="extraNumbers" ng-show="lotteryRules.MaxExtraNumbers > 0" is-regular-number="false">
+        <div ng-repeat="n in extraNumbers track by $index" class="number" ng-click="onNumberClicked(n, false, $event)">{{::n}}</div>
+    </div>
+</div>

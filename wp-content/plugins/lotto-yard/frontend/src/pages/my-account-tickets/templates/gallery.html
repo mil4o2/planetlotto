@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-xs-6 close" ng-click="closeModal()">X</div>
+</div>
+<div>
+    <button ng-click="changeImage(index, -1)" ng-disabled="index==0"> < </button>
+    <img src="{{images[index]}}">
+    <button ng-click="changeImage(index, 1)" ng-disabled="index==(images.length-1)"> > </button>
+</div>
+<div class="row">
+    <div class="col-xs-6 img-number">{{::translation.Tickets}} {{index+1}} of {{images.length}}</div>
+</div>

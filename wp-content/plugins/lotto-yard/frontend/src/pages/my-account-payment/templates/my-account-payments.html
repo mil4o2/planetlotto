@@ -1,0 +1,13 @@
+<div id="my-payment-methods" ng-if="allPaymentMethods.length > 0">
+    <uib-tabset class="navigation" active="activeJustified" justified="true">
+        <uib-tab class="tab" index="0" heading="{{::translation.Active_Cards}}">
+            <ly-payments-active/>
+        </uib-tab>
+        <uib-tab class="tab" index="1" heading="{{::translation.Inactive_Cards}}">
+            <ly-payments-inactive/>
+        </uib-tab>
+    </uib-tabset>
+
+</div>
+
+<ly-payments-active ng-if="allPaymentMethods.length == 0" />

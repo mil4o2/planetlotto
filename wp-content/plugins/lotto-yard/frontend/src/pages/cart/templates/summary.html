@@ -1,0 +1,90 @@
+<!-- <div class="paymentheadercontrol left blue-btn" ng-init="summaryActive = false">
+    <div class="pricecart" ng-mouseover="summaryActive = true" ng-mouseleave="summaryActive = false"> -->
+<div id="close-popup" class="paymentheadercontrol left blue-btn" ng-click="$event.stopPropagation();">
+    <div class="pricecart">
+
+        <div class="cartpopup" ng-class="userService.isLogin ? 'loggedin' : 'loggedout'">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="cartpopuptitlearea">
+                        <h2>
+                            {{::translation.Your_cart}}
+                        </h2>
+                        <div class="close ddown-cls" ng-click="closePopup()"></div>
+                    </div>
+                </div>
+
+                <div class="cartpopupcontentarea row">
+                    <div class="cartpopupcontentareapart cartpopupcontentarealeft container-fluid">
+
+                    </div>
+                    <div class="cartpopupcontentareapart cartpopupcontentarearight container-fluid" ng-show="lyCart.getTotalItems() === 0 && !showFreeTicket">
+                        <p class="cartempty">
+                            {{::translation.Empty_Cart}}
+                        </p>
+                    </div>
+                    <div class="cartpopupcontentareapart cartpopupcontentarearight container-fluid">
+                        <div class="drawstablerow row" ng-show="showFreeTicket">
+                            <div class="col-xs-3 no-padd-m">
+                                <div class="drawstablerowlogo drawstablerowlogo megamillions">
+                                    <div class="drawtableinner drawtableinner megamillions"></div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 no-padd-m">
+                                <div class="drawname">
+                                    <span>{{::translation.free_ticket_title}}</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 no-padd-m">
+                                <div class="pricecol">
+                                    <span>{{::lyCart.getCurrency()}} {{::0|number:2}}</span>
+                                </div>
+                                <div class="icondel">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="drawstablerow row" ng-repeat="item in lyCart.getItems() track by $index" ng-hide="$index > 10">
+                            <div class="col-xs-3 no-padd-m">
+                                <div class="drawstablerowlogo drawstablerowlogo {{item.getLotteryName() | lowercase}}">
+                                    <div class="drawtableinner drawtableinner {{item.getLotteryName() | lowercase}}"></div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 no-padd-m">
+                                <div class="drawname">
+                                    <span>{{item.getLotteryName()}} {{::translation.Ticket}}</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 no-padd-m">
+                                <div class="pricecol">
+                                    <span>{{lyCart.getCurrency()}} {{item.getTotalCost() | number:2}}</span>
+                                </div>
+                                <div class="icon ">
+                                    <div ng-click="removeItem(item.getId())"> {{::translation.Delete}}</div>
+                                    <div ng-click="redirectToCart($event);"> {{::translation.change}}</div>
+                                </div>
+                            </div>
+                            <span ng-if="item.getIsRaffle()" ng-controller="RaffleCtrl" ng-init="init(item.getId())"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkoutbtnrow row" ng-show="lyCart.getTotalItems() > 0">
+                    <div id="checkout" ng-value="{{::translation.Checkout}}" ng-click="redirectToCart($event);">
+                        <div class="resultsrow" ng-show="lyCart.getTotalItems() > 0">
+                            <div class="resultsrowtotalorder">
+                                <span>{{::translation.Total_Order}}</span>
+                            </div>
+                            <div class="resultrowprice">
+                                <span>{{::lyCart.getCurrency()}} {{lyCart.getTotal() - lyCart.getReedemBonusAmount() | number:2}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="close-container" ng-click="hideFixedCartPopup()">
+                        <div class="close-btn"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End whole price cart-->

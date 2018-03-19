@@ -1,0 +1,110 @@
+<!-- Tag for Activity Group: Planet Lotto_ Secure Check Out, Activity Name: Planet Lotto_ Secure Check Out, Activity ID: 4923043 -->
+<!-- Expected URL: http://planetlotto.com.au/cart/ -->
+
+<!--
+Activity ID: 4923043
+Activity Name: Planet Lotto_ Secure Check Out
+Activity Group Name: Planet Lotto_ Secure Check Out
+-->
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Planet Lotto_ Secure Check Out
+URL of the webpage where the tag is expected to be placed: http://planetlotto.com.au/cart/
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 05/30/2017
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+jQuery( document ).ready(function() {
+    jQuery('noscript').append('<iframe src="https://6977030.fls.doubleclick.net/activityi;src=6977030;type=plane003;cat=plane0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+});
+</script>
+<noscript></noscript>
+
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+<div id="billing-page" class="fl-left no-padd">
+    <ng-include src="'/wp-content/plugins/lotto-yard/frontend/src/pages/cart/templates/common/cart-billing-header.html'"></ng-include>
+    <h1 class="col-lg-12 title f-14">{{::translation.Choose_Payment_Method}}</h1>
+
+    <div ng-if="userService.isLogin">
+        <div id="payment-methods" class="no-padd col-xs-12 col-sm-9">
+            <div class="payment-method pointer fl-left max-width hidden-xs" ng-repeat="payment in paymentSystems" ng-class="{ 'current': currentSelectedPayment==payment.name}">
+                <div class="col-lg-12" ng-if="payment.name.toLowerCase() =='creditcard' || lyCart.getAmountToPay()>0" ng-click="paymentSelect(payment)">
+                    <span class="fl-left payment-logos {{::payment.name.toLowerCase()}}-logo"></span>
+                </div>
+            </div>
+
+            <div id="mobile-payment-methods" class="btn-group fl-left visible-xs max-width" uib-dropdown>
+                <button id="btn-append-to-single-button" type="button" class="max-width btn-subs" uib-dropdown-toggle>
+                        <p ng-if="selectedmethod">{{selectedmethod.Processor}} {{selectedmethod.MethodId}}</p>
+                        <p ng-if="!selectedmethod">{{::translation.Selected_payment}}</p>
+                    </button>
+                <ul class="dropdown-menu max-width" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+                    <li class="subscriptionOption max-width" ng-repeat="payment in paymentSystems" ng-click="paymentSelect(payment)" ng-if="payment.name.toLowerCase()=='creditcard' || lyCart.getAmountToPay()>0">
+                        <span class="fl-left payment-name ">{{::payment.name.toLowerCase()}}</span>
+                        <span class="fl-left payment-logos {{::payment.name.toLowerCase()}}-logo "></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 no-padd relative">
+            <div class="loading-payment-wrapper" ng-show="showLoadingPayments && extraInfo != 'creditcard'">
+                <div class="loading-payment-mask">
+                    <div loader-css="ball-clip-rotate"></div>
+                </div>
+            </div>
+            <span class="redirect-msg" ng-if="showRedirectMsg">{{::translation.redirect_message}}</span>
+
+            <div class="fl-left max-width " ng-if="lyCart.getIframePaymentMethods().length !=0 && extraInfo=='creditcard' ">
+                <p class="title" ng-hide="showEdit">{{::translation.your_cc}}</p>
+
+                <div class="m-50-perc btn-group fl-left" ng-hide="showEdit || lyCart.getIframePaymentMethods().length == 0" uib-dropdown>
+                    <button id="btn-append-to-single-button " type="button " class="btn-subs " uib-dropdown-toggle>
+                                {{selectedmethod.Processor}} {{selectedmethod.UserNamePhoneCcNum}}
+                            </button>
+                    <ul class="dropdown-menu " uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button ">
+                        <li class="subscriptionOption " ng-repeat="item in lyPayments" ng-click="paymentMethodSelected(selectedmethod.MethodId, selectedmethod.Processor, item) ">
+                            <span>{{item.Processor}} {{item.UserNamePhoneCcNum}}</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <span class="m-50-perc btn-type-one pointer" ng-if="lyCart.getAmountToPay()>0" ng-click="editPaymentMethods()">{{showEdit ? translation.use_existing_card : translation.add_another_cc }}</span>
+
+                <div ng-show="showEdit" ly-credit-card-payment error-message="errorMessage" save-card-btn="false" submit-order-new-credit-card="submitOrderNewCreditCard(card, user)" show-login-loader="showLoginLoader" is-deposit="false"></div>
+                <div ng-show="cartAdded" class="cartAdded">{{::translation.credit_card_added}}</div>
+            </div>
+            <div ng-if="lyCart.getIframePaymentMethods().length == 0 && extraInfo=='creditcard'">
+                <div ly-credit-card-payment error-message="errorMessage" submit-order-new-credit-card="submitOrderNewCreditCard(card, user)" show-login-loader="showLoginLoader" is-deposit="false"></div>
+            </div>
+
+            <form class="details-form col-xs-6" ng-show="showAdressForm" name="updateProfileForm" novalidate="novalidate" ng-submit="UpdateProfile($event, user)" ng-model-options="{updateOn: 'blur'}">
+                <div class="form-group">
+                    <label for="City">{{::translation.City}}</label>
+                    <input name="City" type="text" required ng-model="user.City" />
+                </div>
+                <div class="form-group">
+                    <label for="Address">{{::translation.Address}}</label>
+                    <input type="text" ng-model="user.Address" only-alphabets-and-numbers required required-err-type="Please_insert_valid_address" minlength="4" maxlength="35" name="Address">
+                </div>
+                <div class="form-group">
+                    <label for="zipcode">{{::translation.Postal_Code}}</label>
+                    <input type="text" ng-model="user.ZipCode" only-alphabets-and-numbers required required-err-type="Please_insert_valid_postal_code" minlength="3" maxlength="12" name="zipcode">
+                </div>
+                <div class="form-btn-group col-xs-12">
+                    <button type="submit" class="btn btn-blue-brds">{{::translation.Save_Changes}}</button>
+                </div>
+            </form>
+
+            <div ng-repeat="payment in paymentSystems" ng-if="extraInfo==payment.name.toLowerCase() && payment.name.toLowerCase() !='creditcard'">
+                <div ly-cart-payment processor="payment.id " field-text="{{translation['Label_Payment_' + payment.name.toLowerCase()]}}"></div>
+            </div>
+        </div>
+        <div id="order-summary" class="col-xs-12 col-sm-12 col-md-3 no-padd">
+            <div class="side" ly-cart-order-summary active="billing"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div id="my-active-payment-methods">
+    <h4 ng-if="allPaymentMethods.length > 0">{{::translation.My_Active_Cards}}:</h4>
+    <div class="my-acc-table no-padd" ng-if="activePayments.length > 0">
+        <div ng-repeat="payment in activePayments" ng-class="{'col-md-12 no-padd': !payment.IsExpired}">
+            <span class="data-row row col-md-3">{{payment.CardType +" (**********" + payment.CreditCardNumber + ')'}}</span>
+            <span class="data-row row col-md-2 isActiveTab">{{!payment.IsExpired? translation.Active: translation.Inactive}}</span>
+            <div class="data-row row col-md-3 btn setDefaultBtn">
+                <button class="btn btn-blue-brds" ng-click="setDefaultCreditCard(payment)" ng-class="{'btn-disable':payment.IsDefault}" ng-if="payment.IsDefault || !payment.IsExpired">{{payment.IsDefault? translation.Default: translation.Set_As_Default}}</button>
+            </div>
+            <div class="data-row row col-md-2 btn updateBtnTab">
+                <button class="btn btn-blue-brds" ng-if="!payment.IsExpired || payment.IsDefault" ng-click="update(payment)" ng-disabled="payment.IsExpired">{{::translation.Update}}</button>
+            </div>
+            <div class="data-row row col-md-2 btn">
+                <button class="btn btn-blue-brds" ng-click="deletePaymentMethod(payment)" ng-if="!payment.IsExpired && !payment.IsDefault">{{translation.Delete}}</button>
+            </div>
+        </div>
+
+        <div ng-bind="resultMessage"></div>
+        <div ng-bind="errorMessage"></div>
+        <button class="add-payment btn btn-blue-brds" ng-click="popUpAddPayment()">{{::translation.Add_Payment_Method}}</button>
+    </div>
+    <div ng-if="allPaymentMethods.length == 0">
+        <!--<ng-include src="'/wp-content/plugins/lotto-yard/frontend/src/pages/common/templates/ly-credit-card-user-data.html'"></ng-include>-->
+        <div ly-edit-add-payment error="error" show-login-loader="showLoginLoader" edit-add-credit-card="editAddCreditCard(creditcard)" credit-card="creditcard" is-update="isUpdate"></div>
+    </div>
+</div>
+
+<div ng-if="allPaymentMethods.length == 0" class="add-new-card-holder" ly-credit-card-payment error-message="error" submit-order-new-credit-card="editAddCreditCard(card, user, depositAmount)" show-login-loader="showLoginLoader" save-card-btn="true" is-deposit="false"></div>

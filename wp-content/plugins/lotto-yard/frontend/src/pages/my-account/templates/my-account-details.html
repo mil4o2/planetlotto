@@ -1,0 +1,84 @@
+<div class="my-acc-details">
+    <div class="title">{{::translation.Your_Details | uppercase}}:</div>
+
+    <form class="details-form" name="updateProfileForm" novalidate="novalidate" ng-submit="UpdateProfile($event, user)" ng-model-options="{updateOn: 'blur'}">
+        <div class="form-group">
+            <div class="col-xs-6">
+                <label for="FirstName">{{::translation.First_Name}}</label>
+                <input name="FirstName" type="text" ng-model="user.FirstName" required only-alphabets required-err-type="Please_insert_valid_name" minlength=2 />
+            </div>
+            <div class="col-xs-6">
+                <label for="LastName">{{::translation.Last_Name}}</label>
+                <input name="LastName" type="text" ng-model="user.LastName" required only-alphabets required-err-type="Please_insert_valid_name" minlength=2 />
+            </div>
+        </div>
+
+        <div class="form-group second">
+            <div class="label-custom">{{::translation.Date_Of_Birth}}:</div>
+            <div class="select-box-arrow">
+                <select ng-options="day as day for day in daysInMonth" tabindex="6" required required-err-type="Please_insert_date_of_birth" ng-model="user.DateOfBirth.day">
+                    <option value="" disabled selected>{{::translation.Day}}</option>
+                </select>
+            </div>
+            <div class="select-box-arrow">
+                <select ng-options="month as month for month in months" tabindex="7" required required-err-type="Please_insert_date_of_birth" ng-model="user.DateOfBirth.month" ng-change="updateDaysInMonth(user.birthday.month)">
+                    <option value="" disabled selected>{{::translation.Month}}</option>
+                </select>
+            </div>
+            <div class="select-box-arrow">
+                <select ng-options="year as year for year in birthdayYears" tabindex="8" required required-err-type="Please_insert_date_of_birth" ng-model=" user.DateOfBirth.year">
+                    <option value="" disabled selected>{{::translation.Year}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-12">
+                <label for="email">{{::translation.Email}}</label>
+                <input class="btn disabled" name="email" type="email" ng-model="user.Email" required required-err-type="Please_insert_valid_city" readonly/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-6">
+                <label for="CountryCode">{{::translation.Country}}</label>
+                <div class="select-box-arrow disabled">
+                    <select class="btn disabled" name="CountryCode" ng-model="user.CountryCode" disabled ng-options="country as country.name for country in countryData" required disabled></select>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <label for="City">{{::translation.City}}</label>
+                <input name="City" type="text" ng-model="user.City" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-6">
+                <label for="Address">{{::translation.Address}}</label>
+                <input type="text" ng-model="user.Address" only-alphabets-and-numbers required-err-type="Please_insert_valid_address" minlength="4" maxlength="35" name="Address">
+            </div>
+            <div class="col-xs-6">
+                <label for="zipcode">{{::translation.Postal_Code}}</label>
+                <input type="text" ng-model="user.ZipCode" only-alphabets-and-numbers required-err-type="Please_insert_valid_postal_code" minlength="3" maxlength="12" name="zipcode">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-6">
+                <label for="MobileNumber">{{::translation.Mobile}}</label>
+                <input name="MobileNumber" type="text" ng-model="user.MobileNumber" required-err-type="Please_insert_valid_phone_number" minlength=10 valid-number />
+            </div>
+            <div class="col-xs-6">
+                <label for="PhoneNumber">{{::translation.Additional_Mobile}}</label>
+                <input name="PhoneNumber" type="text" ng-model="user.PhoneNumber" required required-err-type="Please_insert_valid_phone_number" minlength=10 valid-number />
+            </div>
+        </div>
+
+        <div class="form-btn-group relative">
+            <div ng-bind="errorMessage"></div>
+            <button ng-click="cancel()" class="btn btn-blue-brds">{{::translation.Cancel}}</button>
+            <button type="submit" class="btn btn-blue-brds">{{::translation.Save_Changes}}</button>
+            <div class="spin-loader-inline-block" ng-show="showLoginLoader" loader-css="ball-clip-rotate"></div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,99 @@
+<div id="sign-up-form">
+    <button class="closing" ng-click="closeModal()"></button>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 no-padd col-xs-12">
+                <!-- <p ng-bind-html="translation.SignUpModalText"></p> -->
+                <form name="signupFrm" novalidate="novalidate" ng-submit="signUp($event, user)">
+                    <div class="form-group">
+                        <div class="fullname">
+                            <input placeholder="{{translation.FullName}}" tabindex="1" name="fullname" type="text" ng-model="user.fullname" ng-model-options="{updateOn: 'blur'}" required required-err-type="Please_insert_valid_name" ng-minlength="2"
+                                ng-pattern="/^[а-яА-ЯёЁ |a-zA-Z-_']{2,20}$/ig" pattern-err-type="Please_insert_valid_fullname"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="email">
+                            <input placeholder="{{translation.Email}}" tabindex="2" name="email" type="email" ng-model="user.email" ng-model-options="{updateOn: 'blur'}" ng-pattern="/^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/" pattern-err-type="Please_insert_valid_email"
+                                required required-err-type="Please_insert_valid_email" email-err-type="Please_insert_valid_email" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="pass">
+                            <input placeholder="{{translation.Password}}" tabindex="3" name="password" type="password" ng-model="user.password" ng-model-options="{updateOn: 'blur'}" ng-pattern="/^[a-zA-Z0-9\s@#\.$&!]{7,20}$/" required pattern-err-type="Please_insert_valid_password"
+                                required-err-type="Please_insert_valid_password" ng-minlength-err-type="Please_insert_valid_password" ng-maxlength-err-type="Please_insert_valid_password" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="number1">
+                            <input name="phone1" ng-intl-tel-input type="text" tabindex="4" ng-model="user.phoneNumber" ng-model-options="{updateOn: 'blur'}"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="number2">
+                            <input name="phone2" ng-intl-tel-input type="text" tabindex="5" ng-model="user.mobileNumber" ng-model-options="{updateOn: 'blur'}" />
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="birthdate">
+                            <div class="select-box-arrow form-group">
+                                <select ng-blur="check($event, signupFrm)" ng-options="day as day for day in daysInMonth" tabindex="6" required required-err-type="Please_insert_date_of_birth" ng-model="registrationBdayDay">
+                                    <option value="" disabled selected>{{::translation.Day}}</option>
+                                </select>
+                            </div>
+                            <div class="select-box-arrow form-group">
+                                <select ng-blur="check($event, signupFrm)" ng-options="month as month for month in months" tabindex="7" required required-err-type="Please_insert_date_of_birth" ng-model="registrationBday" ng-change="updateDaysInMonth(user.birthday.month)">
+                                    <option value="" disabled selected>{{::translation.Month}}</option>
+                                </select>
+                            </div>
+                            <div class="select-box-arrow form-group">
+                                <select ng-blur="check($event, signupFrm)" ng-options="year as year for year in birthdayYears" tabindex="8" required required-err-type="Please_insert_date_of_birth" ng-model="user.birthday.year">
+                                    <option value="" disabled selected>{{::translation.Year}}</option>
+                                </select>
+                            </div>
+                            <span ng-if="showErrorMsg" class="help-block has-error error-msg">{{::translation.Please_insert_date_of_birth}}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="terms">
+                            <label for="terms" class="clear">
+                                <input id="terms" type="checkbox" tabindex="9" required required-err-type="Please_accept_our_terms_and_conditions" ng-model="user.termsAccepted"/>
+                                <span class="custom-checkbox"></span>
+                                <div class="agreement-text">{{::translation.I_agree}}
+                                    <a href="terms-and-conditions" ng-click="$close()">{{::translation.Terms_Conditions}}</a><br/>
+                                    {{::translation.Terms_Conditions_18}}
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div ng-bind="errorMessage" class="errorMessage" id="errorMessage"></div>
+
+                        <div ng-show="showLoginLoader" loader-css="ball-clip-rotate"></div>
+
+                        <div ng-show="!showLoginLoader" class="sign-up-but">
+                            <button ng-click="check($event, signupFrm)" type="submit" tabindex="10" class="btn-blue">{{::translation.Submit}}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-6 no-padd hidden-xs">
+                <div class="picture">
+                    <span>{{::translation.reg_head_1}}</span>
+                    <span>{{::translation.reg_head_2}}</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="row hidden-xs">
+            <div class="brands">
+                <span class="icons icon-geo-trust"></span>
+                <span class="icons icon-norton"></span>
+                <span class="icons icon-mc-afee"></span>
+                <span class="icons icon-verified-secured"></span>
+                <span class="icons icon-webutation"></span>
+                <img src="./wp-content/plugins/lotto-yard/frontend/images/Live_chat.png" alt="image">
+            </div>
+        </div> -->
+    </div>
+</div>

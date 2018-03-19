@@ -1,0 +1,17 @@
+<div id="faq-page" class="white-bgr">
+    <div class="container">
+        <div class="max-width">
+            <div class="col-xs-12 col-md-3 fl-left no-padd">
+                <div ly-for-players titleMenu="{{::translation.forPlayers}}"></div>
+            </div>
+
+            <div class="col-xs-12 col-md-9 fl-right">
+                <div class="intro" bind-html-compile="pageContent"></div>
+
+                <div class="faq-part" ng-repeat="contentFaq in acf.content track by $index">
+                    <div ly-faq class="col-xs-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

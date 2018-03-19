@@ -1,0 +1,101 @@
+<!-- Tag for Activity Group: Planet Lotto_ Home Page, Activity Name: Planet Lotto_ Home Page, Activity ID: 4926206 -->
+<!-- Expected URL: http://planetlotto.com.au/ -->
+
+<!--
+Activity ID: 4926206
+Activity Name: Planet Lotto_ Home Page
+Activity Group Name: Planet Lotto_ Home Page
+-->
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Planet Lotto_ Home Page
+URL of the webpage where the tag is expected to be placed: http://planetlotto.com.au/
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 05/30/2017
+-->
+
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+jQuery( document ).ready(function() {
+    jQuery('noscript').append('<iframe src="https://6977030.fls.doubleclick.net/activityi;src=6977030;type=plane0;cat=plane0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>') ;
+});
+// document.write('<iframe src="https://6977030.fls.doubleclick.net/activityi;src=6977030;type=plane0;cat=plane0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+    <!-- <iframe src="https://6977030.fls.doubleclick.net/activityi;src=6977030;type=plane0;cat=plane0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe> -->
+</noscript>
+
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+<div class="head-section text-center {{!enableHomePageSlider ? 'no-slider' : ''}}">
+    <div class="container" ng-if="!enableHomePageSlider">
+        <h2>Anytime. Anywhere.</h2>
+        <p class="desc">
+            Their fish. Wherein from god male a lights in form there, that tree. From fowl seed gathering rule from
+            midst winged two his together behold wherein thing is Blessed may.
+        </p>
+        <a href="/" class="btn learn-more">Learn More</a>
+    </div>
+    <div ng-if="enableHomePageSlider" class="ly-home-page-slider"></div>
+</div>
+<ng-include class="cf" src="'/wp-content/plugins/lotto-yard/frontend/src/pages/common/templates/header-banner.html'"></ng-include>
+
+
+<div class="container home-page-container">
+
+    <!--<div ng-if="enableHomePageSlider" class="ly-home-page-slider"></div>-->
+    <!--<div ng-if="!enableHomePageSlider" class="video-holder">-->
+        <!-- Uncomment to enable video iframe-->
+        <!--<div class="" bind-html-compile="embededIframe"></div>-->
+
+        <!-- Bigest jacpot -->
+        <!--  ng-if="item.current_biggest_jackpot == true"-->
+        <!--<div class="blue-slider-banner">-->
+            <!--<div class="hidden-xs lotteries-logos {{::allDraws[0].LotteryName}}"></div>-->
+
+            <!--<p class="fl-left">-->
+                <!--<span class="currency">{{::allDraws[0].LotteryCurrency2}}</span>{{::allDraws[0].Jackpot | jackpot}}<span class="timer-millions">-->
+					<!--<span class="millions">{{translation.Million}}</span>-->
+                <!--<span class="timer">-->
+                    <!--<span class="align-text" ly-timer time="allDraws[0].DrawDate"></span>-->
+                <!--<span class="hidden-sm hidden-md hidden-lg align-text">-->
+                        <!--{{::allDraws[0].LotteryName}}-->
+                    <!--</span>-->
+                <!--<span class="mobile-top-lottery-logo lotteries-logos hidden-sm hidden-md hidden-lg {{::allDraws[0].LotteryName}}"></span>-->
+                <!--</span>-->
+                <!--</span>-->
+            <!--</p>-->
+            <!--<a class="btn-green" ng-class="{'two-rows' : isGoingToPersonalSelectPage }" ng-click="goToPlayPageFromHome()">{{::translation.Play_Now}}</a>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<img id="home-bgr-image-slider" ng-src="{{::backgroundImageLink}}">-->
+
+    <div id="choose-play-section" class="fl-left max-width hidden-xs" ng-if="false">
+        <div class="col-20" ng-repeat="item in playWidget">
+            <div ng-bind-html="item.step_description"></div>
+        </div>
+        <div class="col-20">
+            <a id="play-widget-link" ng-if="playWidgetLink" ng-href="{{::playWidgetLink}}">
+                <img ng-src="/wp-content/plugins/lotto-yard/frontend/images/play-widget-btn.jpg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="special-products-wrapper">
+        <div class="ly-special-products"></div>
+        <div class="ly-testimonials col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="testimonials.data.length"></div>
+        <div class="ly-latest-winners col-xs-12 col-sm-6 col-md-6 col-lg-6 no-padd-left" ng-if="latestWinners.data.kength"></div>
+    </div>
+
+    <div bind-html-compile="pageContent"></div>
+
+    <div class="cd-cart-trigger pointer" ng-click="showFixedCart()" ng-if="false" ng-class="{'show': lyCart.getItems().length !== 0}">
+        <span class="cart-items" ng-if="lyCart.getItems().length !== 0">
+	        {{lyCart.getItems().length !== 0 ? lyCart.getItems().length : ''}}
+        </span>
+        <div id="fixed-cart-popup" ng-if="lyCart.getItems().length !== 0" ly-cart-summary></div>
+    </div>
+</div>

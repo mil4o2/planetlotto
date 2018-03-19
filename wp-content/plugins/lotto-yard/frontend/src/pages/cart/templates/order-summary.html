@@ -1,0 +1,84 @@
+<div class="order-summary-content">
+    <div class="promocode-content">
+        <p class="title f-14" ng-class="{'custom-margin': !userService.isLogin}">{{::translation.Order_Summary }}</p>
+        <!-- <p class="title f-14" ng-if="extraInfo=='creditcard'">{{::translation.Promo_Code }}</p> -->
+        <div class="move-left relative" ng-if="extraInfo=='creditcard'">
+            <div id="complete-order-box" ng-if="userService.isLogin">
+                <p>{{::translation.Complete_Order}} <span>{{::lyCart.getCurrency()}}{{(getReedemBonus() + getCashback()) | number:2 }} {{::translation.Cashback}}</span> {{::translation.Cashback_Sec_Part}}</p>
+            </div>
+            <div ng-if="lyCart.getBonusAmountToUse()>0">
+                <label>
+                        <input type="checkbox" name="name" ng-model="bonus.isUsingBonusMoney"  ng-change="changeIsUsingBonusMoney()"/>
+                        <span class="checkbox-text-input">{{::translation.Use }} {{::lyCart.getCurrency()}} {{lyCart.getBonusAmountToUse() | number: 2}} {{::translation.Bonus_Balance_Text }} </span>
+                    </label>
+            </div>
+            <p class="custom-margin promo-code" ng-if="extraInfo=='creditcard'">{{::translation.Any_Promo_code}}</p>
+            <div class="spin-loader-promo-code" ng-show="showPromoLoader" loader-css="ball-clip-rotate"></div>
+            <div class="btn-group" class="custom-margin" ng-if="extraInfo=='creditcard'">
+                <!--<input class="btn btn-default" type="text" ng-model="promoCode" ng-init="initpopuppromo(lyCart.getReedemCode())" ng-checked="lyCart.getReedemCode()" ng-disabled="!userService.isLogin" />-->
+
+                <input class="inputLikeBtn fl-left" type="text" ng-model="promoCode" />
+
+                <button class="btn btn-primary" ng-click="submitPromoCode($event,promoCode)">
+                {{::translation.Apply}}
+                </button>
+                <div ng-if="promoCodeErr" class="errorMessage">{{::translation.PromoCodeErr}}</div>
+            </div>
+        </div>
+        <!-- END pad-left-right div -->
+        <!-- Total Content -->
+        <div class="total-content" ng-class="{'custom-margin': activeTab != 'cart'}">
+            <div class="text-style-1">
+                <span>{{::translation.Sub_Total}}:</span>
+                <span class="fl-right">{{::lyCart.getCurrency()}}{{ lyCart.getSubTotal() | number:2}}</span>
+            </div>
+            <div class="text-style-1">
+                <span>{{::translation.You_Save}}:</span>
+                <span class="fl-right">- {{::lyCart.getCurrency()}}{{ (lyCart.getProductDiscount()+ lyCart.getVipDiscount() + (isPercantageReedemCode() ? lyCart.getReedemBonusAmount() :0) ) | number:2}}</span>
+            </div>
+            <!-- <div ng-show="userService.isLogin && bonusAmount>0" class="text-style-1"> -->
+            <div ng-show="userService.isLogin && lyCart.getBonusAmountToUse() > 0 && bonus.isUsingBonusMoney" class="text-style-1">
+                <span>{{translation.Bonus_Debit}}:</span>
+                <span class="fl-right">- {{::lyCart.getCurrency()}}{{ bonus.isUsingBonusMoney ? (isPercantageReedemCode() ? (lyCart.getBonusAmountToUse() - lyCart.getReedemBonusAmount()).toFixed(2) : lyCart.getBonusAmountToUse().toFixed(2) ): 0.00}}</span>
+            </div>
+            <div ng-show="userService.isLogin && accountBalance > 0 && lyCart.getSubTotal() - lyCart.getBonusAmountToUse() - lyCart.getVipDiscount() > 0" class="text-style-1">
+                <span>{{translation.Account_Debit}}:</span>
+                <span class="fl-right" ng-show="accountBalance > 0 && accountBalance <= lyCart.getSubTotal() - lyCart.getBonusAmountToUse() - lyCart.getVipDiscount()">- {{::lyCart.getCurrency()}}{{ accountBalance | number:2}}</span>
+                <span class="fl-right" ng-show="accountBalance > 0 && accountBalance > lyCart.getSubTotal() - lyCart.getBonusAmountToUse() - lyCart.getVipDiscount()">- {{::lyCart.getCurrency()}}{{ lyCart.getSubTotal() - lyCart.getBonusAmountToUse() - lyCart.getVipDiscount()| number:2}}</span>
+            </div>
+            <div class="text-style-2">
+                <span>{{::translation.Total_Cost}}:</span>
+                <span class="fl-right total-money">{{::lyCart.getCurrency()}}{{getAmountToPay()|number:2}}</span>
+                <div class="errorMessage">{{AdressErr}}</div>
+            </div>
+
+        </div>
+        <div class="lower-part" ng-if="extraInfo=='creditcard'" ng-class="{'custom-margin': activeTab != 'cart'}">
+            <div ng-if="activeTab=='cart' || !userService.isLogin">
+                <label class="f-12" ng-if="userService.isLogin && getAmountToPay()<=0">
+                    <input type="checkbox" ng-disabled="!userService.isLogin" ng-model="required.terms" ng-change="allowGoToCart()"> {{::translation.I_agree}}
+                    <a id="terms-link" href="terms-and-conditions/">{{::translation.Terms_Conditions}}</a>
+                    <div ng-if="agreeTermsError" class="errorMessage">{{agreeTermsError}}</div>
+                </label>
+                <div class="errorMessage">{{errorPlaceOrder}}</div>
+                <button ng-disabled="waitForRespose" ng-click="secureCheckout()" class="btn-green">{{::translation.Secure_Checkout}}</button>
+            </div>
+
+            <div id="secure-loader" class="spin-loader" ng-show="showSecureLoader" loader-css="ball-clip-rotate"></div>
+            <div ng-if="activeTab=='billing' && userService.isLogin">
+                <p class="select-amount" ng-hide="lyCart.getIframePaymentMethods().length==0">{{::translation.Select_Amount}}:</p>
+                <select class="amount-dropdown btn-group dropdown" ng-hide="lyCart.getIframePaymentMethods().length==0" ng-options="amount as amount | number:2 for amount in amounts" ng-model="required.selectedAmount"></select>
+                <label class="f-12" ng-hide="lyCart.getIframePaymentMethods().length==0">
+                    <input type="checkbox" ng-disabled="!userService.isLogin" ng-model="required.terms" ng-change="changeTerms()"> {{::translation.I_agree}}
+                    <a id="terms-link" href="terms-and-conditions/">{{::translation.Terms_Conditions}}</a>
+                    <div ng-if="agreeTermsError" class="errorMessage">{{agreeTermsError}}</div>
+                </label>
+                <div class="errorMessage">{{errorPlaceOrder}}</div>
+                <div class="spin-loader" ng-show="showLoaderPlaceOrder" loader-css="ball-clip-rotate"></div>
+                <button class="btn-green" ng-class="showAdressForm || showEdit || lyCart.getIframePaymentMethods().length==0 ? 'btn-disable' : ''" ng-disabled="showAdressForm || showEdit || lyCart.getIframePaymentMethods().length==0 && !userService.isLogin || waitForRespose" ng-click="submitOrder(selectedmethod)">{{::translation.Place_Order}}</button>
+                <p class="f-12 italic">{{translation.Credit_Card_Statement}}</p>
+            </div>
+        </div>
+        <!--END Total Content -->
+    </div>
+</div>

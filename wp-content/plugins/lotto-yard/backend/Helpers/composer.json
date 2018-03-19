@@ -1,0 +1,6 @@
+{
+    "require": {
+        "athlon1600/php-proxy": "^3.0",
+        "guzzlehttp/guzzle": "^6.1"
+    }
+}

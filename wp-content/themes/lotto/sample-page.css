@@ -1,0 +1,196 @@
+body {
+    padding-top: 60px;
+    font-family: BebasNeueRegular, "Open Sans", sans-serif;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: 0;
+}
+
+#header .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.header-menu li {
+    display: inline-block;
+    color: #444444;
+    font-size: 18px;
+    padding: 17px 15px;
+}
+
+li.classic-icon a,
+li.group-icon a,
+li.lottery-results-icon a,
+li.promotions-icon a,
+li.support-icon a,
+li.blog-icon a {
+    background: none;
+    color: inherit;
+    font: inherit;
+}
+
+#desktop-login-menu li:last-child .btn-blue-brds,
+#desktop-login-menu li:last-child .btn-green,
+#desktop-login-menu li:last-child .btn-blue {
+    margin-right: 0;
+}
+
+#header .btn-green,
+#header .btn-blue,
+#header .btn-blue-brds {
+    letter-spacing: .025em;
+}
+
+#header .btn-blue {
+    background: none;
+    border: 1px solid #333333;
+    color: #444444 !important;
+}
+
+#header .btn-blue:hover {
+    background: #333333;
+    color: #fff !important;
+}
+
+#header .btn-green,
+#header .btn-blue {
+    padding: 5px 23px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: normal;
+    height: auto;
+    line-height: inherit;
+}
+
+#header .btn-blue-brds,
+#header .btn-blue-brds:hover,
+#header .btn-blue-brds:focus,
+#header .btn-blue-brds:active {
+    border: 0;
+    color: #444444 !important;
+    text-transform: capitalize;
+    background-color: transparent !important;
+    background-image: url(img/cart.png);
+    background-repeat: no-repeat;
+    font-size: 14px;
+}
+
+#social ul li+li {
+    margin-left: 20px;
+}
+
+#social ul li .social-icons {
+    margin: 0;
+    background: url(img/social.png);
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+}
+
+#social ul li .social-icons.youtube,
+#social ul li .social-icons.youtube:hover {
+    background-position: left top;
+}
+
+#social ul li .social-icons.twitter,
+#social ul li .social-icons.twitter:hover {
+    background-position: -44px top;
+}
+
+#social ul li .social-icons.google-plus,
+#social ul li .social-icons.google-plus:hover {
+    background-position: -86px top;
+}
+
+#social ul li .social-icons.facebook,
+#social ul li .social-icons.facebook:hover {
+    background-position: -130px top;
+}
+
+.footer {
+    background: #36183e;
+    background: -moz-linear-gradient(left, #36183e 0%, #502b5a 100%);
+    background: -webkit-linear-gradient(left, #36183e 0%, #502b5a 100%);
+    background: linear-gradient(to right, #36183e 0%, #502b5a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#36183e', endColorstr='#502b5a', GradientType=1);
+}
+
+#footer-top {}
+
+#footer-images .icons {
+    background: url(img/footer-images.png);
+    background-repeat: no-repeat;
+    width: 56px;
+    max-width: none;
+    height: 41px;
+    float: none;
+    margin: 0 10px;
+}
+
+#footer-images .icons.icon-world-pay {
+    background-position: left top;
+}
+
+#footer-images .icons.icon-visa {
+    background-position: -58px top;
+}
+
+#footer-images .icons.icon-paypal {
+    background-position: -117px top;
+}
+
+#footer-images .icons.icon-master-card {
+    background-position: -176px top;
+}
+
+#footer-bottom {
+    background: none;
+    letter-spacing: 0;
+}
+
+.copyright {
+    font-size: 16px;
+    color: #36183e;
+}
+
+.owned-by {
+    font-size: 14px;
+    color: #66496d;
+    line-height: 2.1428;
+}
+
+@media (min-width: 0) {}
+
+@media (min-width: 320px) {}
+
+@media (min-width: 360px) {}
+
+@media (min-width: 420px) {}
+
+@media (min-width: 480px) {}
+
+@media (min-width: 520px) {}
+
+@media (min-width: 640px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    #header .container {
+        width: 100%;
+        max-width: 1800px;
+    }
+    #header #desktop-login-menu {
+        margin-left: 20px;
+    }
+}

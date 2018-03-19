@@ -1,0 +1,10 @@
+﻿<span class="redirect-msg" ng-if="showRedirectMsg">{{::translation.redirect_message}}</span>
+<div ng-if="fieldText && !iframe">
+    <p> {{::fieldText}}</p>
+    <input type="text" ng-model="phoneOrEmail">
+    <input type="submit" value="{{::translation.Sign_In}}" ng-click="paymentSelectMoreInfo($event,phoneOrEmail, processor)" ng-hide="progress">
+</div>
+<div ng-if="iframe">
+    <iframe ng-src="{{iframe}}" style="width: 400px; height: 530px;"></iframe>
+</div>
+<div ng-bind="errorMessage.message"></div>

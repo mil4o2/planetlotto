@@ -1,0 +1,17 @@
+<div class="user-info-box">
+    <div class="upper">
+        <div class="close" ng-click="closePopup()">x</div>
+        <div class="name"> {{userName}} </div>
+        <div>{{::translation.MemberId}}: {{memberId}}</div>
+        <!--<a class="my-acc hidden-xs" ng-click="goMyAccount()" ng-show='userService.isLogin'>{{::translation.My_Account}}</a>-->
+    </div>
+    <div class="lower">
+        <div class="balance"><span>{{::translation.Balance}}</span>
+            <span ng-if="totalBalance">{{::lyCart.getCurrency()}} {{totalBalance | number:2}}</span>
+            <span ng-if="!totalBalance">{{::lyCart.getCurrency()}} 0.00</span>
+        </div>
+        <hr/>
+        <div><a ui-sref="myAccountPage.deposit" ng-click="closePopup()" class="btn-green">{{::translation.Deposit}}</a></div>
+        <div class="log-out-btn" ng-show='userService.isLogin' ng-click="logout()">{{::translation.Signout}}</div>
+    </div>
+</div>

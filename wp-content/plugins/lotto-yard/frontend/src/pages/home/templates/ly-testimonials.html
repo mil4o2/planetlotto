@@ -1,0 +1,18 @@
+<div id="testimonials">
+    <p class="title">{{::translation.testimonials}}</p>
+    <slick settings="slickConfigTestimonials">
+        <div ng-repeat="item in testimonials.data" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padd no-marg">
+            <div class="centered">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padd">
+                    <img class="img-responsive" ng-src="{{::item.acf.avatar.url}}" alt="{{::item.acf.avatar.alt}}" />
+                </div>
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <div bind-html-compile="::item.acf.text"></div>
+                    <div class="author">
+                        <span>{{::item.acf.author}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </slick>
+</div>

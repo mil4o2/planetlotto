@@ -1,0 +1,93 @@
+<div class="my-acc-table">
+    <div class="filters-row row">
+
+        <div id="fillter-by" class="filter-holder">
+            <label class="f-12" for="fillter-by">{{::translation.Filter_By}}: </label>
+            <div class="btn-group" uib-dropdown>
+                <button id="btn-append-to-single-button" type="button" ng-model="filters.type" class="btn-subs" uib-dropdown-toggle>
+                    {{fillterBy}}
+                </button>
+                <ul class="dropdown-menu no-scroll" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+                    <li class="subscriptionOption" ng-repeat="sortOption in filtersOptions" ng-click="changeDatePeriod(since, sortOption)" ng-if="fillterBy != sortOption.text">
+                        <span>{{sortOption.text}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="since" class="filter-holder">
+            <label class="f-12" for="since">{{::translation.Since}}: </label>
+            <div class="btn-group" uib-dropdown>
+                <button id="btn-append-to-single-button" type="button" ng-model="filters.type" class="btn-subs" uib-dropdown-toggle>
+                    {{sinceBy}}
+                </button>
+                <ul class="dropdown-menu no-scroll" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+                    <li class="subscriptionOption" ng-repeat="since in sinceMenu" ng-click="changeDatePeriod(since, sortOption)" ng-if="sinceBy != since.text">
+                        <span>{{since.text}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="from" class="filter-holder special">
+            <label class="f-12" for="from">{{::translation.From}}: </label>
+            <div class="form-group">
+                <input type="text" class="form-control from" uib-datepicker-popup="{{format}}" ng-model="filters.period.from" is-open="popupFrom.opened"
+                         datepicker-options="dateOptionsFrom" ng-required="true" close-text="Close" ng-change="changePage(currentPage)" ng-click="openPicker('from')"/>
+
+                <label class="input-group-btn" ng-show="isCustom">
+                    <button type="button" class="btn btn-default" ng-click="openPicker('from')"  ng-disabled="!isCustom"><i class="glyphicon glyphicon-calendar"></i></button>
+                </label>
+            </div>
+        </div>
+
+        <div id="to" class="filter-holder  special">
+            <label class="f-12" for="to">{{::translation.To}}: </label>
+            <div class="form-group">
+                <input type="text" class="form-control to" uib-datepicker-popup="{{format}}" ng-model="filters.period.to" is-open="popupTo.opened"
+                        datepicker-options="dateOptionsTo" ng-required="true" close-text="Close" ng-change="changePage(currentPage)" ng-click="openPicker('to')"/>
+
+                <label class="input-group-btn" ng-show="isCustom">
+                    <button type="button" class="btn btn-default" ng-click="openPicker('to')" ng-disabled="!isCustom"><i class="glyphicon glyphicon-calendar"></i></button>
+                </label>
+            </div>
+        </div>
+
+        <div id="itemsCount" class="filter-holder">
+            <label class="f-12" for="itemsCount">{{::translation.Items}}:</label>
+            <div class="btn-group" uib-dropdown>
+                <button id="btn-append-to-single-button" type="button" ng-model="filters.type" class="btn-subs" uib-dropdown-toggle>
+                    {{itemsBy}}
+                </button>
+                <ul class="dropdown-menu no-scroll" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+                    <li class="subscriptionOption" ng-repeat="items in itemsPerPage" ng-click="changePage(1, items)" ng-if="itemsBy != items">
+                        <span>{{items}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="headers-row row">
+        <div class="col-xs-3">{{::translation.Date}}</div>
+        <div class="col-xs-2">{{::translation.Type}}</div>
+        <div class="col-xs-3">{{::translation.Transaction_Id}}</div>
+        <div class="col-xs-2">{{::translation.Time}}</div>
+        <div class="col-xs-2">{{::translation.Amount}}</div>
+    </div>
+    <div ng-if="transactions.Data.length==0">
+        <p class="text-center">{{::translation.No_Data}}</p>
+    </div>
+    <div class="data-row row" ng-if="transactions.Data.length > 0" ng-repeat="transaction in transactions.Data">
+        <div class="col-xs-3">{{transaction.Date | date: "dd/MM/yyyy"}}</div>
+        <div class="col-xs-2">{{transaction.TransactionType}}</div>
+        <div class="col-xs-3">{{transaction.TransactionId}}</div>
+        <div class="col-xs-2">{{::transaction.Date | date: "h:mm a"}}</div>
+        <div class="col-xs-2">{{::lyCart.getCurrency()}} {{transaction.Amount| number:2}}</div>
+    </div>
+    <div class="pagination-holder col-xs-12">
+        <ul uib-pagination total-items="transactions.PageCount * filters.itemsCount" items-per-page="filters.itemsCount" ng-model="currentPage" max-size="3"
+                ng-change="changePage(currentPage)" boundary-links="false" direction-links="true" previous-text="<" next-text=">"></ul>
+    </div>
+</div>

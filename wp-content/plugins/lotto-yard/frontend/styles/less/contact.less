@@ -1,0 +1,588 @@
+@import "functions.less";
+
+#contact {
+    padding-bottom: 20px;
+    padding-top: 72px;
+    background-color: white;
+
+    .contact-info{
+
+        .divider{
+            margin: 0 auto 60px;
+            width: 100%;
+            max-width: 454px;
+            height: 4px;
+            background: #1a69db;
+        }
+
+        div[class*="col-"]{
+            width: 100%;
+        }
+
+        > div[class*="col-"]{
+            margin-bottom: 66px;
+        }
+
+        .contact-icons{
+            display: none;
+        }
+
+        p{
+            font-size: 1.4285714285714286em;
+            font-weight: 500;
+            line-height: 1.8;
+            color: @color-base-one;
+            letter-spacing: .05em;
+
+            &.faq-text{
+                font-size: 1.2857142857142858em;
+                margin-top: 37px;
+
+                & a{
+                    font-weight: 500;
+                }
+            }
+
+            &:not(.faq-text) a{
+                @media (max-width:480px){
+                    font-size: 0.76em;
+                }
+            }
+        }
+
+        a{
+            font-weight: 700;
+        }
+    }
+
+    h3,
+    h4{
+        line-height: 1;
+        color: @color-base-one;
+    }
+
+    h3{
+        font-size: 2.5714285714285716em;
+        font-weight: 500;
+        letter-spacing: .025em;
+        margin-bottom: 66px;
+    }
+
+    h4{
+        font-size: 1.4285714285714286em;
+        font-weight: 700;
+        letter-spacing: .2em;
+        margin-bottom: 40px;
+    }
+
+    .left {
+        padding-top: 15px;
+        padding-left: 0;
+
+        .title {
+            margin-top: 33px;
+            font-weight: 100;
+            font-size: 34px;
+        }
+    }
+    @media (min-width: @screen-width-min-lg){
+        .grey-border{
+            border: 1px solid #ebebeb;
+        }
+    }
+
+    #contact-form{
+
+        form input,
+        .select-box-arrow,
+        form .form-group.messageArea textarea{
+            @media (max-width:480px){
+                font-size: 1em !important;
+            }
+        }
+        @media (min-width: @screen-width-min-md) and (max-width:@screen-width-min-lg){
+            padding: 0;
+        }
+
+        .select-box-arrow{
+            width: 100%;
+            border: 1px solid #d4d4d4;
+            .border-radius(100px);
+            background-color: #fff;
+            background-position: 90% 50%;
+            font-size: 1.2857142857142858em;
+            font-weight: 500;
+            font-style: normal;
+            letter-spacing: .025em;
+            color: #545454;
+
+            select{
+                width: 109%;
+
+            }
+        }
+
+        .fullname,
+        .email,
+        .subject,
+        .messageArea{
+            width: 100%;
+        }
+
+        .phone,
+        .country{
+            @media (max-width: @screen-width-min-lg){
+                width: 100%;
+            }
+        }
+
+        form {
+            overflow: hidden;
+            margin-top: 65px;
+            @media (min-width: @screen-width-min-md) and (max-width:@screen-width-min-lg){
+                margin-top: 25px;
+
+            }
+
+            .country{
+                label{
+                    margin-bottom: 0;
+                }
+                .select-box-arrow{
+                    //height: 28px;
+                    height: auto;
+                    padding: 18px 0 17px 38px;
+                }
+            }
+
+            .error-msg{
+                position: absolute;
+            }
+
+            .success-msg{
+                position: absolute;
+            }
+
+            @media(max-width: @screen-sm-min){
+                #message {
+                    margin-bottom: 10px;
+                }
+
+                #message + .error-msg{
+                    top:200px;
+                    display: block;
+
+                }
+
+                .error-msg{
+                    position: absolute;
+                    top:20px;
+                }
+
+                .success-msg{
+                    position: absolute;
+                    top: 203px;
+                }
+            }
+
+            .selected-flag{
+                max-height: 23px;
+                margin-top: 21px;
+            }
+
+            @media (min-width:@screen-width-min-lg){
+                div.form-group{
+                    margin-bottom: 22px;
+                }
+                div.form-group.country{
+                    margin-bottom: 28px;
+                }
+                div.form-group.messageArea{
+                    margin-bottom: 25px;
+                }
+            }
+            @media (min-width: @screen-width-min-md) and (max-width:@screen-width-min-lg){
+                 div.form-group.messageArea{
+                    padding-right: 0;
+                }
+
+
+
+                div.form-group{
+                    margin-top: 40px;
+                        &:nth-child(3){
+                            clear:both;
+                        }
+                         &:nth-child(5){
+                            clear:both;
+                        }
+                }
+            }
+
+            .has-error {
+                 textarea#message{
+                    border: 1px solid red !important;
+                 }
+            }
+            .form-group.messageArea{
+
+                //@media (min-width: @screen-width-min-md) and (max-width:@screen-width-min-lg){
+                //        width: 33%;
+                //        position: absolute;
+                //        top: 0;
+                //        right: 0;
+                //        margin-top: 150px;
+                //}
+                //width: 100%;
+                //float: left;
+                input.messageArea{
+                   display: none;
+                }
+                
+                textarea{
+                    //background: @light-blue;
+                    color: @text-grey;
+                    border: 1px solid #d4d4d4;
+                    width: 100%;
+                    height: 180px;
+                    padding: 20px 43px;
+                    font-size: 1.2857142857142858em;
+                    font-weight: 500;
+                    letter-spacing: .025em;
+                    .border-radius(34px);
+                }
+            }
+            .intl-tel-input{
+                width: 100%;
+
+                .country-list{
+                    max-width: 250px;
+                }
+            }
+            label{
+                width: 100%;
+                text-transform: uppercase;
+                font-size: 16px;
+                font-weight: 400;
+                color: @text-grey;
+            }
+
+            input{
+                font-size: 1.2857142857142858em;
+                font-weight: 500;
+                letter-spacing: .025em;
+                color: #545454;
+                width: 100%;
+                border: 1px solid #d4d4d4;
+                .border-radius (100px);
+                padding: 21px 42px;
+            }
+            .btn-blue{
+                background: @color-base-two;
+                color: @text-color-white;
+                border: 1px solid @color-base-two;
+                .border-radius(100px);
+                padding: 21px 42px;
+                width: 100%;
+                font-size: 1.2857142857142858em;
+                font-weight: 700;
+                letter-spacing: .025em;
+                &:active,
+                &:focus,
+                &:hover {
+                    background: #FFF;
+                    color: @color-base-two !important;
+                }
+                @media (min-width: @screen-width-min-lg){
+                    margin-bottom: 20px;
+                }
+                @media (min-width: @screen-width-min-md) and (max-width:@screen-width-min-lg){
+                    margin-right: 0 !important;
+                    margin-top: -40px;
+                }
+            }
+        }
+    }
+    .contact-information {
+        background: @light-blue;
+        padding: 0 30px;
+        // margin-top: 75px;
+        // @media (min-width: @screen-sm-min) and (max-width:@screen-width-min-lg){
+        //     margin-top: 0;
+        // }
+        h3 {
+            font-weight: 100;
+            padding-top: 28px;
+            @media (min-width: @screen-sm-min) and (max-width:@screen-width-min-lg){
+                padding-bottom: 25px !important;
+            }
+        }
+
+        .contact-icons {
+            height: 40px;
+            width: 40px;
+            background-image: url('../images/contact-page-icons.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: inline-block;
+        }
+        .address-icon {
+            background-position: 0 0;
+            @media (min-width:@screen-sm-min){
+                background-position: 4px 0;
+            }
+            width: 27px;
+            margin-right: 13px;
+        }
+        .callus-icon {
+            background-position: -65px 0;
+        }
+        .assist-icon {
+            background-position: -26px 0;
+        }
+        .address, .callus, .assist {
+            // width: 100%;
+            padding: 20px 0;
+            * {
+                display: inline-block;
+                float: left;
+            }
+            a {
+                float: none;
+            }
+        }
+        .assist {
+            padding-bottom: 270px;
+        }
+        .address-title, .callus-title, .assist-title{
+            margin: 0 0 15px 0;
+            font-weight: 500;
+        }
+    }
+    .right {
+        height: 100%;
+        .banner {
+            height: 250px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    @media(max-width: @screen-lg-min) {
+        .address-title, .callus-title, .assist-title{
+            width: 100%;
+            text-align: center;
+        }
+        .contact-icons {
+            margin-left: 20%;
+        }
+    }
+    @media(max-width: @screen-sm-min) {
+        div.right{
+            padding: 0;
+        }
+        .banner {
+            display: inherit;
+            height: 145px !important;
+        }
+        .title {
+            margin-top: 0 !important;
+        }
+    }
+}
+
+@media (max-width: @screen-width-min-lg) {
+    #contact{
+        .contact-information{
+            padding: 0;
+            h3{
+                padding: 0;
+                margin-top: 0;
+                background: #fff;
+            }
+             .address, .callus, .assist {
+                padding: 20px 0;
+             }
+            .contact-icons{
+                right: 0;
+                margin: 0 auto;
+                float: none;
+                display: block;
+            }
+            h4{
+                width: 100%;
+                text-align: center;
+            }
+            div.col-xs-10{
+                margin-top: 15px;
+                width: 100%;
+            }
+        }
+
+        #contact-form{
+            //h3{
+            //    text-align: left;
+            //}
+            form{
+                .form-group.has-error {
+                    input{
+                        border: none !important;
+                        border-bottom: 1px solid #838383 !important;
+                    }
+                }
+
+                //.form-group, .form-group.messageArea{
+                //
+                //    @media (max-width: @screen-width-min-md){
+                //        width: 34%;
+                //        margin-bottom: 35px;
+                //    }
+                //    width: 33%;
+                //    padding-left: 0;
+                //    padding-right: 30px;
+                //}
+                //.form-group.messageArea{
+                //    clear: both;
+                //    float: right;
+                //}
+                //button{
+                //    clear: both;
+                //    margin-right: 37px;
+                //}
+            }
+        }
+    }
+}
+@media (max-width: @screen-width-min-md) {
+    #contact{
+        #contact-form {
+            form {
+                .form-group.messageArea{
+                    width: 100%;
+                }
+                button{
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-sm-min) {
+    #contact{
+        margin-top: -20px;
+
+        .breadcrumbs{
+            display: none;
+        }
+        .left{
+            .title{
+                line-height: 16px;
+                font-size: 16px;
+            }
+        }
+        .contact-information{
+            margin-top: 0;
+            font-size: 12px;
+            h3{
+                line-height: 35px;
+            }
+            h4{
+                font-size: 12px;
+            }
+
+            .contact-icons{
+                position: relative;
+                right: 0;
+                width: 100%;
+                float: left;
+                margin-left: 15px;
+                max-width: 31px;
+            }
+            .address-icon{
+                background-position: 4px 0;
+            }
+            .callus-icon{
+                background-size: 91px;
+                background-position: -60px 0;
+            }
+            .assist-icon{
+                background-position: -20px 0;
+                background-size: 80px;
+            }
+            div.col-xs-10{
+                margin-top: 0;
+                width: 80%;
+
+                h4{
+                    margin-bottom: 5px;
+                    text-align: left;
+                }
+            }
+        }
+
+        #contact-form {
+            padding: 0;
+
+            h3{
+                margin-top: 0;
+                padding-top: 15px;
+            }
+            form {
+                margin-top: 0;
+
+                .form-group{
+                    width: 100%;
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+
+                button{
+                    margin: 0;
+                    width: 100%;
+                }
+
+                label{
+                    float: left;
+                    width: 30%;
+                    margin: 0;
+                    padding-bottom: 5px;
+                    font-size: 12px;
+                    color: @color-base-one;
+                    border-bottom: 1px solid #838383;
+                }
+                .country{
+                    label{
+                        border-bottom: none;
+                    }
+                }
+                .form-group.messageArea{
+                    margin-bottom: 10px;
+                    padding-right: 0;
+                    label{
+                        width: 100%;
+                        border-bottom: none;
+                    }
+                }
+                //input{
+                //    float: left;
+                //    width: 70%;
+                //}
+                //label, input{
+                //    line-height: 1.4;
+                //    height: 22px;
+                //    .border-radius(0);
+                //    background: #fff;
+                //}
+                //.intl-tel-input{
+                //    width: 70%;
+                //    input{
+                //        width: 100%;
+                //    }
+                //}
+            }
+        }
+
+    }
+}

@@ -1,0 +1,15 @@
+<div class="withdraw-request">
+    <div class="text">{{::translation.Withdraw_Text}}</div>
+    <div class="balance-holder">
+        <div class="col-xs-6">
+            <span>{{::translation.Request}}:<span class="text-blue"> {{::currency}}</span></span>
+            <input type="text" ng-model="withdraw.value" ng-change="changeAmount()">
+            <textarea cols="50" rows="6" maxlength="256" ng-model="withdraw.comment" />
+            <div class="errorMessage" ng-show="showErrorMessage && !showSuccessMessage">{{::translation.Min_withdraw_value}}</div>
+            <div class="errorMessage" ng-show="showErrorMessageTwo && !showSuccessMessage">{{::translation.max_withdraw_value}}</div>
+            <button class="withdraw-btn btn-green" ng-disabled=" waitingForResponse" ng-click="withdrawMoney()">{{::translation.Request}} {{::translation.Withdraw}}</button>
+            <div class="spin-loader-inline-block" ng-show="showLoginLoader" loader-css="ball-clip-rotate"></div>
+            <div ng-show="showSuccessMessage">{{::translation.Successful_withdraw}}</div>
+        </div>
+    </div>
+</div>

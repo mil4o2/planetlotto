@@ -1,0 +1,11 @@
+<button class="closing" ng-click="closeModal()"></button>
+<div id="popup">
+    <p>{{lotteryName}}</p>
+    <div class="numbers-container">
+        <div ng-repeat="number in numbers" class="float-numbers {{numbersLenght<=6? 'center-small-numbers':''}}">
+            <span class="balls normal-numbers" ng-repeat="selectedNumber in number.selectedNumbers">{{selectedNumber}}</span>
+            <span class="balls additional-numbers" ng-repeat="extraNumber in number.extraNumbers">{{extraNumber}}</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>

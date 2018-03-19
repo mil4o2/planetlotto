@@ -1,0 +1,105 @@
+<div id="add-new-cc-container" class="fl-left">
+    <button type="button" class="close" ng-click="closeModal()"></button>
+
+    <div class="first-part">
+        <div class="visa-mastercard fl-left"></div>
+        <h1 class="title fl-left" ng-show="!isUpdate">{{::translation.Add_Credit_Cart}}</h1>
+        <h1 class="title fl-left" ng-show="isUpdate">{{::translation.Update_Credit_Cart}}</h1>
+    </div>
+
+    <div class='card-wrapper fl-left hidden-xs'></div>
+    <div class="first-part">
+        <p id="mandatory-fields" class="custom-padding max-width fl-left">{{::translation.All_Fields}}</p>
+    </div>
+
+    <form id="add-new-credit-card" class="fl-left" ng-submit="submitForm(card, user, depositAmount)">
+        <div class="max-width form-group fl-left">
+            <label for="credit-card-field" class="col-xs-12 custom-padding">{{::translation.Card_Number}}:</label>
+            <div class="col-xs-3 custom-padding">
+                <input id="credit-card-field" class="form-control card-number-auto-tab" type="text" name="first-numbers" ng-model="card.number1" ng-change="changeCardNumber(card.number1,0)">
+            </div>
+            <div class="col-xs-3 custom-padding">
+                <input class="form-control card-number-auto-tab" type="text" name="second-numbers" ng-model="card.number2" ng-change="changeCardNumber(card.number2,1)">
+            </div>
+            <div class="col-xs-3 custom-padding">
+                <input class="form-control card-number-auto-tab" type="text" name="third-numbers" ng-model="card.number3" ng-change="changeCardNumber(card.number3,2)">
+            </div>
+            <div class="col-xs-3 custom-padding">
+                <input class="form-control card-number-auto-tab" type="text" name="fourth-numbers" ng-model="card.number4" ng-change="changeCardNumber(card.number4,3)">
+            </div>
+        </div>
+        <div class="max-width form-group fl-left">
+            <div class="col-xs-6 custom-padding">
+                <label for="first-name-field">{{::translation.First_Name}}:</label>
+                <input id="first-name-field" class="col-xs-12 form-control" type="text" name="first-name" ng-model="card.firstName">
+            </div>
+            <div class="col-xs-6 custom-padding">
+                <label for="last-name-field">{{::translation.Last_Name}}:</label>
+                <input id="last-name-field" class="col-xs-12 form-control" type="text" name="last-name" ng-model="card.lastName">
+            </div>
+        </div>
+        <div class="max-width form-group fl-left">
+            <div class="custom-inputs col-xs-6 custom-padding">
+                <label for="expiration-date-field" class="max-width">{{::translation.Expiration_Date}}:</label>
+                <div class="btn-group fl-left" uib-dropdown>
+                   <button id="expiration-date-field" type="button" ng-model="dummy" class="btn-subs" uib-dropdown-toggle>
+                       {{card.expiration.month}}
+                   </button>
+                   <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+                       <li class="subscriptionOption" ng-repeat="month in months track by $index" ng-click="changeMonthValue(month)">
+                           <span>{{month}}</span>
+                       </li>
+                   </ul>
+               </div>
+               <span class="col-xs-1 custom-padding text-center">/</span>
+              <div class="btn-group" uib-dropdown>
+                  <button id="expiration-date-field" type="button"  ng-model="dummy" class="btn-subs" uib-dropdown-toggle>
+                      {{card.expiration.year}}
+                  </button>
+                  <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+                      <li class="subscriptionOption" ng-repeat="year in years track by $index" ng-click="changeYearValue(year)">
+                          <span>{{year}}</span>
+                      </li>
+                  </ul>
+              </div>
+                <span ng-if="errorExpirationDate" class="help-block has-error error-msg" ng-bind="errorExpirationDate"></span>
+            </div>
+            <div class="col-xs-6 custom-padding custom-inputs ">
+                <label for="ccv-field " class="max-width ">{{::translation.CVV_CV2}}</label>
+                <div class="col-xs-4 custom-padding ">
+                    <input id="ccv-field" class="max-width " type="password" name="cvc" ng-model="card.Cvv">
+                </div>
+                <p class="col-xs-8 custom-padding ">{{translation.Last_3_Digits}}</p>
+            </div>
+        </div>
+        <div class="max-width form-group fl-left">
+            <div class="col-xs-4 custom-padding form-group">
+                <label for="city-field">{{::translation.City}}</label>
+                <input id="city-field" class="form-control " type="text " ng-model="user.City" only-alphabets />
+            </div>
+            <div class="col-xs-4 custom-padding form-group">
+                <label for="address-field"> {{::translation.Address}}</label>
+                <input id="address-field" class="form-control " type="text " ng-model="user.Address" only-alphabets-and-numbers />
+            </div>
+            <div class="col-xs-4 custom-padding form-grou">
+                <label for="postal-code-field "> {{::translation.Postal_Code}}</label>
+                <input id="postal-code-field" class="form-control " type="text " ng-model="user.ZipCode" only-alphabets-and-numbers />
+            </div>
+        </div>
+        <div class="max-width form-group fl-left" ng-if="isDeposit">
+            <div class="separating-line"></div>
+        </div>
+        <div class="max-width form-group fl-left deposit-amount" ng-show="isDeposit">
+            <div class="col-xs-4 custom-padding form-group">
+                <label for="postal-code-field">{{::translation.Deposit_Amount}}</label>
+                <input id="postal-code-field" class="form-control" type="number" ng-model="depositAmount" ng-blur="validateDeposit(depositAmount)" />
+            </div>
+        </div>
+        <div class="help-block has-error error-msg" ng-bind="errorMessage.message"></div>
+        <div class="submit form-group fl-left ">
+            <button type="submit " class="btn btn-blue form-control ">{{isDeposit ? translation.Deposit : isUpdate ? translation.Update_card : translation.Save_card}}</button>
+        </div>
+        <div class="spin-loader" ng-if="showLoginLoader.show" loader-css="ball-clip-rotate"></div>
+
+    </form>
+</div>

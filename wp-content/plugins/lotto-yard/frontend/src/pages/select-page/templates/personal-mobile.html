@@ -1,0 +1,16 @@
+<div id="personal-mobile">
+    <div class="qp-holder">
+        <div class="qp-btn col-xs-4" ng-click="onQuickPick()">{{::translation.QuickPick}}</div>
+        <div class="qp-btn col-xs-4" ng-click="quickPickLinesAndGoToCart(5)">{{::translation.Quick_Checkout}}</div>
+        <div class="qp-btn col-xs-4" >
+            <div ng-show="!moreLines" ng-click="onClickMoreLessBtn(true)">{{::translation.Add_Lines}}</div>
+            <div ng-show="moreLines" ng-click="onClickMoreLessBtn(false)">{{::translation.Remove_Lines}}</div>
+        </div>
+    </div>
+    <div class="tickets-content" ng-repeat="n in numbOfLines track by $index">
+        <div class="fl-left tickets-content-inner" ly-select-page-line-mobile line-number="n" numbers="numbers" ng-click="showAllNumbers(n)" ng-show="n < 6 || moreLines"></div>
+        <!-- <div class="fl-left tickets-content-inner more" ly-select-page-line-mobile line-number="n + 5" numbers="numbers" ng-click="showAllNumbers(n)" ng-if="moreLines"></div> -->
+    </div>
+
+    <div ly-select-page-main-footer></div>
+</div>

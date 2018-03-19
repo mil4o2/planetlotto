@@ -1,0 +1,426 @@
+@import "functions.less";
+
+.news.container {
+    padding-top: 72px;
+    background: white;
+
+    #news-scroll-top {
+        margin-top: -145px;
+    }
+
+    .breadcrumb {
+        background: none;
+    }
+}
+.recent-posts,
+#news-title {
+    h1 {
+        color: @text-grey;
+        font-weight: 200;
+    }
+    h3{
+        font-size: 2.5714285714285716em;
+        font-weight: 500;
+        letter-spacing: .025em;
+        margin-bottom: 66px;
+        color: @color-base-one;
+    }
+}
+
+.recent-posts{
+    .news-block{
+        border-bottom: 1px solid @color-base-one;
+        padding-bottom: 35px;
+
+        & + .news-block{
+            margin-top: 40px;
+        }
+    }
+    a{
+        color: @color-base-one;
+        letter-spacing: .025em;
+    }
+    .news-img{
+      margin-bottom: 30px;
+    }
+    .news-title{
+        font-size: 1.4285714285714286em;
+        font-weight: 500;
+        margin-bottom: 9px;
+    }
+    .news-date{
+        font-size: 1.2857142857142858em;
+        font-weight: 700;
+    }
+}
+
+.play-now-banner{
+    height: auto;
+
+    .right{
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 28px;
+        background-image: none;
+    }
+    .lotteries-logos{
+        margin: 0 auto;
+        float: none;
+    }
+    a.btn {
+        float: none;
+        margin: 0 auto;
+        font-size: 1.8571428571428572em;
+        background: @color-base-two;
+        color: @text-color-white;
+        .border-radius(50px);
+        width: 100%;
+        max-width: 250px;
+        padding: 8px 20px 13px;
+        margin-top: 18px;
+
+        &:hover{
+            color: @text-color-white;
+        }
+
+        img{
+            @media (max-width:991px){
+                display: none;
+            }
+        }
+    }
+}
+
+#news-seo {
+    margin: 25px 0 0 15px;
+
+    div {
+        font-size: 14px;
+        line-height: 1.384;
+        display: inline-block;
+        float: left;
+    }
+
+    .seo-home-link {
+        color: black;
+        text-decoration: underline;
+    }
+}
+
+#banners {
+
+    padding-left: 63px;
+    .sign-up-now {
+        color: @text-grey;
+        margin-bottom: 30px;
+        h4  {
+            font-style: italic;
+            font-weight: 600;
+        }
+        .sign-up-now-pic {
+            width: 100%;
+            height: 210px;
+            background-size: cover;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .btn-blue {
+            position: relative;
+            top: -100px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            max-width: 145px;
+            max-height: 40px;
+            line-height: 38px;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 16px;
+            text-transform: uppercase;
+            .border-radius();
+
+        }
+    }
+    #latest-winners{
+        @media(max-width: @screen-md-min){
+            display: none;
+        }
+    }
+    #latest-winners, #highest-jackpots {
+        background-color: @light-blue;
+        padding: 0 5% 0 5%;
+        margin-bottom: 30px;
+
+
+        .jackpot {
+            padding: 15px;
+            background: #fff;
+            margin-bottom: 3px;
+            .play-now {
+                height: 30px;
+                width: 90px !important;
+                .border-radius();
+                border: 1px solid  rgb(215, 215, 215);
+                margin-top: -25px;
+                padding: 5px 0;
+                text-align: center;
+                text-transform: uppercase;
+                a {
+                    color: @color-base-one;
+                    padding: 0;
+                    text-decoration: none;
+                }
+            }
+        }
+        .text-total {
+            float: left;
+        }
+        #total {
+            background-color: @light-blue;
+
+            #total-sum  {
+                font-size: 2em;
+            }
+        }
+        .js-marquee {
+            background-color: @light-blue;
+        }
+        .latest-winner {
+            // width: 90%;
+            // margin-left: 5%;
+
+            p {
+                font-size: 15px;
+            }
+        }
+        .winners-country, .comma {
+            display: none;
+        }
+
+    }
+    #highest-jackpots {
+        padding: 0 5% 5% 5%;
+        .title {
+            font-weight: 300;
+        }
+        @media(max-width: @screen-md-min) {
+            span{
+                font-size: 10px;
+            }
+            #marquee .jackpot .play-now {
+                height: 25px;
+                width: 60px !important;
+                margin-top: -20px;
+                padding: 0;
+                a {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+.ly-blog, .single-blog {
+    color: @text-grey;
+
+    .news-block {
+
+        & + .news-block{
+            margin-top: 80px;
+        }
+    }
+    .newspage-icon {
+        width: 64px;
+        height: 50px;
+        display: inline-block;
+    }
+    .news-title {
+        position: relative;
+        top: -20px;
+        margin: 0 0 0 10px;
+        max-height: 45px;
+        max-width: 85%;
+        height: 45px;
+        overflow: hidden;
+        font-size: 36px;
+        text-transform: capitalize;
+        font-weight: 100;
+        @media(max-width: @screen-lg-min) {
+            width: 80%;
+            float: right;
+            text-align: left;
+        }
+    }
+    .news-img{
+      border-top: 4px solid transparent;
+      margin-bottom: 40px;
+    }
+    .news-date {
+        margin: 0 0 36px 0;
+        font-size: 1.4285714285714286em;
+        font-weight: 700;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        color: @color-base-one;
+        display: inline-block;
+    }
+    .news-date.tag {
+        float: right;
+        margin-top: -25px;
+        position: relative;
+        left: 0;
+        div {
+            display: inline-block;
+            margin: 0 5px;
+        }
+    }
+    .news-text {
+        font-size: 1.4285714285714286em;
+        font-weight: 500;
+        color: @color-base-one;
+        line-height: 1.5;
+        letter-spacing: .05em;
+        margin-bottom: 40px;
+        //text-overflow: ellipsis;
+        //overflow: hidden;
+        //max-height: 103px;
+
+        p,
+        span{
+            display: inline;
+        }
+    }
+    .news-read-more-btn {
+        text-align: center;
+        text-decoration: none;
+        background-color: rgb(243, 243, 243);
+        border: 1px solid rgb(243, 243, 243);
+        line-height: 2;
+        text-transform: capitalize;
+        font-size: 1.28571em;
+        font-weight: 500;
+        letter-spacing: 0.075em;
+        .border-radius(50px);
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        color: rgb(54, 24, 62);
+        //.transition (all 0.2s ease-in-out);
+        padding: 13px 12px;
+        display: inline-block;
+        width: 100%;
+        max-width: 270px;
+        .transition(all .3s);
+
+        &:hover{
+            background: #e84e0e;
+            border-color: #e84e0e;
+            color: #fff;
+        }
+
+        @media (min-width: 992px){
+            float: right;
+        }
+    }
+    .news-social{
+        line-height: 0;
+        padding: 10px 0;
+
+        @media (max-width: 991px){
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .news-social-btn{
+        display: inline-block;
+        width: 43px;
+        height: 43px;
+        background: url(../images/blog-social-icons.png);
+        background-repeat: no-repeat;
+
+        &.fb{
+            background-position: left top;
+        }
+
+        &.tw{
+            background-position: center top;
+        }
+
+        &.gp{
+            background-position: right top;
+        }
+
+        & + .news-social-btn{
+            margin-left: 15px;
+        }
+    }
+
+    .pagination-btns {
+        margin-top: 25px;
+
+        div {
+            display: inline-block;
+            //float: left;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            color: @text-grey;
+            font-weight: bold;
+            margin-right: 10px;
+            cursor: pointer;
+            text-transform: capitalize;
+            &:first-of-type {
+                margin-right: 20px;
+            }
+        }
+        .currentPage {
+            background-color:  @color-base-one;
+            color: white;
+        }
+    }
+}
+.single-blog {
+    .news-title {
+        display: inline-block;
+        margin: 0 0 0 10px;
+        font-size: 36px;
+        text-transform: capitalize;
+        max-height: none;
+        max-width: 87%;
+        overflow: initial;
+        margin-top: 20px;
+    }
+    .single-blog-text {
+        p {
+            margin-bottom: 10px;
+            * {
+                font-size: 14px !important;
+            }
+        }
+    }
+    @media(max-width: @screen-lg-min) {
+        .news-title {
+            height: auto;
+            font-size: 32px;
+        }
+        .news-date {
+            display: inline-block;
+            top: -15px;
+            left: 70px;
+        }
+        .single-blog-text {
+            margin-top: 10px;
+        }
+    }
+}
+.browser-ie, .browse-edge, .browser-unknown {
+    .container.news{
+        margin-top: 135px !important;
+    }
+}

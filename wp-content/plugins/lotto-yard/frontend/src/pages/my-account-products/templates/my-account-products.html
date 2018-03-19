@@ -1,0 +1,49 @@
+<div class="my-acc-table">
+    <div class="headers-row row">
+        <div class="col-xs-1">{{::translation.Product_Status}}</div>
+        <div class="col-xs-2">{{::translation.Product_Lottery}}</div>
+        <div class="col-xs-2">{{::translation.Group_Shares}}</div>
+        <div class="col-xs-1">{{::translation.Draws_Left}}</div>
+        <div class="col-xs-1">{{::translation.Total_Lines}}</div>
+        <div class="col-xs-2">{{::translation.Start_Date}}</div>
+        <div class="col-xs-2">{{::translation.End_Date}}</div>
+        <div class="col-xs-1"></div>
+    </div>
+
+    <div class="data-row row col-xs-12" ng-repeat="product in productsMaped">
+        <div class="row pointer" ng-click="isVisible=!isVisible">
+            <div class="col-xs-1 status" ng-class="{'active': product.Status == 'Active'}">{{product.Status}}</div>
+            <div class="col-xs-2">
+                <p class="text-left lottery-name">{{product.NameToShow}}</p>
+                <!-- <p class="text-left">{{ getProductType(product.Product, product.ProductId) }}</p> -->
+                <p class="text-left">{{product.Product}}</p>
+            </div>
+            <div class="col-xs-2 more-padd">{{product.LinesLeft}}</div>
+            <div class="col-xs-1 draws-left">
+                <span class="red">{{product.DrawsLeft.split('/')[0]}}</span>
+                <span class="not-red">/{{product.DrawsLeft.split('/')[1]}}</span>
+            </div>
+            <div class="col-xs-1">{{product.TotalLines}}</div>
+            <div class="col-xs-2">{{product.PurchasedOn}}</div>
+            <div class="col-xs-2">{{product.EndDate}}</div>
+            <!-- <div class="col-xs-1 glyphicon glyphicon-chevron-down"></div> -->
+            <div class="col-xs-1 arrow-down fl-right"></div>
+        </div>
+        <div class="row col-xs-12" ng-if="isVisible">
+            <div ly-my-account-product product="product"></div>
+        </div>
+    </div>
+    <!-- <div class="pagination-holder row col-xs-12">
+        <div class="col-xs-1">
+            <button class="btn btn-default" ng-click="changePage(-1)" ng-disabled="currentPage==1"><</button>
+        </div>
+        <div class="col-xs-1 current">{{currentPage}}</div>
+        <div class="col-xs-1">
+            <button class="btn btn-default" ng-click="changePage(1)" ng-disabled="products.length==0">></button>
+        </div>
+    </div> -->
+    <div class="pagination-holder col-xs-12">
+        <ul uib-pagination total-items="40 * productsPageCount" max-size="3" ng-model="currentPage" ng-change="changePage(currentPage)"
+                boundary-links="false" direction-links="true" previous-text="<" next-text=">"></ul>
+    </div>
+</div>

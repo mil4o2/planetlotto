@@ -1,0 +1,16 @@
+<div ng-if="!lyCart.isEmpty()">
+    <div>
+        <div class="fl-left col-xs-12 no-padd" ng-repeat="item in lyCart.getItems() track by $index">
+            <div ly-cart-product-template></div>
+        </div>
+        <div class="show-free-ticket col-xs-12 no-padd" ng-if="isFirstTimePurchase">
+            <div ly-cart-product-template></div>
+        </div>
+    </div>
+</div>
+<div class="emptyCart" ng-if="lyCart.isEmpty()">
+    <div class="emptyCartMsg">{{::translation.Empty__Shopping_Cart}}</div>
+    <div class="emptyCartIcon"></div>
+    <div class="no-items">{{::translation.No_Items}}</div>
+    <a class="btn btn-blue" ng-href="/play-lottery/#syndicate">{{::translation.Pls_Add_Ticket}}</a>
+</div>

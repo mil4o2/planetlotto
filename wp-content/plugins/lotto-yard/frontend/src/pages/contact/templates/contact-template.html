@@ -1,0 +1,35 @@
+<ng-include class="cf" src="'/wp-content/plugins/lotto-yard/frontend/src/pages/common/templates/header-banner.html'"></ng-include>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info clearfix text-center" bind-html-compile="contact_information"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="contact-form" class="clearfix">
+                    <h3 class="text-center">{{::translation.Send_us_message}}</h3>
+                    <div ly-contact-form></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div id="contact">-->
+    <!--<div class="container">-->
+        <!--<div class="left col-xs-12 col-sm-7">-->
+            <!--<h1 class="title">{{::pageTitle}}</h1>-->
+            <!--<div class="text" bind-html-compile="pageContent"></div>-->
+        <!--</div>-->
+        <!--<div class="right col-xs-12 col-sm-5 fl-right">-->
+            <!--<div class="banner" style="background-image:url('{{::acf.banner.url}}')"></div>-->
+        <!--</div>-->
+        <!--<div class="grey-border fl-left">-->
+            <!--<div class="contact-information col-xs-12 col-sm-12 fl-left col-lg-5" bind-html-compile="acf.contact_information"></div>-->
+            <!--<div id="contact-form" class="col-xs-12 col-sm-12 col-lg-7 fl-left">-->
+                <!--<h3 class="text-center">{{::translation.Send_us_message}}</h3>-->
+                <!--<div ly-contact-form></div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+<!--</div>-->

@@ -1,0 +1,19 @@
+<div ng-if="!item.getIsRaffle()" class="hiddenlinenumbers animated" ng-show="active" ng-class="{ 'fadeIn': active, 'fadeOut': !active }">
+    <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs" ng-repeat="lines in lines track by $index" ng-hide="item.getProductType() == 1 && $index >= 10">
+        <span class="line f-12">{{::translation.Line}} {{$index + 1}}: </span>
+        <span class="normal-numbers" ng-repeat="number in getSanitizedNumbers(lines, 0) track by $index">{{number}}</span>
+        <span class="additional-numbers" ng-repeat="specialnumber in getSanitizedNumbers(lines,1) track by $index">{{specialnumber}}</span>
+        <span ng-if="!isSyndicate" class="pencil" ng-click="editLine($index, item)"></span>
+    </div>
+</div>
+<div ng-if="item.getIsRaffle()" class="hiddenlinenumbers hiddenlinenumbersnavidad" ng-show="active">
+    <h3>{{::translation.Your_Tickets}}</h3>
+    <p>{{::translation.Ticket_Number}}</p>
+    <div class="lineofnavidadticket">
+        <div class="number numberblue" ng-repeat="navidadNumber in getNavidatTicketParts(item.getNumbers())[0] track by $index">{{ navidadNumber }}</div>
+        <div class="middledash">-</div>
+        <div class="number numberorange" ng-repeat="navidadNumber in getNavidatTicketParts(item.getNumbers())[1] track by $index">{{ navidadNumber }}</div>
+        <div class="middledash">-</div>
+        <div class="number numberorange" ng-repeat="navidadNumber in getNavidatTicketParts(item.getNumbers())[2] track by $index">{{ navidadNumber }}</div>
+    </div>
+</div>

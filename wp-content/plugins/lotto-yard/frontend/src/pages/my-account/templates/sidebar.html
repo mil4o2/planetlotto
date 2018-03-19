@@ -1,0 +1,115 @@
+<div id="my-account" class="container">
+    <div class="col-xs-12 intro">
+        <div class="col-24 part first">
+            <div class="name">{{user.FirstName +" "+ user.LastName}} </div>
+            <div ng-if="userBalanceData.VipLevel != 'None'" class="vip-lvl">{{userBalanceData.VipLevel}}</div>
+            <a class="deposit-btn btn-green" ng-click="goToDepositPage()">{{::translation.Deposit}}</a>
+            <a class="deposit-btn btn-yellow" ng-click="goToWithdraw()">{{::translation.Withdraw}}</a>
+        </div>
+        <div class="col-32 part">
+            <div class="money-panel">
+                <div class="my-acc-icon real-money-icon"></div>
+                {{::translation.Real_Money}}
+                <div class="money-string fl-right">{{::lyCart.getCurrency()}}{{::(userBalanceData.AccountBalance + userBalanceData.WinningAmount) | number:2}}</div>
+                <div ng-if="userBalanceData.AccountBalance < 10000" class="dots">........</div>
+            </div>
+            <div class="bigPlus">+</div>
+            <div class="money-panel">
+                <div class="my-acc-icon bonus-money-icon"></div>
+                {{::translation.Bonus_Money}}
+                <div class="money-string fl-right">{{::lyCart.getCurrency()}}{{::userBalanceData.BonusAmount | number:2}}</div>
+                <div ng-if="userBalanceData.BonusAmount < 1000" class="dots">........</div>
+            </div>
+            <div class="bigEqual">=</div>
+            <div class="money-panel">
+                <div class="my-acc-icon balance-icon"></div>
+                {{::translation.Balance}}
+                <div class="money-string balance fl-right">{{::lyCart.getCurrency()}}{{::allMoney | number:2}}</div>
+                <div ng-if="allMoney < 1000000" class="dots">........</div>
+            </div>
+        </div>
+        <div class="col-44 part last">
+            <div class="upperPart" ng-class="{'Platinum': '{{userBalanceData.VipLevel}}' == 'Platinum'}">
+                <div class="vip-icon" ng-class="currentVip.name"></div>
+
+                <div class="progress-holder" ng-show="'{{userBalanceData.VipLevel}}' != 'Platinum'">
+                    <div class="current-level">{{::translation.Current_VIP_status}}</div>
+                    <div class="progress-ends">
+                        <div class="progress">
+                            <div class="start-pts">{{::userBalanceData.StartPoints}}</div>
+                            <div class="end-pts">{{::userBalanceData.EndPoints}}</div>
+                            <div class="cur-pts" ng-style="{left: vipPercentageMinusThree + '%'}">{{userBalanceData.Points}}</div>
+                            <div class="progress-bar progress-bar" role="progressbar" aria-valuenow="{{vipPercentage}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: vipPercentageMinusThree + '%'}">
+                                <span class="sr-only"></span>
+                                <span class="indicator-line"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="left fl-left">
+                    <div class="text-blue">{{::userBalanceData.VipLevel}}</div>
+                    <div class="current-level">{{userBalanceData.Points}} {{::translation.Points}}</div>
+                </div>
+
+                <div class="fl-right current-bonus">
+                    <div class="half">
+                        <div class="text-center">{{::translation.Automatic_Discount}}</div>
+                        <div class="text-center text-blue">{{::userBalanceData.Discount * 100}}%</div>
+                    </div>
+                    <div class="half">
+                        <div class="text-center">{{::translation.Automatic_Cashback}}</div>
+                        <div class="text-center text-blue">{{::userBalanceData.CashBack * 100}}%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="lowerPart" ng-show="'{{userBalanceData.VipLevel}}' != 'Platinum'">
+                <div class="col-40 next-vip-part">
+                    <span class="vip-icon" ng-class="nextVip.name"></span>
+                    <span>{{::translation.Next_VIP_status}}</span>
+                    <span class="text-blue">{{::nextVip.name}}</span>
+                    <span class="missing-points f-12">{{::translation.Missing_Points}} {{userBalanceData.EndPoints - userBalanceData.Points}}</span>
+                </div>
+                <div class="col-30 next-vip-part next-vip-part-smaller">
+                    <div class="text-center">{{::translation.Automatic_Discount}}</div>
+                    <div class="text-center text-blue">{{::nextVip.discount}}</div>
+                </div>
+                <div class="col-30 next-vip-part next-vip-part-smaller">
+                    <div class="text-center">{{::translation.Automatic_Cashback}}</div>
+                    <div class="text-center text-blue">{{::nextVip.cashback}}</div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-19 part">
+
+        Next_VIP_status
+    Automatic_Discount
+    Automatic_Cashback
+    Gold
+    Bronze
+    Silver
+    Platinum
+            <div class="my-acc-icon my-points-icon"></div>
+            <div class="bold">{{userBalanceData.Points}}</div>
+            <div>{{translation.My_Points}}</div>
+        </div>
+        <div class="col-19 part">
+            <div class="my-acc-icon lvlup-points-icon"></div>
+            <div class="bold">{{userBalanceData.EndPoints}}</div>
+            <div>{{translation.Points_Next_Level}}</div>
+        </div> -->
+    </div>
+    <div class="col-xs-12 content">
+        <div class="col-24">
+            <ul class="left-part">
+                <li><a class="link" ng-class="isCurrent('myAccountPage.profile')" ng-click="changeCurrent('myAccountPage.profile')" ui-sref="myAccountPage.profile">{{::translation.My_Profile}}</a></li>
+                <li><a class="link" ng-class="isCurrent('myAccountPage.payment')" ng-click="changeCurrent('myAccountPage.payment')" ui-sref="myAccountPage.payment">{{::translation.My_Payment_Methods}}</a></li>
+                <li><a class="link" ng-class="isCurrent('myAccountPage.transactions')" ng-click="changeCurrent('myAccountPage.transactions')" ui-sref="myAccountPage.transactions">{{::translation.My_Transactions}}</a></li>
+                <li><a class="link" ng-class="isCurrent('myAccountPage.tickets')" ng-click="changeCurrent('myAccountPage.tickets')" ui-sref="myAccountPage.tickets">{{::translation.My_Tickets}}</a></li>
+                <li><a class="link" ng-class="isCurrent('myAccountPage.products')" ng-click="changeCurrent('myAccountPage.products')" ui-sref="myAccountPage.products">{{::translation.My_Purchased_Products}}</a></li>
+            </ul>
+        </div>
+
+        <div class="col-76 my-acc-ui-view anim-in-out anim-fade" ui-view></div>
+    </div>
+</div>

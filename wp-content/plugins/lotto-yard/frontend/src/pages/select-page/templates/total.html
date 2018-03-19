@@ -1,0 +1,43 @@
+<div ng-if="!userService.isLogin || isFirstPurchase" class="subscription col-xs-6 col-sm-3 col-md-3 col-lg-3">
+    <p class="drawoption-title">
+        {{::translation.Get_Your_Ticket}}:
+    </p>
+    <!--<div class="subs-title">{{::translation.Subscription}}
+        <div class="info-icon" ng-mouseenter="showPopUp = true" ng-mouseleave="showPopUp = false"></div>
+        <div class="info-popup" ng-show="showPopUp">Choose your billing period. Your card will be charged accordingly, every 2 or 4 weeks.</div>
+    </div>
+    <div class="btn-group" uib-dropdown>
+        <button id="btn-append-to-single-button" type="button" class="btn-subs" uib-dropdown-toggle>
+            {{isSubscription?selectedSubscription.Weeks +' '+ translation.Weeks: translation.No_Subscription }}
+        </button>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+            <li class="subscriptionOption" ng-repeat="option in subscriptionOptions" ng-click="chooseDiscount(option)">
+                <span>{{::option.Weeks}} {{::translation.Weeks | lowercase}}</span>
+            </li>
+            <li class="subscriptionOption" ng-click="chooseDiscount()">{{::translation.No_Subscription | lowercase}}</li>
+        </ul>
+    </div>-->
+    <!--<div class="bonus">-->
+        <!--<div class="cash-back"></div>-->
+        <!--<div class="text-holder">-->
+            <!--<div class="text-blue">{{::ngCart.getCurrency()}}{{totalCost | number:2 }} {{::translation.CashBack}}</div>-->
+            <!--<div class="text-grey">{{::translation.OnThis}}</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+<div class="total total-holder col-xs-12 col-sm-4 col-md-3 col-lg-3 fl-right">
+    <div class="total-lines-holder">
+        <div class="text-right">{{::translation.Lines}}:</div>
+        <div class="number-right bolder">{{lines}}</div>
+    </div>
+    <div class="total-lines-holder">
+        <div class="text-right">{{::translation.Draws}}:</div>
+        <div class="number-right bolder">{{draws}}</div>
+    </div>
+    <hr>
+    <div class="total-lines-holder">
+        <div class="text-right">{{::translation.Total}}:</div>
+        <div class="number-right bolder bolder-blue">{{::ngCart.getCurrency()}}{{totalCost | number:2 }}</div>
+    </div>
+    <div class="btn-green button-blip" ng-click="saveToCart()">{{::translation.continue}}</div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container selectPage">
+    <div id="play-page" class="fl-left">
+        <!-- <div class="light-blue"> -->
+        <div class="back-background-img" style="background-image: url('{{::content.back_banner_pic.url}}')"></div>
+        <!-- </div> -->
+        <div class="banner col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-image: url('{{::content.banner_pic.url}}')">
+            <div class="banner-title">{{::content.banner_title}}</div>
+        </div>
+        <div class="fl-left col-xs-12 col-sm-12 col-md-12 col-lg-12" ly-select-page-header lottery="lottery" is-classic-tab="isClassicTab"></div>
+        <div class="select-mobile fl-left col-xs-12 col-sm-12 col-md-12 col-lg-12" ly-select-page-main content="content" lottery="lottery" is-classic-tab="isClassicTab" is-mobile="isMobile"></div>
+
+        <div class="about col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <div class="current-info">
+                <div class="row" ng-repeat="row in content.content[0].row">
+                    <div class="col-xs-12 left fl-left" ng-class="row.left_column_width" bind-html-compile="row.left_column"></div>
+                    <div class="col-xs-12 left fl-right" ng-class="row.right_column_width" bind-html-compile="row.right_column"></div>
+                </div>
+
+                <!--<div class="container faq-part no-padd" ng-repeat="contentFaq in content.content track by $index">-->
+                <div class="faq-part cf"  ng-repeat="content in content.content">
+                    <div class="img">
+                        <img src="{{::content.article_image.url}}" alt="{{::content.article_image.title}}">
+                    </div>
+                    <div class="text">
+                        <h4>{{::content.article_title}}</h4>
+                        <div class="desc" bind-html-compile="content.article_text"></div>
+                    </div>
+                </div>
+                <div class="faq-part cf">
+                <!--<div class="faq-part cf" ng-repeat="content in contentFaq track by $index">-->
+                    <div ly-faq class="col-xs-12"></div>
+                </div>
+                <div class="lottery-info" bind-html-compile="content.lottery_info"></div>
+            </div>
+        </div>
+    </div>
+</div>

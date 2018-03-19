@@ -1,0 +1,13 @@
+<div class="lottery-box">
+    <!--<img ng-if="lottery.LotteryName == 'MegaMillions'" src="/wp-content/plugins/lotto-yard/frontend/images/make-a-wish-logo.png" class="img-responsive fl-left" alt="Lottery Image" style="max-width:177px;">-->
+    <!--<img ng-if="lottery.LotteryName != 'MegaMillions'" ng-src="/wp-content/plugins/lotto-yard/frontend/images/{{::lottery.LotteryName | lowercase}}-logo.png" class="img-responsive fl-left" alt="Lottery Image">-->
+    <img ng-src="/wp-content/plugins/lotto-yard/frontend/images/{{::lottery.LotteryName | lowercase}}-logo.png" class="img-responsive fl-left" alt="Lottery Image">
+
+    <div class="fl-left">
+        <p>{{::lottery.LotteryName}} {{::$parent.translation.next_draw_in}} <span class="timer" ly-timer time="lottery.DrawDate"></span></p>
+        <p class="jackpot"><span ng-if="lottery.Jackpot != '-1'">{{::lottery.LotteryCurrency2}}</span>
+            <span count-to="{{::lottery.Jackpot | jackpot}}" value="0" duration="1" class="ng-scope"></span> <span ng-show="lottery.Jackpot != '-1'"> {{::$parent.translation.Million}}</span> </p>
+        <button class="btn-blue-brds" ng-click="goToPlayPage()">{{isClassicTab? $parent.translation.choose_numbers : $parent.translation.SelectGroup}}</button>
+        <a ng-show="quickPicks!=0" class="btn-blue" href="#" ng-click="buyQuickPick()">{{isClassicTab? quickPicks + ' '+ $parent.translation.QuickPicks : $parent.translation.QuickBuy}}</a>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="upper-part col-xs-12">
+    <div class="pic col-xs-12 col-sm-8 "></div>
+    <div class="group-other-shares col-xs-12 col-sm-4">
+        <h2 class="text-blue">{{::lotteryName}} {{::translation.Group}}</h2>
+        <div class="text" bind-html-compile="content.syndicate_text"></div>
+
+        <div class="how-many">{{::translation.How_Many_Shares}}</div>
+        <div class="number-draws-btns plus group-btn fl-right" ng-click="changeOtherShares(1)"></div>
+
+        <input class="group-shares f-16" type="digit"
+            ng-model="otherOption.share"
+            ng-change="changeShare(otherOption.share)"
+            oninput="this.value = this.value.replace(/[a-zA-Z_=!@#$%^&*.,+()-/]/g, '')"
+            ng-blur="validateDeposit(depositAmount)"/>
+
+        <div class="number-draws-btns minus group-btn fl-left" ng-click="changeOtherShares(-1)"></div>
+    </div>
+
+    <div class="view-numbers-holder col-xs-12 col-sm-8">
+        <div class="view-numbers btn btn-blue-brds" ng-click="showNumbers()">{{::translation.See_Your_Numbers}}</div>
+    </div>
+</div>
+
+<div class="lower-part col-xs-12">
+    <div class="number-draws col-xs-12 col-sm-8">
+        <h4>{{::translation.ChooseDraws}}</h4>
+        <div class="radio col-xs-12 col-sm-6" ng-class="{'selected': isOneTimeEntry }">
+            <div ng-click="changeDraw(true)">
+                <div class="circle"></div>
+                <div class="text">{{translation.OneTimeEntry}}</div>
+            </div>
+            <span>{{::translation.One_draw}}</span>
+        </div>
+        <div class="radio col-xs-12 col-sm-6" ng-class="{'selected': !isOneTimeEntry }">
+            <div ng-click="changeDraw(false)">
+                <div class="circle"></div>
+                <div class="text">{{translation.MultiDraw}}</div>
+                <div>
+                    <div class="btn-group" uib-dropdown>
+                        <button id="btn-append-to-single-button" type="button" class="btn-subs" uib-dropdown-toggle>
+                    {{selectedMultiDrawOption.NumberOfDraws}} {{translation.Draws| lowercase }} {{ selectedMultiDrawOption.Discount>0.00 ? selectedMultiDrawOption.Discount * 100 + '% '+ (translation.Discount | lowercase):''}}
+                </button>
+                        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+                            <li ng-repeat="option in multiDrawOptions" ng-click="changeMultiDraw(option)" ng-if="option.NumberOfDraws != 1">
+                                <span>{{::option.NumberOfDraws}} {{::translation.Draws | lowercase}}</span>
+                                <span>{{::(option.Discount * 100)}}% {{::translation.Discount | lowercase}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="total total-holder col-xs-12 col-sm-4 fl-right">
+        <div class="total-lines-holder">
+            <div class="text-right">{{::translation.Shares}}:</div>
+            <div class="number-right bolder">{{otherOption.share}}</div>
+        </div>
+        <div class="total-lines-holder">
+            <div class="text-right">{{::translation.Draws}}:</div>
+            <div class="number-right bolder">{{draws}}</div>
+        </div>
+        <hr>
+        <div class="total-lines-holder">
+            <div class="text-right">{{::translation.Total}}:</div>
+            <div class="number-right bolder bolder-blue">{{::ngCart.getCurrency()}} {{otherOption.price | number:2 }}</div>
+        </div>
+        <div class="btn-green button-blip" ng-click="saveToCart()">{{::translation.continue}}</div>
+    </div>
+</div>

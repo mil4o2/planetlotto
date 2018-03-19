@@ -1,0 +1,19 @@
+<div ng-repeat="promotion in promotionList track by $index">
+    <div ng-if="!promotion.acf.is_special_offer && today <= promotion.acf.expire_date">
+        <div class="promotion col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <img class="background" ng-src="{{::promotion.acf.pic.url}}" alt="">
+            <h3 class="xs-title visible-xs col-xs-4">{{::promotion.title.rendered}}</h3>
+            <div class="offer-text hidden-xs col-sm-8 col-md-8 col-lg-6">
+                <h3>{{::promotion.title.rendered}}</h3>
+                <span bind-html-compile="promotion.content.rendered| limitTo: 200"></span>
+                <br>
+                <a class="btn-blue" ng-href="{{::promotion.link}}"> {{::translation.Read_More}} </a>
+            </div>
+            <div class="offer-text-xs visible-xs">
+                <span bind-html-compile="promotion.content.rendered| limitTo: 200"></span>
+                <br>
+                <a class="btn-blue" ng-href="{{::promotion.link}}"> {{::translation.Read_More}} </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="fl-left visibility-hidden" ng-class="{'visible' : item.getDiscount() > 0}">
+    <!--     <p>
+        {{::translation.Purchase_Save}}
+    </p> -->
+    <p>
+        {{ item.getNumberOfDraws() }} {{::translation.Draws}} {{::translation.Discount}} ({{(item.getDiscount() * 100) | round}}%)
+    </p>
+</div>
+<div class="clear"></div>
+
+<!--<div class="fl-left">
+    <input class="fl-left" type="checkbox" ng-model="subscription" ng-click="subscriptionChanged(item.getId())" ng-checked="{{item.getIsSubscription()}} " />
+
+    <span class="subscription fl-left f-14 text-uppercase">
+        {{::translation.Subscription}}
+    </span>
+    <div class="info-icon" ng-mouseover="showHideSubcriptionInfo(true)" ng-mouseout="showHideSubcriptionInfo(false)">
+    </div>
+
+    <div class="info-popup" ng-if="showSubscriptionInfo">
+        <p>{{::translation.Subscription_ToolTip}}</p>
+    </div>
+
+</div>-->
+
+
+
+<!-- <div ng-if="item.getTotalDiscount() > 0">
+    <p>
+        - {{::lyCart.getCurrency()}} {{item.getTotalDiscount()|number:2}}
+    </p>
+</div> -->

@@ -1,0 +1,91 @@
+<!-- <div> -->
+<div class="blue-bg">
+    <div class="lottery-name">{{::lotteryName}}</div>
+    <div class="group-size">{{::view.type | uppercase}} {{translation.Group | uppercase}}</div>
+</div>
+<div class="share-info">
+    <div>
+        <span>{{::translation.Jackpot_Per_Share}}</span>
+        <span class="fl-right">{{::currency}}{{::jackpot /view.tickets}}</span>
+    </div>
+    <div>
+        <span>{{::translation.Number_Of_Tickets}}</span>
+        <span class="fl-right">{{::view.tickets}} {{translation.Tickets| lowercase}}</span>
+    </div>
+</div>
+
+<div class="winning-chanses">
+    <round-progress max='100' current='current' radius='125' semi='true' color='#e84e0e' bgcolor='#F0F0F0' clockwise='clockwise' responsive='responsive' duration='800' animation='easeOutCubic'></round-progress>
+    <div class='percent'>{{current}}%</div>
+    <span>{{::translation.winningChances}}</span>
+</div>
+
+<div class="how-many">{{::translation.How_Many_Shares}}?</div>
+<div class="radio" ng-repeat="share in shares track by $index" ng-class="{'selected': selectedShares.share== share.share }">
+    <div ng-click="changeShare(share)">
+        <div class="circle"></div>
+        <div class="text">{{share.share}} {{::translation.share}}</div>
+        <div class="price">{{::currency}}{{share.price | number:2}}</div>
+    </div>
+</div>
+<div class="radio" ng-class="{'selected': selectedShares.share== share.share }">
+    <div ng-click="changeShare()">
+        <div class="circle"></div>
+        <div class="text">{{::translation.Other}}</div>
+        <div ng-if="showOther" class="price">{{::currency}}{{otherOption.price | number:2}}</div>
+    </div>
+</div>
+<div ng-if="showOther" class="group-other-shares">
+    <div class="number-draws-btns plus group-btn" ng-click="changeOtherShares(1)"></div>
+    <span class="group-shares f-16">{{otherOption.share}}</span>
+    <div class="number-draws-btns minus group-btn" ng-click="changeOtherShares(-1)"></div>
+</div>
+<div>
+    <div>{{translation.How_Many_Draws}}</div>
+    <div class="radio" ng-class="{'selected': isOneTimeEntry }">
+        <div ng-click="changeDraw(true)">
+            <div class="circle"></div>
+            <div class="text">{{translation.OneTimeEntry}}</div>
+        </div>
+    </div>
+    <div class="radio" ng-class="{'selected': !isOneTimeEntry }">
+        <div ng-click="changeDraw(false)">
+            <div class="circle"></div>
+            <div class="text">{{translation.MultiDraw}}</div>
+            <div>
+                <div class="btn-group" uib-dropdown>
+                    <button id="btn-append-to-single-button" type="button" class="btn-subs" uib-dropdown-toggle>
+                {{selectedMultiDrawOption.NumberOfDraws}} {{translation.Draws| lowercase }} {{ selectedMultiDrawOption.Discount>0.00 ? selectedMultiDrawOption.Discount * 100 + '% '+ (translation.Discount | lowercase):''}}
+            </button>
+                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+                        <li ng-repeat="option in multiDrawOptions" ng-click="changeMultiDraw(option)" ng-if="option.NumberOfDraws != 1">
+                            <span>{{::option.NumberOfDraws}} {{::translation.Draws | lowercase}}</span>
+                            <span>{{::(option.Discount * 100)}}% {{::translation.Discount | lowercase}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="drawoption">
+    <div class="subscription">
+        <div class="subs-title">{{::translation.Subscription}}
+            <div class="info-icon" ng-mouseenter="showPopUp = true" ng-mouseleave="showPopUp = false"></div>
+            <div class="info-popup" ng-show="showPopUp">{{::translation.Subscription_ToolTip}}</div>
+        </div>
+        <div class="btn-group" uib-dropdown>
+            <button id="btn-append-to-single-button" type="button" class="btn-subs" uib-dropdown-toggle>
+                {{isSubscription ?selectedSubscription.Weeks +' '+ translation.Weeks: translation.No_Subscription }}
+            </button>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+                <li ng-repeat="option in subscriptionOptions" ng-click="changeSubscription(option)">
+                    <span>{{::option.Weeks}} {{::translation.Weeks | lowercase}}</span>
+    </li>
+    <li ng-click="changeSubscription()"><span>{{::translation.No_Subscription | lowercase}}</span></li>
+    </ul>
+</div>
+</div>
+</div>-->
+<button class="btn-green" ng-click="saveToCart()">+ {{::translation.JOIN_GROUP}}</button>
+<div class="view-numbers" ng-click="showNumbers()">{{::translation.View_Numbers}}</div>

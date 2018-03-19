@@ -1,0 +1,196 @@
+@import "functions.less";
+
+
+.latest-lotteries-results{
+	background: #fff;
+	&:first-child{
+		padding-top: 10px;
+	}
+	.pic {
+	    height: 350px;
+	    background-repeat: no-repeat;
+	    background-position: center center;
+	}
+	.sortBy {
+		margin-top: 0;
+
+		.switch-btn{
+			margin-left: 15px;
+			padding-top: 15px;
+
+			@media (min-width:@screen-sm-min){
+				margin-left: 0;
+			}
+		}
+
+
+		label {
+			font-weight: normal;
+			line-height: 30px;
+			padding-right: 5px;
+		}
+	}
+
+	p{
+		font-size: 14px;
+	}
+
+	div.col-sm-6{
+		label{
+			font-size: 12px;
+			font-weight: normal;
+			margin-right: 5px;
+			line-height: 30px;
+		}
+	}
+	div.col-sm-5{
+		img{
+			// margin: 0 auto;
+			float: left;
+			display: block;
+			margin-top: 30px;
+		}
+	}
+
+	.select-box-arrow {
+	    width: 155px;
+
+	    select {
+		    float: left;
+		    width: 186px;
+		}
+	}
+
+	div.table-responsive{
+		background: #f7fafd;
+	}
+
+	.table{
+		thead{
+			tr{
+				background: #f7fafd;
+				th{
+					border-bottom: 0;
+					color: @color-base-one;
+					font-size: 13px;
+					font-weight: normal;
+				}
+				th.lotteries-logo-name{
+					width: 240px;
+					padding-left: 35px;
+				}
+			}
+		}
+		tr{
+			background: #fff;
+		    &:hover{
+		      .lotteries-logos{
+
+      		    .transform(scale(1.1));
+		      }
+		    }
+
+		}
+		td{
+			border-top: 2px solid #f7fafd;
+			line-height: 81px;
+		}
+
+		tbody{
+			tr{
+				td.lotteries-logo-name{
+					width: 240px;
+				}
+				td{
+
+					span.normal-numbers{
+						background: #f0f0f0;
+						color: @color-base-one;
+					}
+					span.balls{
+						margin-left: 1px;
+					}
+
+					span.lotteries-logos{
+				        max-width: 131px;
+				        height: 81px;
+				        display: block;
+				        background: url('../images/all-lotteries-logos-768.png');
+              		    .transition(all .2s ease-in-out);
+				    }
+
+				    span.link{
+				    	padding-right: 12px;
+				    	font-size: 13px;
+				    }
+				    span.btn-blue-brds{
+				    	.border-radius();
+				    	padding: 3px 20px;
+				    }
+				    span.lotteries-logos.PowerBall{
+				        background-position: 0px 0;
+				    }
+				    span.lotteries-logos.EuroMillions{
+				        background-position: 0px -80px;
+				    }
+				    span.lotteries-logos.MegaMillions{
+						background: url("../images/make-a-wish-logo.png") center no-repeat !important;
+						background-size: contain !important;
+				    }
+				    span.lotteries-logos.UkLotto{
+				        background-position: 0px -253px;
+				    }
+				    span.lotteries-logos.SuperEnalotto{
+				        background-position: 0px -340px;
+				    }
+				    span.lotteries-logos.NewYorkLotto{
+				        background-position: 0px -427px;
+				    }
+				    span.lotteries-logos.LaPrimitiva{
+				        background-position: 0px -513px;
+				    }
+				    span.lotteries-logos.EuroJackpot{
+				        background-position: 0px -595px;
+				    }
+				    span.lotteries-logos.ElGordo{
+				        background-position: 0px -677px;
+				    }
+				    span.lotteries-logos.BonoLoto{
+				        background-position: 0px -769px;
+				    }
+				    span.lotteries-logos.Lotto649{
+				        background-position: 0px -852px;
+				    }
+				    span.lotteries-logos.OzLotto{
+				        background-position: 0px -935px;
+				    }
+					color: #666768;
+					font-size: 13px;
+				}
+			}
+		}
+	}
+
+}
+.latest-lotteries-results.container{
+	padding-top: 0;
+}
+.blue-bgr-2{
+	.latest-lotteries-results{
+		background: #f7fafd;
+	}
+}
+
+@media (max-width: @screen-sm-min) {
+	.latest-lotteries-results{
+		div.col-sm-5{
+			img{
+				float: none;
+				display: block;
+				margin: 0 auto;
+				margin-top: 30px;
+
+			}
+		}
+	}
+}

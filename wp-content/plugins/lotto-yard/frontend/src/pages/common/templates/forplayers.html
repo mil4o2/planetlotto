@@ -1,0 +1,6 @@
+<div id="for-players">
+    <div class="links">
+        <div class="for-players" ng-if="titleMenu">{{::titleMenu}}</div>
+        <a class="link" ng-repeat="link in forPlayersLinks" ng-class="{ 'current': currentUrl==link.link }" ng-href="{{::link.link}}">{{::link.link_title}}</a>
+    </div>
+</div>

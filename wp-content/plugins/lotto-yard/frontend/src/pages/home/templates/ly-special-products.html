@@ -1,0 +1,122 @@
+<div>
+    <ng-include class="cf" src="'/wp-content/plugins/lotto-yard/frontend/src/pages/common/templates/ly-classic-syndicate-buttons.html'"></ng-include>
+
+    <slick id="special-products-slider" ng-if="viewLoaded" settings="slickConfigSpecialProducts">
+    <!--<div class="special-products cf">-->
+        <!--<div ng-repeat="product in classicProducts" class="fl-left item {{$index > 3 ? 'three-in-line' : ''}}">-->
+        <div ng-repeat="product in classicProducts | filter:charityLotteryFilter" class="fl-left item">
+            <div ly-special-product product="product" is-classic-tab='isClassicTab' lotteries-results="lotteriesResults"></div>
+        </div>
+    <!--</div>-->
+    </slick>
+    <div class="clearfix"></div>
+
+
+
+    <div class="special-products group">
+        <div ng-repeat="product in drawsGroup" class="fl-left item three-in-line">
+            <div class="special-lotteries-box cf text-center" ly-special-lottery product="product"></div>
+        </div>
+    </div>
+
+    <!--<div class="special-products group">-->
+        <!--<div class="fl-left item three-in-line">-->
+            <!--<div class="special-lotteries-box cf text-center">-->
+                <!--<div class="img">-->
+                    <!--<img src="/wp-content/plugins/lotto-yard/frontend/images/american-group-logo.png" alt="American Group">-->
+                <!--</div>-->
+                <!--<div class="special-lottery-box-text">-->
+                    <!--<p class="lottery-name">American Group</p>-->
+                    <!--<p class="lottery-millions">-->
+                        <!--<span>$297</span>-->
+                        <!--<span>Million</span>-->
+                    <!--</p>-->
+                    <!--<p style="padding-left: 3px;">-->
+                        <!--<a href="" class="view-more">View More</a>-->
+                        <!--<a class="btn-blue text-center">buy Tickets</a>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="fl-left item three-in-line">-->
+            <!--<div class="special-lotteries-box cf text-center">-->
+                <!--<div class="img">-->
+                    <!--<img src="/wp-content/plugins/lotto-yard/frontend/images/topjackpot-logo.png" alt="Jackpot Hunter Group">-->
+                <!--</div>-->
+                <!--<div class="special-lottery-box-text">-->
+                    <!--<p class="lottery-name">Jackpot Hunter</p>-->
+                    <!--<p class="lottery-millions">-->
+                        <!--<span>$297</span>-->
+                        <!--<span>Million</span>-->
+                    <!--</p>-->
+                    <!--<p style="padding-left: 3px;">-->
+                        <!--<a href="" class="view-more">View More</a>-->
+                        <!--<a class="btn-blue text-center">buy Tickets</a>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="fl-left item three-in-line">-->
+            <!--<div class="special-lotteries-box cf text-center">-->
+                <!--<div class="img">-->
+                    <!--<img src="/wp-content/plugins/lotto-yard/frontend/images/euro-group-logo.png" alt="Euro Group">-->
+                <!--</div>-->
+                <!--<div class="special-lottery-box-text">-->
+                    <!--<p class="lottery-name">Euro Group</p>-->
+                    <!--<p class="lottery-millions">-->
+                        <!--<span>$297</span>-->
+                        <!--<span>Million</span>-->
+                    <!--</p>-->
+                    <!--<p style="padding-left: 3px;">-->
+                        <!--<a href="" class="view-more">View More</a>-->
+                        <!--<a class="btn-blue text-center">buy Tickets</a>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="clearfix"></div>
+
+    <div id="how-to-start" class="cf">
+        <div class="left pull-left">
+            <div class="inner cf">
+                <div class="step one">
+                    <p class="title">Choose</p>
+                    <div class="divider">
+                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                    </div>
+                    <p class="desc">Choose your lucky  numbers</p>
+                </div>
+                <div class="step two">
+                    <p class="title">Play</p>
+                    <div class="divider">
+                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                    </div>
+                    <p class="desc">Play the Planet's richest jackpots*</p>
+                </div>
+                <div class="step three">
+                    <p class="title">See</p>
+                    <div class="divider">
+                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                    </div>
+                    <p class="desc">See the <strong>real scanned ticket</strong></p>
+                </div>
+                <div class="step four">
+                    <p class="title">Win</p>
+                    <div class="divider"></div>
+                    <p class="desc"><strong>Win the biggest Lottos on the planet!</strong></p>
+                </div>
+            </div>
+        </div>
+        <div class="right pull-left text-center">
+            <div class="inner">
+                <a href="http://planetlotto.com.au/play-lottery/#classic" class="btn">Get Started</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <p class="displayed-jackpots-notice">* Jackpots displayed are live feeds and are estimated.</p>
+
+
+</div>

@@ -1,0 +1,52 @@
+<div class="sortBy">
+    <div class="switch-btn">
+        <label for="sortBy" class="f-12">{{translation.SortBy}}: </label>
+        <div class="btn-group" uib-dropdown>
+            <button id="btn-append-to-single-button" type="button" class="btn-subs" uib-dropdown-toggle>
+                        {{sortBy.displayName}}
+                    </button>
+            <ul class="dropdown-menu no-scroll" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+                <li ng-if="sortBy.displayName != sort.displayName" class="subscriptionOption" ng-repeat="sort in sortValues track by $index" ng-click="changeSort(sort)">
+                    <span>{{sort.displayName}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="lotteries-logo-name fl-left">{{::translation.Lottery_Name | uppercase}}</th>
+                <th>{{::translation.Last_Draw | uppercase}}</th>
+                <th>{{::translation.Payout | uppercase}}</th>
+                <th>{{::translation.Draw_Numbers | uppercase}}</th>
+                <th>{{::translation.Info_Instructions | uppercase}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="lotteryResult in lotteryResults">
+                <td class="lotteries-logo-name">
+                    <span class="{{lotteryResult.LotteryName}} lotteries-logos"></span>
+                    <span>{{lotteryResult.LotteryName}}</span>
+                </td>
+                <td>
+                    {{lotteryResult.DrawDate | date: 'dd.MM.yyyy'}}
+                </td>
+                <td>
+                    {{lotteryResult.RollOver==0 ? translation.Rollover : lotteryResult.LotteryCurrency + ( lotteryResult.RollOver | number)}}
+                </td>
+                <td>
+                    <span class="balls text-center normal-numbers" ng-repeat="num in lotteryResult.WinningResult.SelectedNumbers track by $index">{{num}}</span>
+                    <span class="balls text-center additional-numbers" ng-repeat="num in lotteryResult.WinningResult.ExtraNumbers track by $index">{{num}}</span>
+                </td>
+                <td>
+                    <!--<span class="link" ng-click="goToInfoPage(lotteryResult.LotteryName)">{{::translation.Info}}</span>-->
+                    <span class="link" ng-click="goToPastResultsPage(lotteryResult.LotteryName)">{{::translation.Past_Results}}</span>
+                    <span class="btn-blue-brds" ng-click="goToPlayPage(lotteryResult.LotteryName)">{{::translation.Play_Now}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

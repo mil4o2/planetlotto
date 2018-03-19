@@ -1,0 +1,23 @@
+<h1>{{::translation.Raffle}}</h1>
+
+<div>{{::translation.Shuffle}}</div>
+<div>
+    <div>{{::translation.Ticket_Number}}: {{ticketNumber}}</div>
+    <div>{{::translation.Seat}}: {{lineSeat}}</div>
+    <div>{{::translation.Ticket}}: {{lineTicket}}</div>
+    <div>{{::translation.Price}}: {{price | number:2}}</div>
+</div>
+
+<div>
+    <h4>{{::translation.Add_shares}}</h4>
+    <span ng-click="changeShares(-1)">-</span>
+    <div>{{shares}}/{{maxShares}}</div>
+    <div ng-click="changeShares(1)">+</div>
+</div>
+<div>
+    <div>{{::translation.NUMBER_OF_SHARES}}: {{shares}}</div>
+    <div>{{::translation.Total_Cost}}: {{totalCost| number:2}}</div>
+    <div ng-click="saveToCart()">{{::translation.continue}}</div>
+</div>
+
+<div bind-html-compile="content"></div>

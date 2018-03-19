@@ -1,0 +1,10 @@
+<div id="my-transactions">
+    <uib-tabset class="navigation" active="activeTab" justified="true">
+        <uib-tab class="tab" index="0" heading="{{::translation.Transactions}}">
+            <div ly-my-account-transactions transactions="transactions"></div>
+        </uib-tab>
+        <uib-tab class="tab" index="1" heading="{{::translation.Withdraw}} {{::translation.Request}}">
+            <div ly-my-account-withdraw></div>
+        </uib-tab>
+    </uib-tabset>
+</div>

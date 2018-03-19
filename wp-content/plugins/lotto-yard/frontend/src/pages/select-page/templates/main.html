@@ -1,0 +1,8 @@
+<div ng-switch on="isClassicTab">
+    <div ly-select-page-personal ng-switch-when="true"></div>
+    <div class="select-mobile" ly-select-page-personal-mobile ng-switch-when="Mobile"></div>
+    <!-- <div ly-select-page-group ng-switch-when="false"></div> -->
+    <div id="group-page" ng-switch-when="false">>
+        <div content="content" ly-select-page-group-view-new></div>
+    </div>
+</div>

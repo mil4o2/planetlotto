@@ -1,0 +1,23 @@
+<div ng-class="special-lottery-box" class="special-lotteries-box text-center {{::product.LotteryName}}">
+    <div class="lotteries-logos {{::product.LotteryName}}"></div>
+    <p class="lottery-name f-16">{{::product.LotteryName}}</p>
+    <div class="divider"></div>
+    <p class="lottery-millions">
+        <span ng-show="product.Jackpot > 0">{{::product.LotteryCurrency2}}</span>
+        <span count-to="{{::product.Jackpot | jackpot}}" value="0" duration="1"></span>
+        <span ng-show="product.Jackpot > 0">{{$parent.translation.Million}}</span></p>
+        <!--<span class="lottery-timer" ly-timer time="product.DrawDate"></span>-->
+    <a class="btn-blue f-16" ng-if="quickPicks!=0" ng-href="#" ng-click="buyQuickPick(product, quickPicks)">{{isClassicTab?quickPicks + ' '+ $parent.translation.QuickPicks : $parent.translation.QuickBuy}}</a>
+    <!--<div>-->
+        <a class="btn-blue link" ng-click="goToPlayPage()">{{isClassicTab? $parent.translation.choose_numbers : $parent.translation.SelectGroup}}</a>
+    <!--</div>-->
+    <!--<div class="grey-box" ng-if="lastResults">-->
+        <!--<p class="result-date">{{$parent.translation.Results}}: {{lastResults.DrawDate | dateSuffix}}</p>-->
+        <!--<div ng-if="selectedNumbes">-->
+            <!--<span class="normal-numbers balls" ng-repeat="num in selectedNumbes">{{num}} </span>-->
+            <!--<span class="additional-numbers balls" ng-repeat="num in extraNumbers">{{num}}</span>-->
+        <!--</div>-->
+        <!--<p class="pending" ng-if="!selectedNumbes">{{::translation.Pending}}</p>-->
+        <!--<a class="link" href="/{{product.LotteryName.toLowerCase()}}-results/">{{$parent.translation.results_and_prizes}}</a>-->
+    <!--</div>-->
+</div>

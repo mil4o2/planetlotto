@@ -1,0 +1,285 @@
+@import "functions.less";
+
+#singleInfo {
+    position: relative;
+    // top: -30px;
+    .breadcrumb {
+        background: none;
+    }
+    p.millions-timer {
+        span.timer-millions {
+            span.timer{
+                font-size: 18px;
+                top: 36px;
+                margin-left: -229px;
+                @media(min-width:@screen-width-min-md) and (max-width: @screen-width-min-lg){
+                    margin-left: -200px;
+                }
+                @media(min-width: @screen-sm-min) and (max-width:@screen-width-min-md){
+                    font-size: 14px;
+                    top: 33px;
+                    margin-left: -201px;
+                }
+            }
+        }
+    }
+
+
+    p.millions-timer span.currency, p.millions-timer span.millions{
+        font-size: 42px;
+
+        @media(min-width:@screen-width-min-md) and (max-width: @screen-width-min-lg){
+            font-size: 35px;
+        }
+    }
+    .row { //info and timer
+        margin-bottom: 55px;
+        &:first-of-type{
+            margin-top: 15px;
+        }
+
+        .information {
+            .lottery-name {
+                font-size: 3rem; //30px
+                font-weight: 300;
+            }
+            .lottery-info {
+                font-size: 1.3rem; //13px
+                padding-right: 50px;
+                margin-top: 10px;
+            }
+        }
+        .switch-to-btn {
+            margin-top: -55px;
+            .switch {
+                margin: 5px;
+            }
+            label{
+                font-weight: normal;
+            }
+        }
+        .btn-group.dropdown {
+            // min-width: 155px;
+            // background-position: 167px 13px;
+            .dropdown-menu {
+                z-index: 3;
+            }
+        }
+    }
+    .newStyle {
+        position: relative;
+        background: #F1F7FB;
+        position: relative;
+        z-index: 3;
+        top: -425px;
+        width: 39px;
+        left: -8px;
+        height: 25px;
+        text-align: center;
+    }
+    .priceIn {
+        color: @color-base-one;
+        width: 95px;
+        font-weight: bold;
+    }
+    .full-lenght {
+        width: 100%;
+        background-color: @color-base-one;
+        color: white;
+        padding: 60px 0;
+
+        .container {
+            height: 100%;
+            h4 {
+                font-size: 14px;
+                display: inline-block;
+                position: relative;
+                top: -14px;
+                font-weight: bold;
+            }
+            .shedule {background-position: 0 0;}
+            .guess {background-position: -33px 0;}
+            .jackpot {background-position: -65px 0;}
+            .tax {background-position: -98px 0;}
+            .sec-row {
+                margin: -25px 0 0 40px;
+                max-width: 180px;
+            }
+            .match {
+                display: inline;
+                position: relative;
+                right: -790px;
+                top: -40px;
+                color: @color-base-one;
+                font-weight: bold;
+                @media(max-width: @screen-md-min){
+                    right: -740px;
+                }
+            }
+        }
+    }
+    .pic-sprite {
+        width: 35px;
+        height: 35px;
+        background-image: url("../images/infoPage.png");
+        background-repeat: no-repeat;
+        display: inline-block;
+    }
+    .chart-part.full-lenght{
+        background-color: #F1F7FB;
+        color: inherit;
+        padding: 20px 0;
+        margin-top: -50px;
+        height: 550px;
+
+        .chart-title {
+            text-align: center;
+            .chart-pic {
+                background-position: -130px 0;
+                margin-bottom: -30px;
+            }
+            h4 {
+
+                .text-blue {
+                    color: @color-base-one;
+                }
+            }
+            h2 {
+
+            }
+        }
+        .overallOdds {
+            display: inline-block;
+            font-size: 14px;
+            font-style: italic;
+            max-width: 300px;
+            @media(max-width: @screen-lg-min) {
+                max-width: 150px;
+            }
+            @media(max-width: @screen-md-min) {
+                margin-top: -40px;
+            }
+        }
+        .chart {
+            width: 850px;
+            height: 400px;
+            background-image: url('../images/lines 2.png');
+            background-repeat: no-repeat;
+            background-position: 45px 42px;
+            background-size: 86% 79%;
+            //  margin-left: 500px;
+            @media(max-width: @screen-md-min) {
+                width: 750px;
+            }
+            .ac-line{
+                stroke-dasharray: 2,8;
+                stroke: @color-base-one !important;
+            }
+            circle{
+                r: 8;
+                fill: white !important;
+                stroke: @color-base-one !important;
+            }
+            .angular-charts-template .axis path, .angular-charts-template .axis line {
+                stroke: none;
+            }
+        }
+    }
+    .more-info {
+        padding: 85px 0;
+        .title {
+            font-size: 30px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    .much-text {
+        padding: 15px 0;
+        background-color: #fff;
+    }
+
+    @media(max-width: @screen-sm-min){
+        .chart-part {
+            display: none;
+        }
+        .container {
+            padding: 0 10px;
+            text-align: justify;
+        }
+        .full-lenght {
+            text-align: center;
+        }
+        .more-info img {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media(min-width: @screen-sm-min) and (max-width:@screen-width-min-md){
+    #singleInfo {
+        p.millions-timer{
+            font-size: 70px;
+            margin-top: 21px;
+
+            span.currency{
+                left: 15px;
+            }
+        }
+
+        .select-page-timer {
+            -webkit-transform: scale(1);
+            -moz-transform:      scale(1);
+            -ms-transform:       scale(1);
+            -o-transform:        scale(1);
+            .play-now{
+                margin-top: 72px;
+                margin-left: 0;
+            }
+            .jackpot{
+                font-size: 46px;
+            }
+        }
+
+        p.millions-timer span.currency, p.millions-timer span.millions{
+            font-size: 27px;
+        }
+    }
+}
+
+@media(max-width: @screen-sm-min){
+    #singleInfo {
+        p.millions-timer span.currency, p.millions-timer span.millions {
+            font-size: 21px;
+        }
+        .select-page-timer{
+            .jackpot{
+                font-size: 53px;
+            }
+        }
+        p.millions-timer{
+			font-size: 90px;
+			top: -37px;
+
+			span.currency{
+				left: 20px;
+			}
+			span.currency, span.millions{
+				font-size: 25px;
+			}
+			.jackpot{
+				font-size: 41px;
+			}
+		}
+        .select-page-timer  {
+            .play-now{
+                margin-left: 0;
+                clear: both;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+}

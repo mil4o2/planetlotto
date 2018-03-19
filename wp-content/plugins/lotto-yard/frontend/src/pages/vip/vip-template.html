@@ -1,0 +1,112 @@
+<div id="vip-page">
+    <div class="banner" style="background-image:url('{{::acf.banner.url}}')">
+        <div class="container">
+            <div class="title col-xs-8 col-sm-6 col-md-5 col-lg-5">
+                <span>{{::pageTitle}}</span>
+                <div class="sub-title">{{::translation.vipClub}}</div>
+                <div class="text" bind-html-compile="pageContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="levels container">-->
+        <!--<div class="levels-table col-xs-12 col-sm-6 col-md-6 col-lg-6">-->
+            <!--<div class="first-row">-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">-->
+                    <!--<div class="icons level"></div>-->
+                    <!--<p>{{::translation.vipLevel}}</p>-->
+                <!--</div>-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">-->
+                    <!--<div class="icons points"></div>-->
+                    <!--<p>{{::translation.entryPoints}}</p>-->
+                <!--</div>-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">-->
+                    <!--<div class="icons benefits"></div>-->
+                    <!--<p>{{::translation.vipBenefits}}</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="vip-table-row">-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">{{::translation.vipBronze}}</div>-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">1000-8999</div>-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">{{::translation.fiveCashBack}}</div>-->
+            <!--</div>-->
+            <!--<div class="vip-table-row">-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">{{::translation.vipSilver}}</div>-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">9000-29999</div>-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">{{::translation.tenCashBack}}</div>-->
+            <!--</div>-->
+            <!--<div class="vip-table-row">-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">{{::translation.vipGold}}</div>-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">30000-99999</div>-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">{{::translation.fifteenCashBack}}</div>-->
+            <!--</div>-->
+            <!--<div class="vip-table-row">-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">{{::translation.vipPlatinum}}</div>-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">100000+</div>-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">{{::translation.twentyCashBack}}</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="vip-text col-xs-12 col-sm-6 col-md-6 col-lg-6">-->
+            <!--<h2>{{::translation.vipLevel}}</h2>-->
+            <!--<div class="" bind-html-compile="acf.levels_text"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="levels container">
+        <div class="levels-table col-xs-12">
+            <div class="first-row cf">
+                <div class="col-xs-2">
+                    <p>From</p>
+                </div>
+                <div class="col-xs-2">
+                    <p>To</p>
+                </div>
+                <div class="col-xs-3">
+                    <p>Status</p>
+                </div>
+                <div class="col-xs-3">
+                    <p>Bonus Money</p>
+                </div>
+                <div class="col-xs-2">
+                    <p>Discount</p>
+                </div>
+            </div>
+            <div class="vip-table-row">
+                <div class="col-xs-2">251</div>
+                <div class="col-xs-2">600</div>
+                <div class="col-xs-3">{{::translation.vipBronze}}</div>
+                <div class="col-xs-3">5.00%</div>
+                <div class="col-xs-2">0.00%</div>
+            </div>
+            <div class="vip-table-row">
+                <div class="col-xs-2">601</div>
+                <div class="col-xs-2">1,000</div>
+                <div class="col-xs-3">{{::translation.vipSilver}}</div>
+                <div class="col-xs-3">10.00%</div>
+                <div class="col-xs-2">1.00%</div>
+            </div>
+            <div class="vip-table-row">
+                <div class="col-xs-2">1,001</div>
+                <div class="col-xs-2">5,000</div>
+                <div class="col-xs-3">{{::translation.vipGold}}</div>
+                <div class="col-xs-3">15.00%</div>
+                <div class="col-xs-2">2.00%</div>
+            </div>
+            <div class="vip-table-row">
+                <div class="col-xs-2">5,001</div>
+                <div class="col-xs-2">More</div>
+                <div class="col-xs-3">{{::translation.vipPlatinum}}</div>
+                <div class="col-xs-3">25.00%</div>
+                <div class="col-xs-2">4.00%</div>
+            </div>
+        </div>
+        <div class="vip-text col-xs-12">
+            <h2>{{::translation.vipLevel}}</h2>
+            <div class="" bind-html-compile="acf.levels_text"></div>
+        </div>
+    </div>
+
+    <div class="lower-part-text">
+        <div class="container" bind-html-compile="acf.lower_part_text"></div>
+    </div>
+</div>

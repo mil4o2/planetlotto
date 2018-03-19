@@ -1,0 +1,32 @@
+<div class="table-responsive panel-banking" >
+	<table class="table">
+		<thead >
+			<tr >
+				<td>{{::translation.Payment_Method}}</td>
+				<td>{{::translation.Minimum_deposit}}</td>
+				<td>{{::translation.Processing_time}}</td>
+				<td>{{::translation.More_information}}</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="row in bankingItems.banking_colapsing_fields">
+				<td colspan="4">
+					<uib-accordion >
+					    <div uib-accordion-group class="panel-default" is-open="status.open">
+						    <uib-accordion-heading >
+						    <span class="col-width">{{::row.payment_method}}<br><img ng-src="{{::row.logo.url}}" alt="{{::row.payment_method}} img"></span>
+						    <span class="col-width">{{::row.minimum_deposit}}</span>
+						    <span class="col-width">{{::row.processing_time}}</span>
+						    <span class="col-width">
+							    <span class="btn btn-blue-brds">{{::translation.view_more}}</span>
+						    </span>
+
+						    </uib-accordion-heading>
+						    <p bind-html-compile="row.more_information"></p>
+						</div>
+					</uib-accordion>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

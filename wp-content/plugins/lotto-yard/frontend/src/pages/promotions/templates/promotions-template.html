@@ -1,0 +1,27 @@
+<div id="promotions">
+    <div class="container">
+        <div class="promotions-header">
+
+            <h1>{{::pageTitle}}</h1>
+
+            <div bind-html-compile="pageContent"></div>
+        </div>
+        <div class="SpecialOffer">
+            <img ng-src="{{::acf.special_offer_pic.url}}" class="background">
+            <div class="offer-text col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                <h3>{{::acf.special_offer_title}}</h3>
+                <h4 class="visible-xs">{{::translation.Special_Offer}}</h4>
+                <span class="hidden-xs">{{::acf.special_offer_text}}</span>
+                <br>
+                <a class="btn-blue-brds hidden-xs" ng-href="promotions/paris-giveaway-win-romantic-trip-two"> {{::translation.Read_More}} </a>
+            </div>
+            <div class="specialOfferCorner hidden-xs"></div>
+            <div class="offer-text-xs visible-xs">
+                <span>{{::acf.special_offer_text}}</span>
+                <a class="btn-blue-brds" ng-href="promotions/paris-giveaway-win-romantic-trip-two"> {{::translation.Read_More}} </a>
+            </div>
+        </div>
+
+        <div class="ly-promotions" ng-if="true"></div>
+    </div>
+</div>

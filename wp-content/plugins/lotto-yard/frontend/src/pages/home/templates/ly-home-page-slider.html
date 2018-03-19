@@ -1,0 +1,51 @@
+<slick id="main-slider" settings="slickConfig">
+<!--<slick id="main-slider" ng-if="dataLoaded" settings="slickConfig">-->
+    <div ng-repeat="item in homeSliderData">
+        <div ng-if="item.embed_html_iframe == ''">
+            <div class="text col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <p class="heading" ng-style="{color:item.heading_color}" bind-html-compile="item.slider_heading">
+                </p>
+                <p class="second-text">{{::item.slider_second_text}}</p>
+            </div>
+            <div class="image">
+                <a href="{{::item.link_title}}">
+                <!--<div class="image-bg" ng-if="$index == 0" style="background-image: url({{::item.background_images.url}});"></div>-->
+                <!--<img class="desktop" ng-if="$index != 0" ng-src="{{::item.background_images.url}}">-->
+                <!--<img class="mobile" ng-if="$index != 0" ng-src="{{::item.mobile_slider_image.url}}">-->
+                    <img class="desktop" ng-src="{{::item.background_images.url}}">
+                    <img class="mobile" ng-src="{{::item.mobile_slider_image.url}}">
+                </a>
+            </div>
+
+            <!-- Bigest jacpot -->
+            <div class="blue-slider-banner" ng-if="item.current_biggest_jackpot == true">
+                <div class="hidden-xs lotteries-logos {{::allDraws[0].LotteryName}}"></div>
+
+                <p class="fl-left">
+                    <span class="currency">{{::allDraws[0].LotteryCurrency2}}</span>{{::allDraws[0].Jackpot | jackpot}}<span class="timer-millions">
+    					<span class="millions">{{translation.Million}}</span>
+                    <span class="timer">
+                        <span class="align-text" ly-timer time="allDraws[0].DrawDate"></span>
+                    <span class="hidden-sm hidden-md hidden-lg align-text">
+                            {{::allDraws[0].LotteryName}}
+                        </span>
+                    <span class="mobile-top-lottery-logo lotteries-logos hidden-sm hidden-md hidden-lg {{::allDraws[0].LotteryName}}"></span>
+                    </span>
+                    </span>
+                </p>
+                <a class="btn-green" ng-class="{'two-rows' : isGoingToPersonalSelectPage }" ng-click="goToPlayPage()">{{::item.link_title}}</a>
+            </div>
+            <!-- <div class="bonus-banner blue-slider-banner" ng-if="item.current_biggest_jackpot == false">
+                <img class="bonus-logo" ng-src="{{::item.promotion_image.url}}" alt="bonus image" />
+                <p class="fl-left" bind-html-compile="item.promotion_text">
+                </p>
+                <a class="btn-green" ng-href="{{::item.promotion_link | lowercase}}/#syndicate">{{::item.link_title}}</a>
+            </div> -->
+        </div>
+        <!-- <div class="video-holder" ng-if="item.embed_html_iframe != ''" bind-html-compile="item.embed_html_iframe"></div> -->
+        <div class="image" ng-if="item.embed_html_iframe != ''" bind-html-compile="item.embed_html_iframe"></div>
+
+    </div>
+</slick>
+
+<img id="home-bgr-image-slider" ng-src="" />

@@ -1,0 +1,125 @@
+<div id="singleInfo">
+    <div class="container">
+        <div class="row">
+            <div class="switch-to-btn col-xs-12">
+                <div class="btn-group fl-right" uib-dropdown>
+                    <button id="btn-append-to-single-button" type="button" class="btn-subs" uib-dropdown-toggle>
+                        {{lotteryName}} {{::translation.Info}}
+                    </button>
+                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+                        <li class="subscriptionOption" ng-repeat="lottery in allLotteries" ng-click="changeInfo(lottery)" ng-if="lottery != lotteryName">
+                            <span>{{lottery}} {{::translation.Info}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <label class="f-12 fl-right switch">{{::translation.Switch_To}}:</label>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 information">
+                <span class="lottery-name">{{::lotteryName}} {{::translation.Information}}</span>
+                <div class="lottery-info" bind-html-compile="acf.small_info"></div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <div class="fl-left select-page-timer">
+                    <div class="slider-lotterie-logo">
+                        <img ng-src="/wp-content/plugins/lotto-yard/frontend/images/{{::lotteryName.toLowerCase()}}-logo.png" class="img-responsive" alt="">
+                    </div>
+
+                    <div ng-if="lotteryInfo.Jackpot == '-1'" class="fl-left">
+                        <p class="fl-left millions-timer">
+                            <span class="timer-millions">
+                            <span class="millions">{{::translation.Pending}}</span>
+                            <span class="timer">
+                                    <span ly-timer time="lotteryDrawDate"></span>
+                            <span class="hidden-sm hidden-md hidden-lg">
+                                        {{::allDraws[0].LotteryName}}
+                                    </span>
+                            <span class="mobile-top-lottery-logo lotteries-logos hidden-sm hidden-md hidden-lg {{::allDraws[0].LotteryName}}">
+                                    </span>
+                            </span>
+                            </span>
+                        </p>
+                    </div>
+
+                    <p ng-if="lotteryInfo.Jackpot != '-1'" class="fl-left millions-timer">
+                        <span class="currency">{{::currency}}</span>
+                        <span class="jackpot" count-to="{{currentJackpot | jackpot}}" value="0" duration="1"></span>
+                        <span class="timer-millions">
+                            <span class="millions">{{::$parent.translation.Million}}</span>
+                        <span class="timer">
+                                <span ly-timer time="lotteryDrawDate"></span>
+                        <span class="hidden-sm hidden-md hidden-lg">
+                                    {{::allDraws[0].LotteryName}}
+                                </span>
+                        <span class="mobile-top-lottery-logo lotteries-logos hidden-sm hidden-md hidden-lg {{::allDraws[0].LotteryName}}"></span>
+                        </span>
+                        </span>
+                        <div class="play-now btn-blue" ng-click="goToPlayPage(lotteryName)">{{::translation.Play_Now}}</div>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row full-lenght">
+        <div class="container">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="pic-sprite shedule"></div>
+                <h4>{{::translation.Schedule}}</h4>
+                <div class="sec-row">{{::acf.schedule}}</div>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="pic-sprite guess"></div>
+                <h4>{{::translation.Guess_Range}}</h4>
+                <div class="sec-row">{{::lotteryRules.MaxSelectNumbers}}/{{::lotteryRules.SelectNumbers}} <span ng-if="lotteryRules.ExtraNumbers > 0">+ {{::lotteryRules.LotteryType}} {{::lotteryRules.MaxExtraNumbers}}/{{::lotteryRules.ExtraNumbers}}</span></div>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="pic-sprite jackpot"></div>
+                <h4>{{::translation.Jackpot_Type}}</h4>
+                <div class="sec-row">{{::acf.jackpot_type}}</div>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="pic-sprite tax"></div>
+                <h4>{{::translation.Tax}}</h4>
+                <div class="sec-row">{{::acf.tax}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-part full-lenght" ng-if="graphData">
+        <div class="container">
+            <div class="chart-title">
+                <div class="pic-sprite chart-pic"></div>
+                <h2>{{::translation.price_breakdown}}</h2>
+                <h4>{{::translation.lottery_starts_from}} <span class="text-blue">{{::acf.lottery_starting_jackpot}}</span></h4>
+            </div>
+            <div class="overallOdds fl-right">{{::translation.overall_odds}}</div>
+            <div data-ac-chart="'line'" data-ac-data="data" data-ac-config="config" class="chart"></div>
+            <div class="match">{{::translation.match}}</div>
+            <div class="newStyle priceIn">{{::translation.Price_in}} {{::currency}}</div>
+            <div class="newStyle"></div>
+            <div class="newStyle"></div>
+            <div class="newStyle" style="height:{{yDataHeight}}px" ng-repeat="y in graphData.slice().reverse()">{{::y.y_data}}</div>
+        </div>
+    </div>
+
+    <div class="more-info" ng-repeat="info in moreInfo" style="background-color: {{info.background_color}}">
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 fl-{{info.picture_placement}}">
+                <div class="title">{{::info.title}}</div>
+                <div class="text" bind-html-compile="info.text"></div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6  fl-{{info.picture_placement}}">
+                <img ng-src="{{::info.pic.url}}">
+            </div>
+        </div>
+    </div>
+
+    <div class="much-text">
+        <div class="container" ng-bind-html="pageContent"></div>
+    </div>
+</div>

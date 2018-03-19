@@ -1,0 +1,148 @@
+@import "functions.less";
+
+#banking-page{
+	padding-bottom: 20px;
+
+	.breadcrumbs{
+		padding-top: 15px;
+		padding-bottom: 50px;
+	}
+	.accordion{
+		h4{
+			font-weight: 100;
+			font-size: 24px;
+			padding-bottom: 30px;
+			padding-top: 60px;
+
+			span{
+				display: none;
+			}
+		}
+
+		.faq-btn{
+			height: 58px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	.page-content{
+
+		h4{
+			font-weight: 100;
+			font-size: 24px;
+			padding-bottom: 30px;
+			padding-top: 60px;
+		}
+
+		p {
+			margin: 0 0 20px 0;
+			&:first-child{
+				font-weight: 100;
+				font-size: 24px;
+				padding-bottom: 15px;
+			}
+		}
+	}
+
+	p.title{
+		font-weight: 100;
+		font-size: 24px;
+		padding-bottom: 30px;
+		padding-top: 60px;
+	}
+}
+
+@media (max-width:@screen-width-min-lg) {
+	#banking-page{
+		.panel-banking {
+			.panel-heading {
+				.col-width{
+					width: 24%;
+
+
+				}
+			}
+
+			.table{
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+
+}
+@media (max-width:@screen-sm-min) {
+	#banking-page{
+
+		.breadcrumbs{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.panel-banking {
+
+			font-size: 13px;
+			.panel-heading {
+				.col-width{
+				font-size: 13px;
+					img{
+						display: block;
+					}
+				}
+			}
+		}
+		.accordion {
+			h4{
+				font-size: 20px;
+				padding-bottom: 10px;
+				padding-top: 30px;
+			}
+		}
+		p.title{
+			padding-bottom: 10px;
+			padding-top: 30px;
+			font-size: 20px;
+		}
+		p{
+			font-size: 13px;
+		}
+	}
+}
+
+#privacy-page{
+	h4, .h3{
+		font-weight: 100;
+		font-size: 24px;
+		padding-bottom: 15px;
+		margin-top: 20px;
+	}
+	.accordion {
+		margin-top: 20px;
+		h4 {
+			span {
+				display: none;
+			}
+		}
+	}
+}
+#terms-page{
+	h1{
+		font-weight: 100;
+		font-size: 24px;
+		padding-bottom: 15px;
+	}
+	.accordion .card .card-block {
+		p {
+			text-indent: -44px;
+			margin-left: 40px;
+		}
+		div {
+			text-indent: -38px;
+			margin-left: 77px;
+		}
+	}
+}
+
+.panel-banking table thead tr td {
+ text-align: center;
+}

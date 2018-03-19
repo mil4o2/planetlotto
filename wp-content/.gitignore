@@ -1,0 +1,14 @@
+node_modules
+plugins/lotto-yard/frontend/build/
+plugins/lotto-yard/frontend/styles/css/**/*.css
+!plugins/lotto-yard/frontend/styles/css/plugins
+*.idea
+upgrade
+uploads
+*.log
+*backup*
+languages
+!plugins/lotto-yard/languages
+.vscode
+readme
+*.bat

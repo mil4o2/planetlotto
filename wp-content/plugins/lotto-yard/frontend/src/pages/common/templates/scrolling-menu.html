@@ -1,0 +1,14 @@
+<div id="scrolling-menu">
+    <div class="menus-location fixed">-</div>
+    <div class="menus col-xs-12 col-sm-2 offset-col-sm-1 fl-left">
+        <div class="menu-item" ng-repeat="menu in menuList track by $index"><a ng-click="scrollTo(menu.menu_link)">{{$index + 1}}. {{::menu.menu_title}}</a></div>
+    </div>
+
+    <div class="menus-content col-xs-12 col-sm-9 fl-right">
+        <div ng-repeat="content in menuList track by $index">
+            <h3 id="{{::content.menu_link}}">{{$index + 1}}. {{::content.menu_title}}</h3>
+            <div bind-html-compile="content.menu_content"></div>
+        </div>
+        <div class="glyphicon glyphicon-chevron-up back-to-top fixed hidden" ng-click="scrollTo('top')"></div>
+    </div>
+</div>

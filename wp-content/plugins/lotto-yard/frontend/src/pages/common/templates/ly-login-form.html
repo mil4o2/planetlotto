@@ -1,0 +1,39 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="closeModal()"></button>
+    <h4 class="modal-title">{{::translation.Sign_In}}</h4>
+</div>
+<div class="modal-body">
+
+    <form id="sign-in-form" name="signupFrm" novalidate="novalidate" ng-submit="signin($event, user)" ng-model-options="{updateOn: 'blur'}">
+
+        <div class="form-group ">
+            <div class="user">
+                <input placeholder="{{translation.Email}}" name="email" type="email" ng-model="user.email" required pattern-err-type="Please_insert_valid_email" ng-pattern="/^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/" required-err-type="Please_insert_valid_email"
+                    email-err-type="Please_insert_valid_email" />
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <div class="pass">
+                <input placeholder="{{translation.Password}}" name="password" type="password" ng-model="user.password" ng-pattern="/^[a-zA-Z0-9\s@#\.$&!]{7,20}$/" required pattern-err-type="Please_insert_valid_password" required-err-type="Please_insert_valid_password"
+                    ng-minlength-err-type="Please_insert_valid_password" ng-maxlength-err-type="Please_insert_valid_password" />
+            </div>
+        </div>
+
+        <a href="#" ng-click="forgotPasswordModal()">{{::translation.Forgot_password}}</a>
+
+        <div ng-bind="errorMessage" id="errorMessage"></div>
+
+        <div ng-show="showLoginLoader" loader-css="ball-clip-rotate"></div>
+
+        <div>
+            <button id="login-btn" type="submit" class="btn btn-default">{{::translation.Login}}</button>
+            <div id="not-a-member">
+                <span>
+                    {{::translation.Not_Member}}<a href="#" ng-click="registerModal()"> {{::translation.Submit}}</a>
+                </span>
+            </div>
+
+        </div>
+    </form>
+</div>

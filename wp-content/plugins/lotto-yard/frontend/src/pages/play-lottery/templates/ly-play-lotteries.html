@@ -1,0 +1,54 @@
+<div bind-html-compile="content"></div>
+    <!-- Tag for Activity Group: Planet Lotto_ Classic Lottery, Activity Name: Planet Lotto_ Classic Lottery, Activity ID: 4922956 -->
+<!-- Expected URL: http://planetlotto.com.au/play-lottery/#classic -->
+
+<!--
+Activity ID: 4922956
+Activity Name: Planet Lotto_ Classic Lottery
+Activity Group Name: Planet Lotto_ Classic Lottery
+-->
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Planet Lotto_ Classic Lottery
+URL of the webpage where the tag is expected to be placed: http://planetlotto.com.au/play-lottery/#classic
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 05/30/2017
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+jQuery( document ).ready(function() {
+    if (jQuery('noscript').find('iframe').length == 0) {
+        jQuery('noscript').append('<iframe src="https://6977030.fls.doubleclick.net/activityi;src=6977030;type=plane00;cat=plane0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+    }
+});
+</script>
+<noscript></noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+<div class="container">
+    <div class="col-xs-12 page-content no-padd fl-left" bind-html-compile="pageContent"></div>
+    <div class="clear"></div>
+    <div class="col-xs-12 col-sm-3 no-padd" id="sort-by">
+        <label class="f-12" for="sortBy"> {{translation.SortBy}}: </label>
+        <div class="btn-group" uib-dropdown>
+            <button id="btn-append-to-single-button" type="button" class="btn-subs" uib-dropdown-toggle>
+                    {{sort}}
+                    </button>
+            <ul class="dropdown-menu no-scroll" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+                <li class="subscriptionOption" ng-repeat="sortOption in sortValues" ng-click="changeSort(sortOption.value)" ng-if="sort != sortOption.value">
+                    <span>{{sortOption.value}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-9 no-padd">
+        <ng-include src="'/wp-content/plugins/lotto-yard/frontend/src/pages/common/templates/ly-classic-syndicate-buttons.html'"></ng-include>
+    </div>
+    <div class="clear"></div>
+    <div ng-show="!isClassicTab" ly-special-lotteries lotteries="allBrandDraws"></div>
+    <h3 ng-if="isClassicTab" class="h3">{{::translation.classic_lottery_games}}</h3>
+    <h3 ng-if="!isClassicTab" class="h3">{{::translation.group_lottery_games}}</h3>
+    <div class="nth-child-by-2 col-xs-12 col-md-6 col-sm-6 col-lg-6 no-padd" ly-lottery lottery="lottery" is-classic-tab="isClassicTab" ng-repeat="lottery in allBrandDraws| orderBy: sort=='Jackpot'? -sort: sort"></div>
+</div>

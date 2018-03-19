@@ -1,0 +1,292 @@
+@import "functions.less";
+
+#social{
+	background: white;
+  	margin-top: 15px;
+  	margin-bottom: 46px;
+
+  	.container{
+	  padding-left: 15px;
+	  padding-right: 15px;
+	}
+
+	p.f-14{
+		line-height: 31px;
+	}
+	ul{
+
+	  @media (min-width: @screen-width-min-sm){
+		float: right;
+	  }
+	  	li + li{
+		  margin-left: 17px;
+		}
+		li{
+		  	display: inline-block;
+			@media (min-width: @screen-width-min-sm){
+			  float: left;
+			}
+
+			.social-icons {
+			  margin: 0;
+			  background: url(../images/social.png);
+			  background-repeat: no-repeat;
+			  height: 40px;
+			  width: 40px;
+			  float: left;
+			  .transition(all 0.3s);
+			}
+			.social-icons.youtube{
+			  background-position: left top;
+				&:hover{
+				  background-position: left top;
+				}
+			}
+			.social-icons.twitter{
+			  background-position: -44px top;
+				&:hover{
+				  background-position: -44px top;
+				}
+			}
+			.social-icons.google-plus{
+			  background-position: -86px top;
+				&:hover{
+				  background-position: -86px top;
+				}
+			}
+			.social-icons.facebook{
+			  background-position: -130px top;
+			  &:hover{
+				background-position: -130px top;
+			  }
+			}
+
+		}
+	}
+}
+.footer{
+	width: 100%;
+	background: #36183e;
+	background: -moz-linear-gradient(left,  #36183e 0%, #502b5a 100%);
+	background: -webkit-linear-gradient(left,  #36183e 0%,#502b5a 100%);
+	background: linear-gradient(to right,  #36183e 0%,#502b5a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36183e', endColorstr='#502b5a',GradientType=1 );
+	color: @text-color-white;
+}
+
+#footer-top{
+
+  	padding-top: 63px;
+  	padding-bottom: 64px;
+	border-bottom: 1px solid @white-blue-color;
+
+	#footer-images img {
+		height: 40px;
+		margin: 25px 5px 0;
+		width: auto;
+	}
+
+	div[class*="col-"]{
+		text-align: center;
+		
+		ul{
+
+			text-align:left;
+			display: inline-block;
+
+			li{
+			  font-size: 1.1428571428571428em;
+			  letter-spacing: .075em;
+
+			  &:first-child {
+				font-weight: 700;
+				a {
+				  text-transform: uppercase;
+				  color: @text-color-white;
+				}
+			  }
+
+			  a{
+				color: #f0d2f8;
+			  }
+			}
+
+		}
+	}
+	.title{
+		text-transform: uppercase;
+		padding-top: 30px;
+	}
+	a{
+		line-height: 30px;
+		text-transform: capitalize;
+		color: @text-color-white;
+	}
+}
+#footer-bottom{
+  	background: none;
+  	letter-spacing: 0;
+  	padding-top: 48px;
+	#footer-images {
+
+	  margin: 94px 0 0;
+
+		.icons{
+		  background: url(../images/footer-images.png);
+		  background-repeat: no-repeat;
+		  width: 56px;
+		  max-width: none;
+		  height: 41px;
+		  float: none;
+		  margin: 0 10px;
+
+		  &.icon-world-pay{
+			background-position: left top;
+		  }
+
+		  &.icon-visa{
+			background-position: -58px top;
+		  }
+
+		  &.icon-paypal{
+			background-position: -117px top;
+		  }
+
+		  &.icon-master-card{
+			background-position: -176px top;
+		  }
+
+		  &.icon-adult{
+		  	background: url(../images/adult-logo.png);
+		  }
+
+		  &.icon-norton{
+		  	background: url(../images/norton-logo.png);
+		  }
+
+		  &.icon-credorax{
+		  	background: url(../images/credorax-logo.jpg);
+		  }
+
+		  &.icon-mcafee{
+		  	background: url(../images/mcafee-logo.png);
+		  }
+
+		  &.icon-wirecard{
+		  	background: url(../images/wirecard-logo.jpg);
+		  }
+		  &.icon-adult,
+		  &.icon-norton,
+		  &.icon-credorax,
+		  &.icon-mcafee,
+		  &.icon-wirecard{
+		  	background-size: contain;
+		  }
+		}
+
+		@media (min-width:@screen-width-min-md){
+			.icons {
+				margin-left: 14px;
+
+				&:first-child{
+					margin-left: 0;
+				}
+			}
+		}
+
+
+		@media (min-width:@screen-width-min-lg) {
+			.icons {
+				margin-left: 37px;
+
+				&:first-child{
+					margin-left: 0;
+				}
+			}
+		}
+
+		
+		
+
+		a{
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		a{
+			&:first-child{
+				img{
+					padding: 0px;
+				}
+			}
+		}
+
+	}
+	p.f-12{
+		padding:25px 0;
+		float: left;
+	}
+
+	.copyright{
+	  font-size: 16px;
+	  color: #36183e;
+	  margin: 0 0 7px;
+	}
+
+	.owned-by{
+	  font-size: 14px;
+	  color: #66496d;
+	  line-height: 2.1428;
+	}
+}
+
+@media (max-width: @screen-sm-min) {
+	#footer-top div[class*="col-"]{
+		display: none;
+	}
+	#footer-top #footer-images{
+		display: block;
+		margin: 0
+	}
+	#social{
+
+	}
+	#footer-bottom{
+		padding: 20px;
+
+		p.f-12{
+			padding: 0;
+		}
+	}
+}
+
+@media (min-width: 375px) and (max-width: 667px){
+
+	#social{
+
+		p.f-14{
+			float: left;
+			padding-left:8px;
+			margin: 0;
+			line-height: 39px;
+		}
+	}
+}
+@media (max-width: 374px){
+
+	#social{
+
+		p.f-14{
+			display: none;
+		}
+		ul.fl-right{
+			width: 100%;
+		}
+
+	}
+}
+
+.footer-bottom-icons {
+	float: left;
+	width: 100%;
+}

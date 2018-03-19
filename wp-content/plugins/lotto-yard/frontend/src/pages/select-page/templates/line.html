@@ -1,0 +1,27 @@
+<div class="column" ng-mouseover="hoverLine(true)" ng-mouseout="hoverLine(false)">
+    <div ng-show="isVisibleQuickPick" class="quickpick-per-ticket clearfix">
+        <div id="quickpickIndex{{lineNumber}}" ng-click="onQuickPickClicked()" class="button-quickpickall button bg-color-active"></div>
+        <div ng-click="onClearTicket()" class="button-quickclearall button bg-color-active"></div>
+    </div>
+    <div ng-if="isCorrect" class="isCorrect checkCorrect"></div>
+    <div ng-if="!isCorrect && !isEmpty" class="isError checkCorrect"></div>
+
+    <div class="text-holder">
+        <div ng-if="isEmpty" class="play-a">{{::translation.Play}} {{lineNumber}}</div>
+        <div ng-if="isEmpty" class="pick-numbers">{{neededNormalNumbers != 0 ? translation.Select + ' ' + neededNormalNumbers + ' ' + (neededNormalNumbers==1? translation.Number:translation.Numbers) : translation.Complete}}</div>
+        <div ng-if="isCorrect" class="complete-pickmore">{{::translation.Complete}}</div>
+        <div ng-if="!isCorrect && !isEmpty" class="complete-pickmore">{{::translation.Select}} {{selectedNumbersNumb}} {{neededNormalNumbers}} {{neededNormalNumbers==1?translation.Number:translation.Numbers}}</div>
+    </div>
+
+    <div class="numbers">
+        <div ly-select-page-group-numbers arr="selectNumbers" is-regular-number="true" line="lineNumber" needed-numbers="neededNormalNumbers"></div>
+    </div>
+    <div ng-if="lotteryRules.MaxExtraNumbers > 0">
+        <div>
+            <div class="pick-special-numbers">{{neededExtraNumbers==0? translation.Complete : translation.Select+ ' '+neededExtraNumbers + ' ' + (neededExtraNumbers==2? specialBalls[lotteryRules.LotteryType+ '1']:specialBalls[lotteryRules.LotteryType]) }}</div>
+        </div>
+        <div class="extraNumbers">
+            <div ly-select-page-group-numbers arr="extraNumbers" is-regular-number="false" line="lineNumber" needed-numbers="neededExtraNumbers"></div>
+        </div>
+    </div>
+</div>

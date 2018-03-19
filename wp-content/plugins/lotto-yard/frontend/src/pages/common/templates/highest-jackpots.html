@@ -1,0 +1,15 @@
+<div id="highest-jackpots">
+    <p class="title">{{::translation.Highest_Jackpots}}</p>
+    <div id="marquee">
+        <div class="jackpot" ng-repeat="item in draws | limitTo: 3">
+            <p>
+                <span class="text-blue">{{::item.LotteryName}}</span>
+                <span class="comma">,</span>
+                <span class="jackpot">  {{::item.LotteryCurrency2}}{{::item.Jackpot}}</span>
+				<div class="play-now fl-right">
+				    <a ng-href="/lottery-ticket/{{::item.LotteryName}}">{{::translation.Play_Now}}</a>
+				</div>
+            </p>
+        </div>
+    </div>
+</div>

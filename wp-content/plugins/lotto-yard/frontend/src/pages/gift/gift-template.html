@@ -1,0 +1,25 @@
+<div id="gift-page">
+    <div class="banner" style="background-image:url('{{::acf.banner.url}}')">
+        <div class="container">
+            <div class="title col-xs-8 col-sm-6 col-md-4 col-lg-4">
+                <span>{{::acf.banner_title}}</span>
+                <div class="give-gift-btn btn-blue">{{::translation.giveGift}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page container">
+        <img class="pic col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-src="{{::acf.small_banner.url}}"></img>
+        <div class="more col-xs-12 col-sm-6 col-md-6 col-lg-6 fl-right">
+            <h4 class="f-24 title">{{::pageTitle}}</h4>
+            <div class="text f-12" bind-html-compile="pageContent"></div>
+            <div class="form">
+                <div class="form-title f-14">{{::translation.recipiantEmail}}</div>
+                <input type="email" class="form-control form-email" id="exampleInputEmail1" placeholder="email@gmail.com">
+                <div class="form-title f-14">{{::translation.giftMassage}}</div>
+                <textarea class="form-control form-text-area" rows="3"></textarea>
+            </div>
+            <div class="give-gift-btn btn-blue fl-right">{{::translation.continue}}</div>
+        </div>
+    </div>
+</div>

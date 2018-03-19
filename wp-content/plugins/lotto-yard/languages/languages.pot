@@ -1,0 +1,2471 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-30 13:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: backend/LottoYardPostTypes.php:22
+msgid "Add New Testimonial"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:23
+msgid "New Testimonial"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:24
+msgid "Edit Testimonial"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:25
+msgid "View Testimonial"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:26
+msgid "All Testimonials"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:27
+msgid "Search Testimonials"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:28
+msgid "Parent Testimonials:"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:30
+msgid "No testimonials found in Trash."
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:61
+msgid "Add New Winner"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:62
+msgid "New Winners"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:63
+msgid "Edit Winners"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:64
+msgid "View Winners"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:65
+msgid "All Winners"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:66
+msgid "Search Winners"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:67
+msgid "Parent Winners:"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:69
+msgid "No Winners found in Trash."
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:99
+msgid "Add News"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:100
+msgid "New News"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:101
+msgid "Edit News"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:102
+msgid "View News"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:103
+msgid "All News"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:104
+msgid "Search News"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:105
+msgid "Parent News:"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:107
+msgid "No News found in Trash."
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:138
+msgid "Add Promotion"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:139
+msgid "New Promotion"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:140
+msgid "Edit Promotions"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:141
+msgid "View Promotions"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:142
+msgid "All Promotions"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:143
+msgid "Search Promotions"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:144
+msgid "Parent Promotions:"
+msgstr ""
+
+#: backend/LottoYardPostTypes.php:146
+msgid "No Promotions found in Trash."
+msgstr ""
+
+#: frontend/translations.php:7
+msgid "Your cart"
+msgstr ""
+
+#: frontend/translations.php:8
+msgid "Your cart is empty"
+msgstr ""
+
+#: frontend/translations.php:9
+msgid "Shopping cart is Empty"
+msgstr ""
+
+#: frontend/translations.php:10 frontend/translations.php:198
+msgid "You have no items in your cart"
+msgstr ""
+
+#: frontend/translations.php:11 frontend/translations.php:199
+msgid "Please add a ticket"
+msgstr ""
+
+#: frontend/translations.php:12
+msgid "YOUR ORDER"
+msgstr ""
+
+#: frontend/translations.php:13 frontend/translations.php:18
+msgid "Checkout"
+msgstr ""
+
+#: frontend/translations.php:14
+msgid "FAST PROCESSING"
+msgstr ""
+
+#: frontend/translations.php:15
+msgid "Enjoy a personal and fast processing and support"
+msgstr ""
+
+#: frontend/translations.php:16
+msgid "Promo code"
+msgstr ""
+
+#: frontend/translations.php:17
+msgid "Redeem"
+msgstr ""
+
+#: frontend/translations.php:19
+msgid "Welcome Bonus"
+msgstr ""
+
+#: frontend/translations.php:20
+msgid "VIP points"
+msgstr ""
+
+#: frontend/translations.php:21 frontend/translations.php:124
+msgid "Bonus money"
+msgstr ""
+
+#: frontend/translations.php:22
+msgid "Subscription - Never miss a draw"
+msgstr ""
+
+#: frontend/translations.php:23 frontend/translations.php:118
+msgid ""
+"Choose your billing period. Your card will be charged accordingly, every 2 "
+"or 4 weeks."
+msgstr ""
+
+#: frontend/translations.php:24
+msgid "Line"
+msgstr ""
+
+#: frontend/translations.php:25
+msgid "Lines"
+msgstr ""
+
+#: frontend/translations.php:26
+msgid "Draw"
+msgstr ""
+
+#: frontend/translations.php:27
+msgid "Draws"
+msgstr ""
+
+#: frontend/translations.php:28
+msgid "QTY"
+msgstr ""
+
+#: frontend/translations.php:29
+msgid "Share"
+msgstr ""
+
+#: frontend/translations.php:30
+msgid "Shares"
+msgstr ""
+
+#: frontend/translations.php:31
+msgid "Price"
+msgstr ""
+
+#: frontend/translations.php:32
+msgid "On this purchase you save"
+msgstr ""
+
+#: frontend/translations.php:33 frontend/translations.php:34
+msgid "Discount"
+msgstr ""
+
+#: frontend/translations.php:35
+msgid "Your lines"
+msgstr ""
+
+#: frontend/translations.php:36
+msgid "personal+group"
+msgstr ""
+
+#: frontend/translations.php:37
+msgid " top jackpot"
+msgstr ""
+
+#: frontend/translations.php:38
+msgid ")   top lotto"
+msgstr ""
+
+#: frontend/translations.php:39
+msgid "Your group"
+msgstr ""
+
+#: frontend/translations.php:40
+msgid "group"
+msgstr ""
+
+#: frontend/translations.php:41
+msgid "Standart"
+msgstr ""
+
+#: frontend/translations.php:42 frontend/translations.php:518
+msgid "Gold"
+msgstr ""
+
+#: frontend/translations.php:43
+msgid "ticket"
+msgstr ""
+
+#: frontend/translations.php:44
+msgid " Shares are saved for=>"
+msgstr ""
+
+#: frontend/translations.php:45
+msgid "Your tickets"
+msgstr ""
+
+#: frontend/translations.php:46
+msgid "Ticket number"
+msgstr ""
+
+#: frontend/translations.php:47 frontend/translations.php:107
+msgid "Select"
+msgstr ""
+
+#: frontend/translations.php:48
+msgid "numbers"
+msgstr ""
+
+#: frontend/translations.php:49
+msgid "Select Your Power Ball"
+msgstr ""
+
+#: frontend/translations.php:50
+msgid "Select Your Mega Ball"
+msgstr ""
+
+#: frontend/translations.php:51
+msgid "Select Your 2 Lucky Numbers"
+msgstr ""
+
+#: frontend/translations.php:52
+msgid "Select 2 EuroStars"
+msgstr ""
+
+#: frontend/translations.php:53
+msgid "Save"
+msgstr ""
+
+#: frontend/translations.php:54
+msgid "Cancel"
+msgstr ""
+
+#: frontend/translations.php:55
+msgid "Your payment methods"
+msgstr ""
+
+#: frontend/translations.php:56
+msgid "Add Payment Methods"
+msgstr ""
+
+#: frontend/translations.php:57
+msgid "Choose a Payment Method"
+msgstr ""
+
+#: frontend/translations.php:58
+msgid "Add Payment Method"
+msgstr ""
+
+#: frontend/translations.php:59
+msgid "Wallet"
+msgstr ""
+
+#: frontend/translations.php:60
+msgid "I Agree with the"
+msgstr ""
+
+#: frontend/translations.php:61
+msgid "Terms & Conditions"
+msgstr ""
+
+#: frontend/translations.php:62
+msgid " and I am of legal age to play"
+msgstr ""
+
+#: frontend/translations.php:63
+msgid "Pay"
+msgstr ""
+
+#: frontend/translations.php:64
+msgid "Submit Order"
+msgstr ""
+
+#: frontend/translations.php:65
+msgid "Full Name"
+msgstr ""
+
+#: frontend/translations.php:66
+msgid "Card Number"
+msgstr ""
+
+#: frontend/translations.php:67
+msgid "Expiration Date"
+msgstr ""
+
+#: frontend/translations.php:68
+msgid "last 3 digits at the back of your card"
+msgstr ""
+
+#: frontend/translations.php:69
+msgid "Already a member?"
+msgstr ""
+
+#: frontend/translations.php:70
+msgid "Not a Member yet?"
+msgstr ""
+
+#: frontend/translations.php:71
+msgid "Sign in here"
+msgstr ""
+
+#: frontend/translations.php:72
+msgid "Join now and get"
+msgstr ""
+
+#: frontend/translations.php:73
+msgid "Sign up here"
+msgstr ""
+
+#: frontend/translations.php:74
+msgid "Sign up now"
+msgstr ""
+
+#: frontend/translations.php:75
+msgid "Country"
+msgstr ""
+
+#: frontend/translations.php:76
+msgid "Sign Up"
+msgstr ""
+
+#: frontend/translations.php:77 frontend/translations.php:148
+msgid "Sign In"
+msgstr ""
+
+#: frontend/translations.php:78
+msgid "Forgot your password"
+msgstr ""
+
+#: frontend/translations.php:79
+msgid "Please, enter your email and password!"
+msgstr ""
+
+#: frontend/translations.php:80
+msgid "Please, enter your email!"
+msgstr ""
+
+#: frontend/translations.php:81
+msgid "Please, enter your password!"
+msgstr ""
+
+#: frontend/translations.php:82
+msgid "Please, enter your credit card!"
+msgstr ""
+
+#: frontend/translations.php:83
+msgid "Please, check our Terms and Condition!"
+msgstr ""
+
+#: frontend/translations.php:84
+msgid "Please, enter credit card month!"
+msgstr ""
+
+#: frontend/translations.php:85
+msgid "Please, enter credit card expiration date!"
+msgstr ""
+
+#: frontend/translations.php:86
+msgid "Please, enter credit card year"
+msgstr ""
+
+#: frontend/translations.php:87
+msgid "Please select a payment method!"
+msgstr ""
+
+#: frontend/translations.php:88
+msgid "Free"
+msgstr ""
+
+#: frontend/translations.php:89 frontend/translations.php:276
+msgid "Email"
+msgstr ""
+
+#: frontend/translations.php:90
+msgid "Password"
+msgstr ""
+
+#: frontend/translations.php:91 frontend/translations.php:204
+msgid "Phone"
+msgstr ""
+
+#: frontend/translations.php:92
+msgid "Phone Number"
+msgstr ""
+
+#: frontend/translations.php:93
+msgid "Personal"
+msgstr ""
+
+#: frontend/translations.php:94
+msgid "Group"
+msgstr ""
+
+#: frontend/translations.php:95
+msgid "Zoom"
+msgstr ""
+
+#: frontend/translations.php:96
+msgid "Line 1"
+msgstr ""
+
+#: frontend/translations.php:97
+msgid "Quick Pick 5"
+msgstr ""
+
+#: frontend/translations.php:98
+msgid "Quick Pick 10"
+msgstr ""
+
+#: frontend/translations.php:99
+msgid "Quick Checkout"
+msgstr ""
+
+#: frontend/translations.php:100
+msgid "Days"
+msgstr ""
+
+#: frontend/translations.php:101
+msgid "Hrs"
+msgstr ""
+
+#: frontend/translations.php:102
+msgid "Min"
+msgstr ""
+
+#: frontend/translations.php:103
+msgid "Sec"
+msgstr ""
+
+#: frontend/translations.php:104
+msgid "Quick Pick"
+msgstr ""
+
+#: frontend/translations.php:105
+msgid "QuickPicks"
+msgstr ""
+
+#: frontend/translations.php:106
+msgid "Quick Buy"
+msgstr ""
+
+#: frontend/translations.php:108
+msgid "Numbers"
+msgstr ""
+
+#: frontend/translations.php:109
+msgid "Number"
+msgstr ""
+
+#: frontend/translations.php:110
+msgid "Play group"
+msgstr ""
+
+#: frontend/translations.php:111
+msgid "Choose Number of Draws"
+msgstr ""
+
+#: frontend/translations.php:112
+msgid "One-time entry"
+msgstr ""
+
+#: frontend/translations.php:113
+msgid "Play for the next upcoming Draw only."
+msgstr ""
+
+#: frontend/translations.php:114
+msgid ") Try a Multi-Draw or Subscription and get higher discounts per draw."
+msgstr ""
+
+#: frontend/translations.php:115
+msgid "Multi-draw"
+msgstr ""
+
+#: frontend/translations.php:116
+msgid ""
+"Choose Multi-Draw to play for several draws in advance. Save up to 25% per "
+"draw."
+msgstr ""
+
+#: frontend/translations.php:117
+msgid "Subscription"
+msgstr ""
+
+#: frontend/translations.php:119
+msgid "For the upcoming"
+msgstr ""
+
+#: frontend/translations.php:120
+msgid "draw only"
+msgstr ""
+
+#: frontend/translations.php:121
+msgid "weeks"
+msgstr ""
+
+#: frontend/translations.php:122
+msgid "Total Sum"
+msgstr ""
+
+#: frontend/translations.php:123
+msgid "Total"
+msgstr ""
+
+#: frontend/translations.php:125
+msgid "Bonus Money Back"
+msgstr ""
+
+#: frontend/translations.php:126
+msgid ""
+"This is the amount of bonus money you get on this purchase. Bonus money can "
+"be used to purchase more tickets for free."
+msgstr ""
+
+#: frontend/translations.php:127
+msgid "Improve your odds with group"
+msgstr ""
+
+#: frontend/translations.php:128
+msgid "See Your Numbers"
+msgstr ""
+
+#: frontend/translations.php:129
+msgid "These are your numbers"
+msgstr ""
+
+#: frontend/translations.php:130
+msgid ""
+"Increase your winning chances with a  Group Subscription. 1 in 4 jackpots is "
+"won by a Group Ticket.  On this Subscription we cover all the bonus numbers "
+"to increase the winning chances of the group. "
+msgstr ""
+
+#: frontend/translations.php:131
+msgid "You get=> 50 lines and up to 150 shares in the group."
+msgstr ""
+
+#: frontend/translations.php:132
+msgid ") Get more shares so you'll have a bigger portion from the winning"
+msgstr ""
+
+#: frontend/translations.php:133
+msgid "How many shares would you like?"
+msgstr ""
+
+#: frontend/translations.php:134
+msgid "More Lines"
+msgstr ""
+
+#: frontend/translations.php:135
+msgid "Less Lines"
+msgstr ""
+
+#: frontend/translations.php:136
+msgid "City"
+msgstr ""
+
+#: frontend/translations.php:137
+msgid "Address"
+msgstr ""
+
+#: frontend/translations.php:139
+msgid "Date of Birth"
+msgstr ""
+
+#: frontend/translations.php:140
+msgid ""
+"Your credit card statement will show a description which will include either "
+"PlanetLotto or ALW*lotto448081890001(Support number UK=> +44 8081 890 001."
+msgstr ""
+
+#: frontend/translations.php:141
+msgid "Lottery"
+msgstr ""
+
+#: frontend/translations.php:142
+msgid "Next draw"
+msgstr ""
+
+#: frontend/translations.php:143
+msgid "Jackpot"
+msgstr ""
+
+#: frontend/translations.php:144
+msgid "My Details"
+msgstr ""
+
+#: frontend/translations.php:145
+msgid "Change Password"
+msgstr ""
+
+#: frontend/translations.php:146
+msgid "Upload Documents"
+msgstr ""
+
+#: frontend/translations.php:147
+msgid "Register Now"
+msgstr ""
+
+#: frontend/translations.php:149 frontend/translations.php:229
+msgid "Create Account"
+msgstr ""
+
+#: frontend/translations.php:150
+msgid "Log Out"
+msgstr ""
+
+#: frontend/translations.php:151
+msgid "My Account"
+msgstr ""
+
+#: frontend/translations.php:152 frontend/translations.php:272
+#: frontend/translations.php:277 frontend/translations.php:283
+msgid "Phone in Contact24 system"
+msgstr ""
+
+#: frontend/translations.php:153 frontend/translations.php:273
+#: frontend/translations.php:278 frontend/translations.php:282
+msgid "Phone in Qiwi system"
+msgstr ""
+
+#: frontend/translations.php:154 frontend/translations.php:274
+#: frontend/translations.php:279
+msgid "Phone in Comepay system"
+msgstr ""
+
+#: frontend/translations.php:155 frontend/translations.php:275
+#: frontend/translations.php:281 frontend/translations.php:285
+msgid "WebMoney Id"
+msgstr ""
+
+#: frontend/translations.php:156
+msgid "The Min Deposit Is AUD$10.00"
+msgstr ""
+
+#: frontend/translations.php:157
+msgid "Deposit amount"
+msgstr ""
+
+#: frontend/translations.php:158
+msgid "New Password"
+msgstr ""
+
+#: frontend/translations.php:159
+msgid "Old Password"
+msgstr ""
+
+#: frontend/translations.php:160
+msgid "Retype Password"
+msgstr ""
+
+#: frontend/translations.php:161 frontend/translations.php:215
+msgid "Pending"
+msgstr ""
+
+#: frontend/translations.php:162
+msgid "Win the"
+msgstr ""
+
+#: frontend/translations.php:163
+msgid "Lotto Jackpot"
+msgstr ""
+
+#: frontend/translations.php:164
+msgid "Payment Method"
+msgstr ""
+
+#: frontend/translations.php:165
+msgid "Status"
+msgstr ""
+
+#: frontend/translations.php:166
+msgid "Product Status"
+msgstr ""
+
+#: frontend/translations.php:167
+msgid "Default"
+msgstr ""
+
+#: frontend/translations.php:168
+msgid "Update"
+msgstr ""
+
+#: frontend/translations.php:169
+msgid "Delete"
+msgstr ""
+
+#: frontend/translations.php:170
+msgid "Active"
+msgstr ""
+
+#: frontend/translations.php:171 frontend/translations.php:288
+#: frontend/translations.php:295
+msgid "Use"
+msgstr ""
+
+#: frontend/translations.php:172
+msgid "from my Bonus balance upon this purchase"
+msgstr ""
+
+#: frontend/translations.php:173
+msgid "Subtotal"
+msgstr ""
+
+#: frontend/translations.php:174
+msgid "Transaction"
+msgstr ""
+
+#: frontend/translations.php:175
+msgid "Transactions"
+msgstr ""
+
+#: frontend/translations.php:176
+msgid "Id"
+msgstr ""
+
+#: frontend/translations.php:177
+msgid "Date"
+msgstr ""
+
+#: frontend/translations.php:178
+msgid "Amount"
+msgstr ""
+
+#: frontend/translations.php:179
+msgid "Product"
+msgstr ""
+
+#: frontend/translations.php:180
+msgid "Product & Lottery"
+msgstr ""
+
+#: frontend/translations.php:181
+msgid "Personal Lines"
+msgstr ""
+
+#: frontend/translations.php:182
+msgid "Group Lines"
+msgstr ""
+
+#: frontend/translations.php:183
+msgid "Method"
+msgstr ""
+
+#: frontend/translations.php:184
+msgid "Group Shares"
+msgstr ""
+
+#: frontend/translations.php:185
+msgid "Draws Left"
+msgstr ""
+
+#: frontend/translations.php:186
+msgid "Total Lines"
+msgstr ""
+
+#: frontend/translations.php:187
+msgid "Start Date"
+msgstr ""
+
+#: frontend/translations.php:188
+msgid "End Date"
+msgstr ""
+
+#: frontend/translations.php:189
+msgid "Winnings"
+msgstr ""
+
+#: frontend/translations.php:190
+msgid "My Ticket"
+msgstr ""
+
+#: frontend/translations.php:191
+msgid "Draw Results"
+msgstr ""
+
+#: frontend/translations.php:192
+msgid ""
+"Your credit card will be charged by PlanetLotto (Support number UK: +44 8081 "
+"890 001)."
+msgstr ""
+
+#: frontend/translations.php:193
+msgid "CVV/CV2"
+msgstr ""
+
+#: frontend/translations.php:194
+msgid "This item is in your cart."
+msgstr ""
+
+#: frontend/translations.php:195
+msgid "Remove"
+msgstr ""
+
+#: frontend/translations.php:196
+msgid "shopping cart"
+msgstr ""
+
+#: frontend/translations.php:197
+msgid "is empty"
+msgstr ""
+
+#: frontend/translations.php:200
+msgid "Lotteries"
+msgstr ""
+
+#: frontend/translations.php:201
+msgid "First name"
+msgstr ""
+
+#: frontend/translations.php:202
+msgid "Last name"
+msgstr ""
+
+#: frontend/translations.php:203
+msgid "your@email.com"
+msgstr ""
+
+#: frontend/translations.php:205
+msgid "Add a new credit card"
+msgstr ""
+
+#: frontend/translations.php:206
+msgid "Ticket Scan"
+msgstr ""
+
+#: frontend/translations.php:207
+msgid "My Profile"
+msgstr ""
+
+#: frontend/translations.php:208
+msgid "My Payment Methods"
+msgstr ""
+
+#: frontend/translations.php:209
+msgid "My Transactions"
+msgstr ""
+
+#: frontend/translations.php:210
+msgid "My Scanned Tickets"
+msgstr ""
+
+#: frontend/translations.php:211
+msgid "My Products"
+msgstr ""
+
+#: frontend/translations.php:212
+msgid "My Purchased Products"
+msgstr ""
+
+#: frontend/translations.php:213
+msgid "Buy"
+msgstr ""
+
+#: frontend/translations.php:214
+msgid "Get 200 Tickets"
+msgstr ""
+
+#: frontend/translations.php:219
+msgid "Play Slip"
+msgstr ""
+
+#: frontend/translations.php:220
+msgid "Select group"
+msgstr ""
+
+#: frontend/translations.php:221
+msgid "Results"
+msgstr ""
+
+#: frontend/translations.php:222
+msgid "Million"
+msgstr ""
+
+#: frontend/translations.php:223
+msgid "Sort By"
+msgstr ""
+
+#: frontend/translations.php:224
+msgid "Ticket Type"
+msgstr ""
+
+#: frontend/translations.php:225
+msgid "Classic lotteries"
+msgstr ""
+
+#: frontend/translations.php:226
+msgid "Syndicate lotteries"
+msgstr ""
+
+#: frontend/translations.php:227
+msgid "Group Tickets"
+msgstr ""
+
+#: frontend/translations.php:228
+msgid "Cart"
+msgstr ""
+
+#: frontend/translations.php:230
+msgid "Login"
+msgstr ""
+
+#: frontend/translations.php:231
+msgid "bonus"
+msgstr ""
+
+#: frontend/translations.php:232
+msgid "Welcome"
+msgstr ""
+
+#: frontend/translations.php:233
+msgid "Register Now to Play and Win the Lottery Online"
+msgstr ""
+
+#: frontend/translations.php:234
+msgid "ANYWHERE, ANYTIME"
+msgstr ""
+
+#: frontend/translations.php:235
+msgid "Get Your Ticket"
+msgstr ""
+
+#: frontend/translations.php:236
+msgid "No Subscription"
+msgstr ""
+
+#: frontend/translations.php:237
+msgid "How many shares would you like"
+msgstr ""
+
+#: frontend/translations.php:238
+msgid "Deposit"
+msgstr ""
+
+#: frontend/translations.php:239
+msgid "Results & Prizes"
+msgstr ""
+
+#: frontend/translations.php:240
+msgid "Jakcpot split per share"
+msgstr ""
+
+#: frontend/translations.php:241
+msgid "Number of tickets"
+msgstr ""
+
+#: frontend/translations.php:242
+msgid "Tickets"
+msgstr ""
+
+#: frontend/translations.php:243
+msgid "Testimonials"
+msgstr ""
+
+#: frontend/translations.php:244
+msgid "Latest Winners"
+msgstr ""
+
+#: frontend/translations.php:245
+msgid "Total Wins:"
+msgstr ""
+
+#: frontend/translations.php:246
+msgid "Balance"
+msgstr ""
+
+#: frontend/translations.php:247
+msgid "Do you have a Promo Code?"
+msgstr ""
+
+#: frontend/translations.php:248
+msgid "Apply"
+msgstr ""
+
+#: frontend/translations.php:249
+msgid "Sub Total"
+msgstr ""
+
+#: frontend/translations.php:250
+msgid "You Save"
+msgstr ""
+
+#: frontend/translations.php:251
+msgid "Total Cost"
+msgstr ""
+
+#: frontend/translations.php:252
+msgid "Secure Checkout"
+msgstr ""
+
+#: frontend/translations.php:253
+msgid "Order Summary"
+msgstr ""
+
+#: frontend/translations.php:254
+msgid "Share IceLotto with friends:"
+msgstr ""
+
+#: frontend/translations.php:256
+msgid ""
+"www.IceLotto.com is owned by Y&M Hans Management Limited of 6 Ioanni "
+"Stylianou, 2nd floor, Office/flat 202, 2003, Nicosia, Cyprus."
+msgstr ""
+
+#: frontend/translations.php:257
+msgid "New Customers"
+msgstr ""
+
+#: frontend/translations.php:258
+msgid "New to PlanetLotto? Register now to continue."
+msgstr ""
+
+#: frontend/translations.php:259
+msgid "Returning Customers"
+msgstr ""
+
+#: frontend/translations.php:260
+msgid "Already have account? Log in now to continue."
+msgstr ""
+
+#: frontend/translations.php:261
+msgid "User Name"
+msgstr ""
+
+#: frontend/translations.php:262
+msgid "All fields below are mandatory"
+msgstr ""
+
+#: frontend/translations.php:268
+msgid "Payment Methods"
+msgstr ""
+
+#: frontend/translations.php:269
+msgid "the last 3 digits displayed on the back of your card"
+msgstr ""
+
+#: frontend/translations.php:280
+msgid "Phone in Neteller system"
+msgstr ""
+
+#: frontend/translations.php:284
+msgid "Phone in ComePay system"
+msgstr ""
+
+#: frontend/translations.php:286 frontend/translations.php:293
+msgid "Complete your order and earn"
+msgstr ""
+
+#: frontend/translations.php:287 frontend/translations.php:294
+msgid "Cashback for a future purchase"
+msgstr ""
+
+#: frontend/translations.php:289 frontend/translations.php:296
+msgid "from your bonus balance"
+msgstr ""
+
+#: frontend/translations.php:290
+msgid "Select an amount to add"
+msgstr ""
+
+#: frontend/translations.php:291
+msgid "Place Order Now"
+msgstr ""
+
+#: frontend/translations.php:292
+msgid ""
+"Your credit card statement will show a description which will include either "
+"PlanetLotto or ALW*lotto448081890001 (Support number UK: +44 8081 890 001)."
+msgstr ""
+
+#: frontend/translations.php:297
+msgid "Choose Numbers"
+msgstr ""
+
+#: frontend/translations.php:298
+msgid "Real Money"
+msgstr ""
+
+#: frontend/translations.php:299
+msgid "My Points"
+msgstr ""
+
+#: frontend/translations.php:300
+msgid "points"
+msgstr ""
+
+#: frontend/translations.php:301
+msgid "Points next level"
+msgstr ""
+
+#: frontend/translations.php:302
+msgid "Next VIP status"
+msgstr ""
+
+#: frontend/translations.php:303
+msgid "Current VIP status"
+msgstr ""
+
+#: frontend/translations.php:304
+msgid "Automatic discount"
+msgstr ""
+
+#: frontend/translations.php:305
+msgid "Automatic cashback"
+msgstr ""
+
+#: frontend/translations.php:306
+msgid "missing points"
+msgstr ""
+
+#: frontend/translations.php:307
+msgid "Full out your detals"
+msgstr ""
+
+#: frontend/translations.php:308
+msgid "Mobile"
+msgstr ""
+
+#: frontend/translations.php:309
+msgid "Additional Phone Number"
+msgstr ""
+
+#: frontend/translations.php:310
+msgid "Save Changes"
+msgstr ""
+
+#: frontend/translations.php:311
+msgid "Show Password"
+msgstr ""
+
+#: frontend/translations.php:312
+msgid "Hide Password"
+msgstr ""
+
+#: frontend/translations.php:313
+msgid "Inactive Cards"
+msgstr ""
+
+#: frontend/translations.php:314
+msgid "Active Cards"
+msgstr ""
+
+#: frontend/translations.php:315
+msgid "Set as default"
+msgstr ""
+
+#: frontend/translations.php:316
+msgid "Deactive"
+msgstr ""
+
+#: frontend/translations.php:317
+msgid "Add Funds"
+msgstr ""
+
+#: frontend/translations.php:318
+msgid "How much would you like to deposit?"
+msgstr ""
+
+#: frontend/translations.php:319
+msgid "Select your payment method"
+msgstr ""
+
+#: frontend/translations.php:320
+msgid "Amount to deposit"
+msgstr ""
+
+#: frontend/translations.php:321
+msgid "Credit Card Details"
+msgstr ""
+
+#: frontend/translations.php:322
+msgid "Type"
+msgstr ""
+
+#: frontend/translations.php:323
+msgid "Time"
+msgstr ""
+
+#: frontend/translations.php:324
+msgid "Transaction ID"
+msgstr ""
+
+#: frontend/translations.php:325
+msgid "Filter by"
+msgstr ""
+
+#: frontend/translations.php:326
+msgid "Since"
+msgstr ""
+
+#: frontend/translations.php:327
+msgid "Since the last month"
+msgstr ""
+
+#: frontend/translations.php:328
+msgid "From"
+msgstr ""
+
+#: frontend/translations.php:329
+msgid "To"
+msgstr ""
+
+#: frontend/translations.php:330
+msgid "Items"
+msgstr ""
+
+#: frontend/translations.php:331
+msgid "Show"
+msgstr ""
+
+#: frontend/translations.php:332
+msgid "No data for the selected period"
+msgstr ""
+
+#: frontend/translations.php:333
+msgid "Withdraw"
+msgstr ""
+
+#: frontend/translations.php:334
+msgid ""
+"Withdraw your wunnings and Account Balance. At any time you may ask to "
+"withdraw your winnings and your account’s balance. After requesting to "
+"withdraw, Your withdrawal request will be processed within 48 hours. Please "
+"make sure your contact details are fully updated."
+msgstr ""
+
+#: frontend/translations.php:335
+msgid "Choose how much you would like to withdrawose "
+msgstr ""
+
+#: frontend/translations.php:336
+msgid ""
+"232,458 players have cashed out over<br> <span>€30,000,000</span> so far!"
+msgstr ""
+
+#: frontend/translations.php:337
+msgid ""
+"Winnings are notified by phone. Please make sure your number is correct."
+msgstr ""
+
+#: frontend/translations.php:338
+msgid "Forgot Password?"
+msgstr ""
+
+#: frontend/translations.php:339
+msgid "Request"
+msgstr ""
+
+#: frontend/translations.php:340
+msgid "Whole Amount"
+msgstr ""
+
+#: frontend/translations.php:341
+msgid "Bigger Amount"
+msgstr ""
+
+#: frontend/translations.php:342
+msgid "This feature will be unlocked once your balance will be bigger than"
+msgstr ""
+
+#: frontend/translations.php:343
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: frontend/translations.php:344
+msgid "Select Your Numbers"
+msgstr ""
+
+#: frontend/translations.php:345
+msgid ""
+"We really care about your big winnings. Once you want to withdraw a bigger "
+"amount than "
+msgstr ""
+
+#: frontend/translations.php:346
+msgid ""
+"1000, our VIP account manager will call you to verify your identity and to "
+"offer you the payment methods that are available for you (Wire transfer, "
+"Bank check etc.)"
+msgstr ""
+
+#: frontend/translations.php:347
+msgid "Pick"
+msgstr ""
+
+#: frontend/translations.php:348 frontend/translations.php:369
+msgid "QP"
+msgstr ""
+
+#: frontend/translations.php:349
+msgid "Review Your Order"
+msgstr ""
+
+#: frontend/translations.php:350
+msgid "Raffle"
+msgstr ""
+
+#: frontend/translations.php:351
+msgid "Lottery Name"
+msgstr ""
+
+#: frontend/translations.php:352
+msgid "Last Draw"
+msgstr ""
+
+#: frontend/translations.php:353
+msgid "Draw Date"
+msgstr ""
+
+#: frontend/translations.php:354
+msgid "Payout"
+msgstr ""
+
+#: frontend/translations.php:355
+msgid "Draw Numbers"
+msgstr ""
+
+#: frontend/translations.php:356
+msgid "Info & Instructions"
+msgstr ""
+
+#: frontend/translations.php:357
+msgid "Rollover"
+msgstr ""
+
+#: frontend/translations.php:358
+msgid "Info"
+msgstr ""
+
+#: frontend/translations.php:359
+msgid "Past Results"
+msgstr ""
+
+#: frontend/translations.php:360
+msgid "Play Now"
+msgstr ""
+
+#: frontend/translations.php:361
+msgid "Lottery A-Z"
+msgstr ""
+
+#: frontend/translations.php:362
+msgid "Information"
+msgstr ""
+
+#: frontend/translations.php:363
+msgid ""
+"PowerBall is an American lottery game sold by 45 lotteries as a shared "
+"jackpot game. The Multi-State Lottery Association (MUSL), which is a non-"
+"profit organization that is formed by an agreement with lotteries is the one "
+"that organizes the PowerBall. Its minimun adverticed jacpot is USD 40 "
+"million which can be as big as a nine-figure prize."
+msgstr ""
+
+#: frontend/translations.php:364
+msgid "Switch to"
+msgstr ""
+
+#: frontend/translations.php:365
+msgid "Schedule"
+msgstr ""
+
+#: frontend/translations.php:366
+msgid "Guess Range"
+msgstr ""
+
+#: frontend/translations.php:367
+msgid "Jackpot Type"
+msgstr ""
+
+#: frontend/translations.php:368
+msgid "Tax"
+msgstr ""
+
+#: frontend/translations.php:370
+msgid "winning numbers for"
+msgstr ""
+
+#: frontend/translations.php:371 frontend/translations.php:372
+msgid "Prize Breakdown"
+msgstr ""
+
+#: frontend/translations.php:373 frontend/translations.php:384
+msgid "Lottery starts from:"
+msgstr ""
+
+#: frontend/translations.php:374
+msgid "Division"
+msgstr ""
+
+#: frontend/translations.php:375 frontend/translations.php:389
+msgid "Match"
+msgstr ""
+
+#: frontend/translations.php:376
+msgid "Payout per winner"
+msgstr ""
+
+#: frontend/translations.php:377
+msgid "Change Your Password"
+msgstr ""
+
+#: frontend/translations.php:378 frontend/translations.php:436
+msgid "Year"
+msgstr ""
+
+#: frontend/translations.php:379 frontend/translations.php:435
+msgid "Month"
+msgstr ""
+
+#: frontend/translations.php:380
+msgid "Fill the form:"
+msgstr ""
+
+#: frontend/translations.php:381
+msgid "Add Credit Card"
+msgstr ""
+
+#: frontend/translations.php:382
+msgid "Add Another Credit Card"
+msgstr ""
+
+#: frontend/translations.php:383
+msgid "Price Breakdown"
+msgstr ""
+
+#: frontend/translations.php:385
+msgid "Current Credit Card"
+msgstr ""
+
+#: frontend/translations.php:386
+msgid "Your Credit Cards"
+msgstr ""
+
+#: frontend/translations.php:387
+msgid "Save Card"
+msgstr ""
+
+#: frontend/translations.php:388
+msgid "Price in"
+msgstr ""
+
+#: frontend/translations.php:390
+msgid "Contact Us"
+msgstr ""
+
+#: frontend/translations.php:391
+msgid "Billing & Payment"
+msgstr ""
+
+#: frontend/translations.php:392
+msgid "MegaMillions Free Ticket"
+msgstr ""
+
+#: frontend/translations.php:393
+msgid "Give a gift"
+msgstr ""
+
+#: frontend/translations.php:394
+msgid "Recipient's Email Address"
+msgstr ""
+
+#: frontend/translations.php:395
+msgid "Your gift message"
+msgstr ""
+
+#: frontend/translations.php:396
+msgid "Continue"
+msgstr ""
+
+#: frontend/translations.php:397
+msgid "PlanetLotto's VIP Club"
+msgstr ""
+
+#: frontend/translations.php:398
+msgid "VIP levels"
+msgstr ""
+
+#: frontend/translations.php:399
+msgid "entry points"
+msgstr ""
+
+#: frontend/translations.php:400
+msgid "VIP benefits"
+msgstr ""
+
+#: frontend/translations.php:401
+msgid "VIP BRONZE"
+msgstr ""
+
+#: frontend/translations.php:402
+msgid "2.50% Cash Back"
+msgstr ""
+
+#: frontend/translations.php:403
+msgid "VIP SILVER"
+msgstr ""
+
+#: frontend/translations.php:404
+msgid "5.00% Cash + 1% Discount"
+msgstr ""
+
+#: frontend/translations.php:405
+msgid "VIP GOLD"
+msgstr ""
+
+#: frontend/translations.php:406
+msgid "7.50% Cash + 1% Discount"
+msgstr ""
+
+#: frontend/translations.php:407
+msgid "VIP PLATINUM"
+msgstr ""
+
+#: frontend/translations.php:408
+msgid "gold"
+msgstr ""
+
+#: frontend/translations.php:409
+msgid "bronze"
+msgstr ""
+
+#: frontend/translations.php:410
+msgid "silver"
+msgstr ""
+
+#: frontend/translations.php:411
+msgid "platinum"
+msgstr ""
+
+#: frontend/translations.php:412
+msgid "10% Cash + 2% Discount"
+msgstr ""
+
+#: frontend/translations.php:413
+msgid "Statistics"
+msgstr ""
+
+#: frontend/translations.php:414
+msgid "For Players"
+msgstr ""
+
+#: frontend/translations.php:415
+msgid "Deposit option"
+msgstr ""
+
+#: frontend/translations.php:416
+msgid "View More"
+msgstr ""
+
+#: frontend/translations.php:417
+msgid "Details"
+msgstr ""
+
+#: frontend/translations.php:418
+msgid "Free Ticket"
+msgstr ""
+
+#: frontend/translations.php:419
+msgid "Syndicate"
+msgstr ""
+
+#: frontend/translations.php:420
+msgid "Classic"
+msgstr ""
+
+#: frontend/translations.php:421
+msgid "Scanning"
+msgstr ""
+
+#: frontend/translations.php:422
+msgid "change"
+msgstr ""
+
+#: frontend/translations.php:423
+msgid "Bonus debit"
+msgstr ""
+
+#: frontend/translations.php:424
+msgid "Account debit"
+msgstr ""
+
+#: frontend/translations.php:425
+msgid "next draw in:"
+msgstr ""
+
+#: frontend/translations.php:426
+msgid "My Credit Cards"
+msgstr ""
+
+#: frontend/translations.php:427
+msgid "My Active Credit Cards"
+msgstr ""
+
+#: frontend/translations.php:428
+msgid "My Inactive Credit Cards"
+msgstr ""
+
+#: frontend/translations.php:429
+msgid "Add Lines"
+msgstr ""
+
+#: frontend/translations.php:430
+msgid "Remove Lines"
+msgstr ""
+
+#: frontend/translations.php:431
+msgid "Highest Jackpots"
+msgstr ""
+
+#: frontend/translations.php:432
+msgid "Toggle navigation"
+msgstr ""
+
+#: frontend/translations.php:433
+msgid "Selected payment"
+msgstr ""
+
+#: frontend/translations.php:434
+msgid "Day"
+msgstr ""
+
+#: frontend/translations.php:437
+msgid "Minimum deposit"
+msgstr ""
+
+#: frontend/translations.php:438
+msgid "Processing time"
+msgstr ""
+
+#: frontend/translations.php:439
+msgid "More information"
+msgstr ""
+
+#: frontend/translations.php:440
+msgid "Send us a message"
+msgstr ""
+
+#: frontend/translations.php:441
+msgid ""
+"*The overall odds of winning any prize in the game are approximately 1 in 24."
+"9."
+msgstr ""
+
+#: frontend/translations.php:442
+msgid "Read More"
+msgstr ""
+
+#: frontend/translations.php:443
+msgid "Special Offer"
+msgstr ""
+
+#: frontend/translations.php:444
+msgid "Shuffle"
+msgstr ""
+
+#: frontend/translations.php:445
+msgid "Seat"
+msgstr ""
+
+#: frontend/translations.php:446
+msgid "Add shares"
+msgstr ""
+
+#: frontend/translations.php:447
+msgid "NUMBER OF SHARES"
+msgstr ""
+
+#: frontend/translations.php:448
+msgid "BUY TICKETS NOW"
+msgstr ""
+
+#: frontend/translations.php:449
+msgid "JOIN GROUP"
+msgstr ""
+
+#: frontend/translations.php:450
+msgid "View Numbers"
+msgstr ""
+
+#: frontend/translations.php:451
+msgid "edit"
+msgstr ""
+
+#: frontend/translations.php:452
+msgid "Play"
+msgstr ""
+
+#: frontend/translations.php:453
+msgid "Please insert date of birth"
+msgstr ""
+
+#: frontend/translations.php:454
+msgid "Draw in"
+msgstr ""
+
+#: frontend/translations.php:455
+msgid "Member ID"
+msgstr ""
+
+#: frontend/translations.php:456
+msgid ""
+"The Minimum Withdraw Amount Is 5.00EUR and it is possible only for Real "
+"Money."
+msgstr ""
+
+#: frontend/translations.php:457
+msgid "Withdraw was successful."
+msgstr ""
+
+#: frontend/translations.php:458
+msgid "Account Verification"
+msgstr ""
+
+#: frontend/translations.php:459
+msgid "Send password"
+msgstr ""
+
+#: frontend/translations.php:460
+msgid "Other"
+msgstr ""
+
+#: frontend/translations.php:461
+msgid "Message has been sent successfully."
+msgstr ""
+
+#: frontend/translations.php:462
+msgid "Group Lottery Games"
+msgstr ""
+
+#: frontend/translations.php:463
+msgid "Classic Lottery Games"
+msgstr ""
+
+#: frontend/translations.php:464
+msgid "Special Lottery Games"
+msgstr ""
+
+#: frontend/translations.php:465
+msgid "Buy Tickets"
+msgstr ""
+
+#: frontend/translations.php:466
+msgid "only"
+msgstr ""
+
+#: frontend/translations.php:467
+msgid "About IceLotto"
+msgstr ""
+
+#: frontend/translations.php:468
+msgid "Your"
+msgstr ""
+
+#: frontend/translations.php:469
+msgid "Reset your password"
+msgstr ""
+
+#: frontend/translations.php:470
+msgid "New password"
+msgstr ""
+
+#: frontend/translations.php:471
+msgid "Confirm password"
+msgstr ""
+
+#: frontend/translations.php:472
+msgid "Sed congue, quam nec volutpat dapibus, urna diam condimentum"
+msgstr ""
+
+#: frontend/translations.php:473
+msgid "Number of Draws:"
+msgstr ""
+
+#: frontend/translations.php:474
+msgid "In how many draws would you like to participate?"
+msgstr ""
+
+#: frontend/translations.php:475
+msgid "Please Enter Positive Number"
+msgstr ""
+
+#: frontend/translations.php:476
+msgid "Lines Left"
+msgstr ""
+
+#: frontend/translations.php:477
+msgid "ICE Platinum: 1"
+msgstr ""
+
+#: frontend/translations.php:478
+msgid ""
+" Personal line with your chosen numbers to all 5 lotteries, total of 5 "
+"personal lines plus 50 lines shared by 150 group members of strategically "
+msgstr ""
+
+#: frontend/translations.php:479
+msgid ""
+"chosen numbers by our lottery experts to each of the following lotteries: "
+"PowerBall, MegaMillions, EuroMillions, Canada Lotto649, Spain La Primitiva, "
+"total of 400 group lines."
+msgstr ""
+
+#: frontend/translations.php:480
+msgid "For the upcoming draw only"
+msgstr ""
+
+#: frontend/translations.php:481
+msgid ""
+"Win the biggest lottery jackpot in the world! Boost your winning odds by "
+"5000%. With our Groups you get more tickets, win more and pay less."
+msgstr ""
+
+#: frontend/translations.php:482
+msgid ""
+"Play it European style, with 3 of the biggest lotteries in Europe. All lucky-"
+"star and Euro number combinations are covered, making you a winner on every "
+"draw."
+msgstr ""
+
+#: frontend/translations.php:483 frontend/translations.php:484
+msgid ""
+"Beat the lottery with a Group. Play with hundreds of tickets each draw, "
+"increase your winning odds by 5000% and pay only a fraction of the price."
+msgstr ""
+
+#: frontend/translations.php:485
+msgid ""
+"It’s a game of quantity. Get more tickets and enjoy higher winning odds."
+msgstr ""
+
+#: frontend/translations.php:486
+msgid ""
+"Never miss a BIG Jackpot! With the ‘Jackpot Hunter’ you will always play the "
+"biggest Jackpot at any given time with at least 100 tickets!"
+msgstr ""
+
+#: frontend/translations.php:488
+msgid "Red Cross"
+msgstr ""
+
+#: frontend/translations.php:489
+msgid "Up to 5 unique and personal raffle tickets for Red Cross raffle."
+msgstr ""
+
+#: frontend/translations.php:490
+msgid "MegaMillions Personal + Group"
+msgstr ""
+
+#: frontend/translations.php:491 frontend/translations.php:493
+msgid ""
+"1 Personal with your personal chosen numbers plus 50 lines shared by 150 "
+"group members of strategically chosen numbers by our lottery experts. "
+"Winning will be divided by the group members according to their share "
+"holdings."
+msgstr ""
+
+#: frontend/translations.php:492
+msgid "PowerBall Personal + Group"
+msgstr ""
+
+#: frontend/translations.php:495
+msgid "Valentine"
+msgstr ""
+
+#: frontend/translations.php:496
+msgid "A raffle ticket is shared by 10 participants."
+msgstr ""
+
+#: frontend/translations.php:497
+msgid "AmericanDream"
+msgstr ""
+
+#: frontend/translations.php:498
+msgid ""
+"Special combination to fulfill the American dream. Play the biggest jackpots "
+"in the world: Megamillions, Powerball and NewYork Lotto with a combination "
+"of personal and group tickets."
+msgstr ""
+
+#: frontend/translations.php:499
+msgid "SixPack"
+msgstr ""
+
+#: frontend/translations.php:500
+msgid ""
+"Special combo with high winning odds thanks to our unique method of personal "
+"and group tickets. Play the world’s most lucrative 6/49 lotteries that offer "
+"the best winning chances."
+msgstr ""
+
+#: frontend/translations.php:501
+msgid "MillionaireClub"
+msgstr ""
+
+#: frontend/translations.php:502
+msgid ""
+"The perfect combination to maximize your odds to win the lottery. Play 11 "
+"lotteries with a massive amount of Group and Personal tickets."
+msgstr ""
+
+#: frontend/translations.php:503
+msgid "ElNiño"
+msgstr ""
+
+#: frontend/translations.php:504
+msgid "Loteria D'El Nino."
+msgstr ""
+
+#: frontend/translations.php:505
+msgid "Navidad"
+msgstr ""
+
+#: frontend/translations.php:506
+msgid "Up to 5 unique and personal raffle tickets for the Loteria De Navidad."
+msgstr ""
+
+#: frontend/translations.php:508
+msgid "24/7 VIP"
+msgstr ""
+
+#: frontend/translations.php:509 frontend/translations.php:511
+msgid ""
+"50 Group tickets for each lottery draw, every day! 350 tickets per week. "
+"Participating lotteries: US Powerball, Spanish LaPrimitiva, European "
+"EuroMillions, EuroJackpot, Spanish ElGordo, Spanish BonoLoto, and the US "
+"NewYorkLotto."
+msgstr ""
+
+#: frontend/translations.php:510
+msgid "Premium 24/7 VIP"
+msgstr ""
+
+#: frontend/translations.php:513
+msgid "TopLottoGroup"
+msgstr ""
+
+#: frontend/translations.php:514 frontend/translations.php:523
+msgid ""
+"50 lines shared by 150 group members of strategically chosen numbers to the "
+"highest jackpot lottery. We made sure the group will have a win on each and "
+"every draw which will be divided by the group members according to their "
+"share holdings."
+msgstr ""
+
+#: frontend/translations.php:515
+msgid "JackpotSeeker"
+msgstr ""
+
+#: frontend/translations.php:516
+msgid ""
+"1 personal line with your personal chosen numbers plus 50 lines shared by "
+"150 group members of strategically chosen numbers by our lottery experts to "
+"the biggest jackpot in the world. On This special subscription you always "
+"participate on the biggest lottery jackpot in the world, as we check twice a "
+"week for the biggest jackpot from all the lotteries to make sure you will "
+"always participate in the biggest of them all."
+msgstr ""
+
+#: frontend/translations.php:519
+msgid ""
+"1 Personal line with your chosen numbers to a lottery of your choice plus 50 "
+"lines shared by 150 group members of strategically chosen numbers by our "
+"lottery experts to each of the following lotteries: PowerBall, MegaMillions, "
+"EuroMillions, Canada Lotto649, Spain La Primitiva, total of 400 group lines. "
+"We made sure the Powerball and Mega Millions group will have a win on each "
+"and every draw. Group Wins are divided by the group members according to "
+"their share holdings."
+msgstr ""
+
+#: frontend/translations.php:520
+msgid "Platinum"
+msgstr ""
+
+#: frontend/translations.php:521
+msgid ""
+"1 Personal line with your chosen numbers to all 5 lotteries, total of 5 "
+"personal lines plus 50 lines shared by 150 group members of strategically "
+"chosen numbers by our lottery experts to each of the following lotteries: "
+"PowerBall, MegaMillions, EuroMillions, Canada Lotto649, Spain La Primitiva, "
+"total of 400 group lines."
+msgstr ""
+
+#: frontend/translations.php:522
+msgid "TopLottoPersonal"
+msgstr ""
+
+#: frontend/translations.php:526
+msgid "PowerBall Personal Ticket"
+msgstr ""
+
+#: frontend/translations.php:527
+msgid ""
+"Up to 10 lines for the PowerBall lottery with your personal chosen numbers"
+msgstr ""
+
+#: frontend/translations.php:528
+msgid "PowerBall Group"
+msgstr ""
+
+#: frontend/translations.php:529
+msgid ""
+" 50 lines shared by 150 group members of strategically chosen numbers by our "
+"lottery experts. We made sure the group will have a win on each and every "
+"draw which will be divided by the group members according to their share "
+"holdings."
+msgstr ""
+
+#: frontend/translations.php:530
+msgid "MegaMillions Personal Ticket"
+msgstr ""
+
+#: frontend/translations.php:531
+msgid ""
+"Up to 10 lines for the MegaMillions lottery with your personal chosen numbers"
+msgstr ""
+
+#: frontend/translations.php:532
+msgid "MegaMillions Group"
+msgstr ""
+
+#: frontend/translations.php:533 frontend/translations.php:537
+#: frontend/translations.php:541 frontend/translations.php:545
+#: frontend/translations.php:549 frontend/translations.php:553
+#: frontend/translations.php:557 frontend/translations.php:561
+#: frontend/translations.php:565 frontend/translations.php:569
+#: frontend/translations.php:573
+msgid ""
+"50 lines shared by 150 group members of strategically chosen numbers by our "
+"lottery experts. We made sure the group will have a win on each and every "
+"draw which will be divided by the group members according to their share "
+"holdings."
+msgstr ""
+
+#: frontend/translations.php:534
+msgid "EuroMillions Personal Ticket"
+msgstr ""
+
+#: frontend/translations.php:535
+msgid ""
+"Up to 10 lines for the EuroMillions lottery with your personal chosen numbers"
+msgstr ""
+
+#: frontend/translations.php:536
+msgid "EuroMillions Group"
+msgstr ""
+
+#: frontend/translations.php:538
+msgid "EuroJackpot Personal Ticket"
+msgstr ""
+
+#: frontend/translations.php:539
+msgid ""
+"Up to 10 lines for the EuroJackpot lottery with your personal chosen numbers"
+msgstr ""
+
+#: frontend/translations.php:540
+msgid "EuroJackpot Group"
+msgstr ""
+
+#: frontend/translations.php:542 frontend/translations.php:544
+msgid "OzLotto Group"
+msgstr ""
+
+#: frontend/translations.php:543
+msgid ""
+"Up to 10 lines for the OzLotto lottery with your personal chosen numbers"
+msgstr ""
+
+#: frontend/translations.php:546
+msgid "UkLotto Personal ticket"
+msgstr ""
+
+#: frontend/translations.php:547
+msgid ""
+"Up to 10 lines for the UkLotto lottery with your personal chosen numbers."
+msgstr ""
+
+#: frontend/translations.php:548
+msgid "UkLotto Group"
+msgstr ""
+
+#: frontend/translations.php:550
+msgid "NewYorkLotto Personal ticket"
+msgstr ""
+
+#: frontend/translations.php:551
+msgid ""
+"Up to 10 lines for the NewYorkLotto lottery with your personal chosen "
+"numbers."
+msgstr ""
+
+#: frontend/translations.php:552
+msgid "NewYorkLotto Group"
+msgstr ""
+
+#: frontend/translations.php:554
+msgid "SuperEnalotto Personal ticket"
+msgstr ""
+
+#: frontend/translations.php:555
+msgid ""
+"Up to 10 lines for the SuperEnalotto lottery with your personal chosen "
+"numbers."
+msgstr ""
+
+#: frontend/translations.php:556
+msgid "SuperEnalotto Group"
+msgstr ""
+
+#: frontend/translations.php:558
+msgid "LaPrimitiva Personal ticket"
+msgstr ""
+
+#: frontend/translations.php:559
+msgid ""
+"Up to 10 lines for the LaPrimitiva lottery with your personal chosen numbers."
+msgstr ""
+
+#: frontend/translations.php:560
+msgid "LaPrimitiva Group"
+msgstr ""
+
+#: frontend/translations.php:562
+msgid "Lotto649 Personal ticket"
+msgstr ""
+
+#: frontend/translations.php:563
+msgid ""
+"Up to 10 lines for the Lotto649 lottery with your personal chosen numbers."
+msgstr ""
+
+#: frontend/translations.php:564
+msgid "Lotto649 Group"
+msgstr ""
+
+#: frontend/translations.php:566
+msgid "BonoLoto Personal ticket"
+msgstr ""
+
+#: frontend/translations.php:567
+msgid ""
+"Up to 10 lines for the BonoLoto lottery with your personal chosen numbers."
+msgstr ""
+
+#: frontend/translations.php:568
+msgid "BonoLoto Group"
+msgstr ""
+
+#: frontend/translations.php:570
+msgid "ElGordo Personal ticket"
+msgstr ""
+
+#: frontend/translations.php:571
+msgid ""
+"Up to 10 lines for the ElGordo lottery with your personal chosen numbers."
+msgstr ""
+
+#: frontend/translations.php:572
+msgid "ElGordo Group"
+msgstr ""
+
+#: frontend/translations.php:575
+msgid "You will be redirected..."
+msgstr ""
+
+#: frontend/translations.php:582
+msgid "Sorry, something went wrong."
+msgstr ""
+
+#: frontend/translations.php:583
+msgid "Amount To Deposit"
+msgstr ""
+
+#: frontend/translations.php:584
+msgid "You already have an account with us, please login."
+msgstr ""
+
+#: frontend/translations.php:585
+msgid "Email and Password miss match or does not exist."
+msgstr ""
+
+#: frontend/translations.php:586
+msgid "Please insert valid email."
+msgstr ""
+
+#: frontend/translations.php:587
+msgid "Please insert valid full name."
+msgstr ""
+
+#: frontend/translations.php:588
+msgid "Please insert valid password."
+msgstr ""
+
+#: frontend/translations.php:589
+msgid "Password length should be between 7-20 characters."
+msgstr ""
+
+#: frontend/translations.php:590
+msgid "Please insert valid phone number."
+msgstr ""
+
+#: frontend/translations.php:591
+msgid "Please enter your message."
+msgstr ""
+
+#: frontend/translations.php:592
+msgid "Please enter valid phone number."
+msgstr ""
+
+#: frontend/translations.php:593
+msgid "Please accept our Terms and Conditions."
+msgstr ""
+
+#: frontend/translations.php:594
+msgid "Please sinsert day."
+msgstr ""
+
+#: frontend/translations.php:595
+msgid "Please insert month."
+msgstr ""
+
+#: frontend/translations.php:596
+msgid "Please insert year."
+msgstr ""
+
+#: frontend/translations.php:597
+msgid "Please insert date."
+msgstr ""
+
+#: frontend/translations.php:598
+msgid "Please insert date of birth."
+msgstr ""
+
+#: frontend/translations.php:599
+msgid "Please insert valid name."
+msgstr ""
+
+#: frontend/translations.php:600
+msgid "Please insert valid first name."
+msgstr ""
+
+#: frontend/translations.php:601
+msgid "Please insert valid last name."
+msgstr ""
+
+#: frontend/translations.php:602
+msgid "Please insert credit card number."
+msgstr ""
+
+#: frontend/translations.php:603
+msgid "Please insert your cvv number."
+msgstr ""
+
+#: frontend/translations.php:604
+msgid "Please insert valid city."
+msgstr ""
+
+#: frontend/translations.php:605
+msgid "Please insert valid address."
+msgstr ""
+
+#: frontend/translations.php:606
+msgid "Please insert valid postal code."
+msgstr ""
+
+#: frontend/translations.php:607
+msgid "Please insert Expiration Month."
+msgstr ""
+
+#: frontend/translations.php:608
+msgid "Missing info for such num of draws."
+msgstr ""
+
+#: frontend/translations.php:609
+msgid "Memberid is not valid."
+msgstr ""
+
+#: frontend/translations.php:610
+msgid "Login failed."
+msgstr ""
+
+#: frontend/translations.php:611 frontend/translations.php:612
+msgid "Email already exists."
+msgstr ""
+
+#: frontend/translations.php:613
+msgid "Please enter valid card expiration date."
+msgstr ""
+
+#: frontend/translations.php:614
+msgid "The Min Deposit Is AUD$10.00."
+msgstr ""
+
+#: frontend/translations.php:615
+msgid "Not Valid Card."
+msgstr ""
+
+#: frontend/translations.php:616
+msgid "Please insert valid date of birth."
+msgstr ""
+
+#: frontend/translations.php:617
+msgid "Password NOT updated - wrong old password."
+msgstr ""
+
+#: frontend/translations.php:618
+msgid "The Credit Card already exists."
+msgstr ""
+
+#: frontend/translations.php:619
+msgid "Invalid Card Length."
+msgstr ""
+
+#: frontend/translations.php:620 frontend/translations.php:621
+msgid "Not Valid Card Number."
+msgstr ""
+
+#: frontend/translations.php:622
+msgid "The Min Deposit Is"
+msgstr ""
+
+#: frontend/translations.php:623
+msgid "Password updated."
+msgstr ""
+
+#: frontend/translations.php:624
+msgid "Credit card updated."
+msgstr ""
+
+#: frontend/translations.php:625
+msgid "Credit card added."
+msgstr ""
+
+#: frontend/translations.php:626
+msgid "Member not found."
+msgstr ""
+
+#: frontend/translations.php:627
+msgid "Please check your mail, We have sent your password."
+msgstr ""
+
+#: frontend/translations.php:628
+msgid "Passwords doesnt match."
+msgstr ""
+
+#: frontend/translations.php:629
+msgid "Please insert valid subject."
+msgstr ""
+
+#: frontend/translations.php:630
+msgid "You have entered more than the maximum 40 characters"
+msgstr ""
+
+#: frontend/translations.php:631
+msgid "You have entered more than the maximum 200 characters"
+msgstr ""
+
+#. Name of the plugin
+msgid "Lottery Platform Functionality"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"A plugin added Classes for Lotto Yard API, All logic for Single Page "
+"Application"
+msgstr ""
+
+#. Author of the plugin
+msgid "Lotto Yard WP Team"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://www.lottoyard.com/"
+msgstr ""

@@ -1,0 +1,44 @@
+<!-- Mobile -->
+<p class="mobile ticket-title-name visible-xs">{{::item.getLotteryName()}} {{item.getProductType()==1 ? translation.Standart : translation.Group }} {{::translation.Ticket}}
+    <span class="price-ticket fl-right">{{::lyCart.getCurrency()}}{{item.getTotal()|number:2}}</span>
+</p>
+<!-- End mobile -->
+<div class="delete-container">
+    <div class="garbage pointer" ng-click="removeItem(item.getId())"></div>
+</div>
+<div class="lottery-image">
+    <span class="helper"></span>
+    <img ng-src="/wp-content/plugins/lotto-yard/frontend/images/{{item.getLotteryName() | lowercase}}-logo.png" alt="">
+</div>
+<div class="right-part">
+    <p class="ticket-title-name hidden-xs">{{item.getLotteryName()}} {{item.getProductType()==1 ? translation.Standart : translation.Group }} {{::translation.Ticket}}
+        <span class="price-ticket">{{lyCart.getCurrency()}}{{item.getTotal()|number:2}}</span>
+    </p>
+
+    <div ly-subscription-option class="fl-left hidden-xs subscription-container"></div>
+
+    <!--Lines/Shares-->
+    <div class="fl-left lines-draws-container hidden-xs" ly-cart-arrows item="item" add="add()" remove="remove()" value="item.getNumberOfLinesOrShares()" text="{{item.getProductType()==3? translation.Shares : translation.Lines}}" is-draw="false"></div>
+
+    <!--Tickets-->
+    <!-- <div ng-if="item.getProductType()==3" class="fl-left lines-draws-container hidden-xs" ly-cart-arrows item="item" add="changeTickets(item, 1)" remove="changeTickets(item, -1)" text="{{translation.Tickets}}" value="item.getNumberOfTickets()" is-draw="false"></div> -->
+
+    <!--Draws-->
+    <div id="draws-container " class="fl-left lines-draws-container hidden-xs " ly-cart-arrows ng-if="showDraws " item="item " add="changeDraw(item,1) " remove="changeDraw(item,-1) " text="{{translation.Draws}} " value="item.getNumberOfDraws()
+        " is-draw="true "></div>
+
+    <span class="show-lines pointer hidden-xs " ng-class="{true: 'open'}[active] " ng-click="showDetail(item.getId()) ">{{::translation.Your_Lines}}<span class="glyphicon glyphicon-menu-down "></span></span>
+
+    <!-- Mobile -->
+    <div class="fl-left col-xs-12 lines-draws-container visible-xs " ly-cart-arrows item="item " add="add() " remove="remove() " value="item.getNumberOfLinesOrShares()" is-draw="false "></div>
+
+    <div id="draws-container " class="fl-left col-xs-12 lines-draws-container visible-xs " ly-cart-arrows ng-if="showDraws " item="item " add="changeDraw(item,1) " remove="changeDraw(item,-1) " value="item.getNumberOfDrawsToShow()" is-draw="true "></div>
+
+
+
+</div>
+
+<!-- Mobile -->
+<div ly-subscription-option class="fl-left col-xs-12 visible-xs subscription-container "></div>
+<!--  -->
+<div class="fl-left max-width "  ly-details-item item="item " active="active"></div>

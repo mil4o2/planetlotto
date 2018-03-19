@@ -1,0 +1,8 @@
+<div class="fl-left col-xs-12 no-padd" ng-class="{'active': active==item.getId()}">
+    <p class="mobile-lines-draws-text text-center text-uppercase f-12">{{text}}</p>
+    <div class="lines-draws">
+        <span ng-if="!item.getIsQuickPick() && item._productName != 'SProduct'" class="fl-left plus-minus" ng-click="remove()">-</span>
+        <p class="fl-left text-center" ng-value="value" ng-disabled="true"> {{value()}} </p>
+        <span ng-if="!item.getIsQuickPick()  && item._productName != 'SProduct'" class="fl-right plus-minus" ng-click="add()">+</span>
+    </div>
+</div>

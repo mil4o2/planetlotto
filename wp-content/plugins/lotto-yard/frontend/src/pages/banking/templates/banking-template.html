@@ -1,0 +1,17 @@
+<div id="banking-page" class="white-bgr">
+    <div class="container">
+        <div class="col-xs-12 col-md-3 no-padd" ly-for-players titleMenu="{{::translation.forPlayers}}"></div>
+        <div class="col-xs-12 col-md-9">
+            <p class="page-content" bind-html-compile="pageContent"></p>
+            <div class="faq-part" ng-repeat="contentFaq in acf.content track by $index">
+                <div ly-faq></div>
+            </div>
+
+            <div class="" ng-if="bankingItems.acf_fc_layout === 'banking_collapsing_fields'" ng-repeat="bankingItems in acf.content">
+                <p class="title">{{::bankingItems.table_title}}</p>
+                <div ly-banking></div>
+            </div>
+
+        </div>
+    </div>
+</div>

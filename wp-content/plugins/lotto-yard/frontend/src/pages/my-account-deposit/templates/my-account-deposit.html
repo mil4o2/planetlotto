@@ -1,0 +1,27 @@
+<div class="mainmyaccount block" ng-init="initDepositPage()">
+    <h1 class="col-lg-12 title title-first f-14">{{::translation.Choose_Payment_Method}}</h1>
+
+    <div class="payments">
+        <div class="payment-method pointer fl-left max-width hidden-xs" ng-repeat="payment in paymentSystems.default" ng-class="{ 'current': extraInfo == payment.name.toLowerCase()}">
+            <div class="col-lg-12" ng-click="depositViaProccessor(payment)">
+                <span class="fl-left payment-logos {{::payment.name.toLowerCase()}}-logo"></span>
+            </div>
+        </div>
+    </div>
+
+    <div ng-switch on="section.selectionPaymentTemplate">
+        <div ng-switch-when="new">
+            <span ng-if="allActiveCards.length > 0" class="exist_button m-50-perc btn btn-blue-brds pointer" ng-click="goToDepositPage()">{{::translation.use_existing_card}}</span>
+            <div class="add-new-card-holder" ly-credit-card-payment error-message="errorMessage" submit-order-new-credit-card="submitOrderNewCreditCard(card, user, depositAmount)" show-login-loader="showLoginLoader" is-deposit="true"></div>
+        </div>
+        <div ng-switch-when="exist">
+            <ng-include class="animate-switch" src="'/wp-content/plugins/lotto-yard/frontend/src/pages/my-account-deposit/templates/exist-payments.html'"></ng-include>
+        </div>
+    </div>
+
+    <div class="col-xs-12">
+        <div ng-repeat="payment in paymentSystems.default" ng-if="extraInfo==payment.name.toLowerCase() && payment.name.toLowerCase() !='creditcard'">
+            <div ly-cart-payment processor="payment.id " field-text="{{translation['Label_Payment_' + payment.name.toLowerCase()]}}"></div>
+        </div>
+    </div>
+</div>

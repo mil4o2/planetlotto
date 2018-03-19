@@ -1,0 +1,59 @@
+<!-- <ly-purchases></ly-purchases> -->
+<div id="thank-you" class="container">
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2 col-md-offset-2 col-lg-offset-2" bind-html-compile="pageContent"></div>
+    <!--<div class="multimedia">
+        <div class="help-improve col-xs-0 col-sm-6 col-md-6 col-lg-6">
+
+        </div>
+        <div class="video col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div bind-html-compile="iFrame"></div>
+        </div>
+    </div>-->
+
+    <div class="border-top col-xs-12" ng-if="purchaseItems">
+        <div class="ordered-ticket fl-left max-width" ng-repeat="item in purchaseItems" class="col-xs-12">
+            <div class="col-xs-6 lottery">
+                <img ng-src="/wp-content/plugins/lotto-yard/frontend/images/{{::item.LotteryName | lowercase}}-logo.png" />
+                <span>{{::item.LotteryName}} {{::item.ProductName}} {{::translation.Ticket}}</span>
+            </div>
+
+            <div class="btn-group col-xs-3">
+                <button class="btn btn-default">{{item.ProductName=="Group" ? "Shares" : "Lines"}} <span>{{::item.Lines}}</span></button>
+                <button class="btn btn-default">{{::translation.Draws}} <span>{{::item.NumOfDraws}}</span></button>
+            </div>
+            <span class="fl-right">{{::lyCart.getCurrency()}} {{::item.Amount | number:2}}</span>
+        </div>
+    </div>
+
+    <div ng-repeat="contentFaq in content.acf.content" class="col-xs-12">
+        <div ly-faq></div>
+    </div>
+
+    <div class="contacts col-xs-12">
+        <h4>{{::translation.contactsus}}</h4>
+        <div class="col-xs-3">
+            <div class="clock contact-icons"></div>
+            <div class="text">
+                {{::content.acf.contact_us_time}}
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="phone contact-icons"></div>
+            <div class="text">
+                <a href="tel:{{::content.acf.contact_us_phone}}">{{::content.acf.contact_us_phone}}</a>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="fax contact-icons"></div>
+            <div class="text">
+                <a href="fax:{{::content.acf.contact_us_fax}}">{{::content.acf.contact_us_fax}}</a>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="email contact-icons"></div>
+            <div class="text">
+                {{::content.acf.contact_us_email}}
+            </div>
+        </div>
+    </div>
+</div>

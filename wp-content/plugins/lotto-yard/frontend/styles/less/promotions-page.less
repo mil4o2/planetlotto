@@ -1,0 +1,273 @@
+@import "functions.less";
+
+#promotions {
+    background: white;
+    margin-top: -40px;
+}
+.promotions-header {
+    color: @text-grey;
+    font-weight: 400;
+    padding-top: 20px;
+
+    .breadcrumb {
+        margin-top: -20px;
+        background: none;
+    }
+
+    h1 {
+        font-weight: 200;
+    }
+}
+
+.SpecialOffer {
+    height: 550px;
+    margin-top: 15px;
+    position: relative;
+
+    .btn-blue-brds {
+        padding: 5px 10px 5px 10px;
+        display: block;
+        width: 102px;
+        .border-radius();
+        margin-top: 15px;
+        @media (max-width: @screen-sm-min){
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .background {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @media (max-width: @screen-sm-min){
+            height: 40%;
+            background-size: 100% 100%;
+        }
+    }
+    .specialOfferCorner {
+        background-image: url(../images/special-offer-corner.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        display: inline-block;
+        float: right;
+        right: -2px;
+        bottom: -2px;
+        width: 210px;
+        height: 170px;
+        z-index: 3;
+    }
+    .offer-text {
+        // width: 30%;
+        padding: 1px 20px 20px 20px;
+        background-color: @color-base-one;
+        position: absolute;;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        color: white;
+
+        h3 {
+            font-weight: 100;
+            @media (max-width: @screen-sm-min){
+                text-align: center;
+            }
+        }
+        h4 {
+            text-align: center;
+        }
+        .small-text {
+            font-size: 16px;
+            font-family: "Open Sans";
+            width: 245px;
+            height: 155px;
+            overflow: hidden;
+        }
+    }
+    .offer-text-xs {
+        padding: 15px;
+    }
+}
+
+.ly-promotions {
+    position: relative;
+    height: 350px;
+    margin-top: 20px;
+    @media (max-width: @screen-sm-min){
+        margin-top: -150px;
+    }
+
+    .promotion {
+        position: relative;;
+        padding: 0;
+        height: 100%;
+        @media (max-width: @screen-sm-min){
+            margin-bottom: 20px;
+        }
+
+        .background {
+            width: 100%;
+            height: 350px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @media (max-width: @screen-sm-min){
+                height: 50%;
+            }
+        }
+    }
+    .offer-text {
+        padding: 1px 20px 20px 20px;
+        background-color: @light-gray;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+
+        h3 {
+            @media (max-width: @screen-md-min){
+                font-size: 14px;
+            }
+        }
+
+        .small-text {
+            font-size: 16px;
+            font-family: "Open Sans";
+            width: 245px;
+            height: 155px;
+            overflow: hidden;
+            @media (max-width: @screen-md-min){
+                font-size: 12px;
+            }
+        }
+    }
+    .btn-blue {
+        padding: 5px 10px 5px 10px;
+        display: block;
+        width: 102px;
+        .border-radius();
+        margin-top: 15px;
+        @media (max-width: @screen-sm-min){
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .xs-title {
+        background-color: @color-base-one;
+        position: relative;
+        top: -195px;
+        right: 0;
+        z-index: 3;
+        float: right;
+        color: white;
+        font-size: 1.5em;
+    }
+    .offer-text-xs {
+        padding: 15px;
+
+        span {
+            width: 100%
+        }
+    }
+}
+.single-promotion {
+    background: white;
+    padding-bottom: 20px;
+    .banner {
+        min-height: 650px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-bottom: 50px;
+        position: relative;
+
+        .title-holder {
+            z-index: 3;
+            position: relative;
+            padding-top: 100px;
+
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            position: absolute;
+        }
+        .title {
+            color: white;
+            font-size: 72px;
+            font-family: "Oswald";
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 50%;
+            line-height: 1.1;
+            z-index: 3;
+        }
+        .breadcrumb {
+            background-color: rgba(1,1,1,0);
+            // margin-top: 30px;
+            z-index: 3;
+
+        }
+        .btn-blue {
+            padding: 10px;
+            display: inline-block;
+            .border-radius();
+            margin-top: 15px;
+            font-weight: 800;
+            z-index: 3;
+
+            @media (max-width: @screen-sm-min){
+                width: 100%;
+                text-align: center;
+            }
+        }
+        @media (max-width: @screen-sm-min){
+            display: block !important;
+            min-height: inherit;
+            height: 230px;
+            .title-holder {
+                padding: 5px 20px;
+                .title {
+                    font-size: 30px;
+                    width: 65%;
+                }
+            }
+            img {
+                max-height: 230px;
+            }
+            .btn-blue {
+                width: 55%;
+            }
+        }
+    }
+}
+.special-offer {
+    .text {
+        p {
+            margin-bottom: 10px;
+        }
+    }
+}
+.accordion {
+    h4 {
+        display: none;
+    }
+    .card {
+        .faq-btn.collapsed {
+            border-bottom: none;
+        }
+        .card-block {
+            border-top: none;
+            p {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+@media (max-width: @screen-sm-min){
+    #banners {
+        display: none;
+    }
+    .promotions-header {
+        padding-left: 15px;
+    }
+}

@@ -1,0 +1,26 @@
+<ng-include class="cf" src="'/wp-content/plugins/lotto-yard/frontend/src/pages/common/templates/header-banner.html'"></ng-include>
+<div class="news container">
+    <div id="news-scroll-top"></div>
+    <div id="news-title" class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+        <h3>Planet Lotto Blog</h3>
+        <!--<h1>{{::pageContent.title.rendered}}</h1>-->
+        <!--<div bind-html-compile="pageContent.content.rendered"></div>-->
+
+        <div class="ly-blog" ng-if="true"></div>
+    </div>
+    <div id="banners" class="hidden-xs col-sm-5 col-md-4 col-lg-4">
+        <ng-include class="cf" src="'/wp-content/plugins/lotto-yard/frontend/src/pages/blog/templates/recent-posts.html'"></ng-include>
+        <ng-include class="cf" src="'/wp-content/plugins/lotto-yard/frontend/src/pages/blog/templates/play-now-banner.html'"></ng-include>
+    <!--<div id="banners" class="col-xs-12 col-sm-5 col-md-4 col-lg-4" ng-if="pageWidget.show_sidebar_banner">-->
+        <!--<div class="sign-up-now">-->
+            <!--<h4>{{::pageWidget.sidebar_banner_title}}</h4>-->
+            <!--<div class="sign-up-now-pic">-->
+                <!--<img ng-src="{{::pageWidget.sidebar_banner_picture.url}}" />-->
+            <!--</div>-->
+            <!--<div class="btn-blue" ng-click="userService.isLogin || signupModal()">{{::translation.sign_up_now}}</div>-->
+        <!--</div>-->
+        <!--<div ng-repeat="widget in widgetList">-->
+            <!--<div bind-html-compile="widget.choose_widget"></div>-->
+        <!--</div>-->
+    </div>
+</div>

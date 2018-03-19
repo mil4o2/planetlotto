@@ -1,0 +1,80 @@
+<div id="add-new-cc-container" class="mainpaymenttabs mainpaymenttabsexist mainpaymenttabsdeposit">
+    <div class="tabspart">
+        <div class="formpart credit formpartexist">
+            <div class="formparttop">
+                <div class="formcol formcolleft" ng-if="extraInfo == 'creditcard'">
+                    <h1>
+                        <span class="title" ng-if="lyCart.getAmountToPay() === 0">{{::translation.Wallet}}</span>
+                        <span class="title" ng-if="lyCart.getAmountToPay() > 0">{{::translation.Your_Payment_Methods}}</span>
+                    </h1>
+                    <p class="CCdescription">{{::translation.Credit_Card_Descriptor}}</p>
+                    <p class="f-12">{{::translation.current_cc}}</p>
+
+                    <div class="dropdowncard">
+                        <div class="dropdowncardtitle select-box-arrow">
+                            <select ng-model="selectedmethod" ng-options="item as item.ProcessorType + ' **********' + item.CreditCardNumber for item in lyCart.getIframePaymentMethods() track by item.Id" class="visa" ng-change="paymentMethodSelected(selectedmethod.MethodId, selectedmethod.Processor)">
+                            </select>
+                        </div>
+                        <div class="formpartlink">
+                            <div class="btn btn-blue-brds add-payment" ng-click="editPaymentMethods()">+ {{::translation.add_another_cc}}</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <form class="col-xs-6" name="test" novalidate="novalidate" ng-submit="depositFunds(depositAmount, creditcard.terms)">
+                    <div ng-if="extraInfo == 'saltrapay'">
+                        <h3>{{::translation.Soltrapay_Secure}}</h3>
+                        <p>{{::translation.Soltrapay_Descriptor}}</p>
+                    </div>
+                    <div class="formcol formcolright">
+                        <div class="agreetoterms" ng-show="extraInfo == 'creditcard'">
+                            <div class="agreesentence form-group">
+                                <label for="terms">
+                                <input id="terms" type="checkbox" ng-model="creditcard.terms" ng-click="changeTerms()" required required-err-type="Please_accept_our_terms_and_conditions" />
+                                <span class="agreement-text f-12">{{::translation.I_agree}}
+                                    <a href="terms-and-conditions">{{::translation.Terms_Conditions}}</a><br/>
+                                    {{::translation.Terms_Conditions_18}}
+                                </span>
+                            </label>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="form-group">
+                            <p class="f-12">{{::translation.Deposit_Amount}}</p>
+                            <input id="deposit" type="number" ng-init="depositAmount=0" ng-model="depositAmount" required
+                                ng-min="5"
+                                ng-min-err-type="Min_deposit"
+                                oninput="this.value = this.value.replace(/[a-zA-Z_=!@#$%^&*+()-]/g, '')"
+                                ng-blur="validateDeposit(depositAmount)"/>
+                            <div class="errorMessage">{{errorDeposit}}</div>
+                        </div>
+                        <div class="submit">
+                            <button ng-class="{'btn-disable':showAdressForm}" ng-click="depositFunds(depositAmount, creditcard.terms)" type="submit" class="btn btn-green">{{::translation.Deposit}}</button>
+                        </div>
+                        <div class="spin-loader-inline-block" ng-show="showDepositLoader" loader-css="ball-clip-rotate"></div>
+                    </div>
+                </form>
+
+                <form class="details-form col-xs-6" ng-show="showAdressForm" name="updateProfileForm" novalidate="novalidate" ng-submit="UpdateProfile($event, user)" ng-model-options="{updateOn: 'blur'}">
+                    <div class="form-group">
+                        <label for="City">{{::translation.City}}</label>
+                        <input name="City" type="text" required ng-model="user.City" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Address">{{::translation.Address}}</label>
+                        <input type="text" ng-model="user.Address" only-alphabets-and-numbers required required-err-type="Please_insert_valid_address" minlength="4" maxlength="35" name="Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="zipcode">{{::translation.Postal_Code}}</label>
+                        <input type="text" ng-model="user.ZipCode" only-alphabets-and-numbers required required-err-type="Please_insert_valid_postal_code" minlength="3" maxlength="12" name="zipcode">
+                    </div>
+                    <div class="form-btn-group col-xs-12">
+                        <button type="submit" class="btn btn-blue-brds">{{::translation.Save_Changes}}</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

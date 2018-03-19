@@ -1,0 +1,24 @@
+<div class="blue-slider-banner cf">
+    <div class="left pull-left text-right">
+        <div class="sum">
+            <strong>
+                <span class="currency">{{::allDraws[0].LotteryCurrency2}}</span>
+                <span class="num">{{::allDraws[0].Jackpot | jackpot}}</span>
+                <span class="millions">{{translation.Million}}</span>
+            </strong>
+        </div>
+        <div class="timer">
+            <span class="timer">
+                <span class="timer-img"></span>
+                <span class="timer-clock align-text" ly-timer time="allDraws[0].DrawDate"></span>
+            </span>
+        </div>
+    </div>
+    <div class="right pull-left text-center play-now-banner-header">
+        <div class="lotteries-logos {{::allDraws[0].LotteryName}}"></div>
+        <a ly-play-now-btn class="btn" ng-class="{'two-rows' : isGoingToPersonalSelectPage }" ng-click="goToPlayPageFromHome()">
+            <span>{{::translation.Play_Now}}</span>
+            <img ng-src="/wp-content/plugins/lotto-yard/frontend/images/arrow-with-dots.png" alt="Play Now">
+        </a>
+    </div>
+</div>

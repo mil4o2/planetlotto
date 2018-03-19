@@ -1,0 +1,161 @@
+@import "functions.less";
+
+#group {
+    .upper-part, .lower-part {
+        width: 100%;
+        display: block;
+    }
+    .upper-part {
+        .pic {
+            min-height: 280px;
+            background: url('../images/group_selection.png') center center no-repeat;
+        }
+        .view-numbers-holder {
+            position: relative;
+            height: 30px;
+            margin-top: -35px;
+            .view-numbers {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 150px;
+            }
+        }
+        .group-other-shares {
+            .text {
+                max-height: 185px;
+                min-height: 185px;
+                overflow: hidden;
+            }
+            .how-many {
+                text-align: center;
+                font-weight: 600;
+                margin: 10px 0;
+            }
+            .number-draws-btns {
+                bottom: 0;
+            }
+            .plus {
+                font-size: 50px;
+                line-height: 32px;
+            }
+            input {
+                display: inline-block;
+                width: 60%;
+                height: 40px;
+                .border-radius ();
+                border: 1px solid @color-base-one;
+                margin-left: 30px;
+                text-align: center;
+                font-size: 30px;
+                font-weight: 800;
+                color: @color-base-one;
+            }
+        }
+    }
+    .lower-part {
+        .number-draws {
+            margin-top: 22px;
+            border: 1px solid #eee;
+            .border-radius();
+            h4 {
+                font-size: 25px;
+                text-align: center;
+                font-weight: 600;
+                color: @color-base-one;
+            }
+            .radio {
+                margin: 15px 0px;
+                padding: 10px 80px;
+                &:first-of-type {
+                    border-right: 1px solid #eee;
+                }
+                .circle {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    .border-radius(50%);
+                    -moz-background-clip: padding;
+                    -webkit-background-clip: padding-box;
+                    background-clip: padding-box;
+                    border: 1px solid #c0c0c0;
+                    float: left;
+                    margin-right: 10px;
+                }
+                .text {
+                    position: relative;
+                    top: -4px;
+                    display: inline-block;
+                    width: 80%;
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    float: left;
+                    cursor: pointer;
+                }
+            }
+            .radio.selected {
+                .circle {
+                    background: @color-base-one;
+                }
+            }
+        }
+        .total {
+            position: relative;
+            bottom: 0;
+            margin-top: 21px;
+
+            .total-lines-holder {
+                width: 100%;
+                margin-bottom: 10px;
+
+                .text-right {
+                    width: 65px;
+                    text-align: right;
+                    display: inline-block;
+                    font-size: 15px;
+                    font-family: "Open Sans";
+                    color: #555658;
+                    line-height: 1.2;
+                }
+                .number-right {
+                    font-weight: bolder;
+                    font-size: 20px;
+                    line-height: 19px;
+                    display: inline-block;
+                    text-align: right;
+                    float: right;
+                }
+            }
+        }
+    }
+    @media(max-width: @screen-width-min-sm){
+        .lower-part {
+            margin-bottom: 140px;
+        }
+        .lower-part .number-draws .radio {
+            padding: 0px 25px;
+        }
+        .upper-part .group-other-shares input {
+            margin-left: 15px;
+            .minus {
+                bottom: 0 !important;
+            }
+        }
+    }
+    @media(max-width: @screen-width-min-sm) {
+        .lower-part {
+            margin-bottom: 140px;
+        }
+        .lower-part .number-draws .radio {
+            padding: 0px 25px;
+        }
+        .upper-part .group-other-shares input {
+            margin-left: 15px;
+            .minus {
+                bottom: 0 !important;
+            }
+        }
+    }
+}

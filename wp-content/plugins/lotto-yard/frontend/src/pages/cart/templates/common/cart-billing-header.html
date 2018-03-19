@@ -1,0 +1,26 @@
+<div id="order-state" class="col-sm-12 hidden-xs" ng-if="!lyCart.isEmpty()">
+    <div id="tabs">
+        <div class="col-20">
+            <a href="cart" ng-class="{active: activeTab=='cart'}">
+                <span class="cart states" ng-class="{active: activeTab=='cart'}"></span>
+                <p class="text-center" ng-class="{active: activeTab=='cart'}">{{::translation.menu_cart}}</p>
+            </a>
+        </div>
+        <div class="col-10">
+            <span class="arrow states"></span>
+        </div>
+        <div class="col-30">
+            <a ng-class="{active: activeTab=='cart'}">
+                <span class="billing states" ng-class="{active: activeTab=='billing'}"></span>
+                <p class="text-center" ng-class="{active: activeTab=='billing'}">{{::translation.billing_payment}}</p>
+            </a>
+        </div>
+        <div class="col-10">
+            <span class="arrow states"></span>
+        </div>
+        <div class="col-20">
+            <span class="complete states" ng-class="{active: activeTab=='complete'}"></span>
+            <p class="text-center" ng-class="{active: activeTab=='complete'}">{{::translation.Complete}}</p>
+        </div>
+    </div>
+</div>

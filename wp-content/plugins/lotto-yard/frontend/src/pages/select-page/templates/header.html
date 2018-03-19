@@ -1,0 +1,26 @@
+<div class="select-page-timer {{::lottery.toLowerCase()}}">
+    <div class="inner">
+        <div class="slider-lotterie-logo">
+            <img ng-src="/wp-content/plugins/lotto-yard/frontend/images/{{::lottery.toLowerCase()}}-logo.png" class="img-responsive" alt="">
+        </div>
+        <div class="pending" ng-if="Jackpot == '-1'">{{::translation.Pending}}</div>
+        <p ng-if="Jackpot != '-1'" class="fl-left millions-timer">
+            <span class="currency">{{::LotteryCurrency}}</span>
+            <span class="jackpot" count-to="{{::Jackpot| jackpot}}" value="0" duration="1"></span>
+            <span class="timer-millions">
+                    <span class="millions">{{::$parent.translation.Million}}</span>
+            <span class="timer">
+                <span class="mobile-only">{{::lottery}} {{::translation.Draw_In}}</span>
+                <span ly-timer time="DrawDate"></span>
+            <span class="hidden-sm hidden-md hidden-lg">
+                            {{::allDraws[0].LotteryName}}
+                        </span>
+            <span class="mobile-top-lottery-logo lotteries-logos hidden-sm hidden-md hidden-lg {{::allDraws[0].LotteryName}}"></span>
+            </span>
+            </span>
+        </p>
+    </div>
+</div>
+<div id="switch-lotterie-buttons">
+    <ng-include src="'/wp-content/plugins/lotto-yard/frontend/src/pages/common/templates/ly-classic-syndicate-buttons.html'"></ng-include>
+</div>

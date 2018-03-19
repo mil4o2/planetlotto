@@ -1,0 +1,22 @@
+<div id="latest-winners" ng-show="latestWinners.data.length > 0">
+    <p class="title">{{::translation.latest_winners}}</p>
+    <div id="marquee">
+        <div class="latest-winner" ng-repeat="item in latestWinners.data">
+            <div class="winner-row">
+                <div class="text-blue">{{::item.acf.country}}</div>
+                <div class="comma">,</div>
+                <div class="text-blue">{{::item.acf.lottery}}</div>
+                <div class="name-country">{{::item.acf.winner_name}} {{::item.acf.country}}</div>
+                <div class="fl-right">
+                    {{::lyCart.getCurrency()}} {{::item.acf.won_price | number:2}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="total" class="latest-winner">
+        <p class="text-right">
+            <span class="text-total">{{::translation.total_wins}}</span>
+            <span id="total-sum" class="text-right">{{::lyCart.getCurrency()}} {{::getTotalSum | number:2}}</span>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<!-- Tag for Activity Group: Planet Lotto_ Cart Check Out, Activity Name: Planet Lotto_ Cart Check Out, Activity ID: 4923468 -->
+<!-- Expected URL: http://planetlotto.com.au/cart/ -->
+
+<!--
+Activity ID: 4923468
+Activity Name: Planet Lotto_ Cart Check Out
+Activity Group Name: Planet Lotto_ Cart Check Out
+-->
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Planet Lotto_ Cart Check Out
+URL of the webpage where the tag is expected to be placed: http://planetlotto.com.au/cart/
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 05/30/2017
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+jQuery( document ).ready(function() {
+    jQuery('noscript').append('<iframe src="https://6977030.fls.doubleclick.net/activityi;src=6977030;type=plane002;cat=plane0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+});
+</script>
+<noscript></noscript>
+
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+
+<div id="cart-page" data-ng-init="initCart()">
+    <ng-include src="'/wp-content/plugins/lotto-yard/frontend/src/pages/cart/templates/common/cart-billing-header.html'"></ng-include>
+    <div class="max-width">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 no-padd scrollit" ng-class="{'emptyCart': {{lyCart.isEmpty()}} == true }">
+            <h1 ng-if="!lyCart.isEmpty()">{{::translation.review_your_order}}</h1>
+            <div ng-if="activeTab=='cart'">
+                <div ly-cart-items></div>
+            </div>
+        </div>
+        <div id="order-summary" ng-if="!lyCart.isEmpty()" class="col-xs-12 col-sm-12 col-md-4 col-lg-3" ly-cart-order-summary active-tab="activeTab" total="total"></div>
+        <div ng-if="activeTab=='billing'">
+            <div ng-if="userService.isLogin" ly-cart-billing></div>
+        </div>
+        <div ng-if="activeTab=='complete'">{{::translation.Complete}}</div>
+    </div>
+</div>
+<div bind-html-compile="content"></div>
